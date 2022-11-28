@@ -3,5 +3,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:id])
+    @places = @event.places
   end
 end
