@@ -59,4 +59,3 @@ event_team5 = EventTeam.create!(event: match5, team: team10)
 
 puts 'Creating Places...'
 # PLACES
-
