@@ -1,5 +1,16 @@
-<ul>
-  <% @events.each do |event| %>
+<p id="notice"><%= notice %></p>
+
+<div class="cards-container">
+  <% @events.each do |event|%>
+    <div class="card">
+    <%# <% event.teams.each do |team| %>
+        <%# <%=team.name%>
+    <%# <% end %>
     <li><%= event.competition %></li>
+    <li><%= event.location %></li>
+    <li><%= event.hour %></li>
+    <li><%= event.date %></li>
+    <li><%= event.channel %></li>
+    </div>
   <% end %>
-</ul>
+</div>
