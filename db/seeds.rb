@@ -19,6 +19,18 @@ Anakin = User.create!(competition:"", localisation:"", heure:"", date:"", channe
 Anakin.photo.attach(io: )
 
 
+#TEAMS
+
+team1 = Team.create!(name: "France")
+team2 = Team.create!(name: "Brasil")
+team3 = Team.create!(name: "Espagne")
+team4 = Team.create!(name: "Portugal")
+team5 = Team.create!(name: "Cameroun")
+team6 = Team.create!(name: "Angleterre")
+team7 = Team.create!(name: "Belgique")
+team8 = Team.create!(name: "Argentine")
+team9 = Team.create!(name: "Japon")
+team10 = Team.create!(name: "Ghana")
 puts 'Creating Events...'
 # EVENTS
 match1 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade de Lusail - Qatar", hour: "16h00", date: "09/12/2022", channel: "Being")
@@ -32,14 +44,18 @@ match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "S
 match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", hour: "15h00", date: "28/12/2022", channel: "Primevideo")
 match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", hour: "21h00", date: "28/12/2022", channel: "Primevideo")
 
-#TEAMS
+#EVENT TEAM
 
-team1 = Team.create!(name: "")
-team1 = Team.create!(name: "")
-team1 = Team.create!(name: "")
-team1 = Team.create!(name: "")
-
-
+event_team1 = EventTeam.create!(event: match1, team: team2)
+event_team1 = EventTeam.create!(event: match1, team: team1)
+event_team2 = EventTeam.create!(event: match2, team: team3)
+event_team2 = EventTeam.create!(event: match2, team: team4)
+event_team3 = EventTeam.create!(event: match3, team: team5)
+event_team3 = EventTeam.create!(event: match3, team: team6)
+event_team4 = EventTeam.create!(event: match4, team: team7)
+event_team4 = EventTeam.create!(event: match4, team: team8)
+event_team5 = EventTeam.create!(event: match5, team: team9)
+event_team5 = EventTeam.create!(event: match5, team: team10)
 
 puts 'Creating Places...'
 # PLACES
