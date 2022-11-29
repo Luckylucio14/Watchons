@@ -9,7 +9,8 @@ require "open-uri"
 
 puts 'Cleaning database...'
 Place.destroy_all
-Event.destroy_al= Event.destroy_allgit 
+Event.destroy_all
+Team.destroy_all
 
 puts 'Creating Users...'
 # USERS
@@ -30,6 +31,14 @@ match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e plac
 match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "Stade Al-Bayt - Qatar", hour: "16h00", date: "18/12/2022", channel: "TF1")
 match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", hour: "15h00", date: "28/12/2022", channel: "Primevideo")
 match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", hour: "21h00", date: "28/12/2022", channel: "Primevideo")
+
+#TEAMS
+
+team1 = Team.create!(name: "")
+team1 = Team.create!(name: "")
+team1 = Team.create!(name: "")
+team1 = Team.create!(name: "")
+
 
 
 puts 'Creating Places...'
