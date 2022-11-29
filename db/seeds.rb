@@ -77,6 +77,7 @@ event_team5 = EventTeam.create!(event: match5, team: team10)
 
 puts 'Creating Places...'
 # PLACES
+
 LaScierie = Place.create!(characteristic: "", address: "3 allée de l'Ile Gloriette 44000 Nantes", name:"La Scierie", status:"Places disponibles")
 file = URI.open("http://www.lesbarres.com/media/image/slideshow/a1f8f0d08556369fa82d5ce29e775387b7a713e1.jpg")
 LaScierie.photo.attach(io: file, filename: "LaScierie.png", content_type: "image/png")
@@ -113,7 +114,6 @@ lab = Place.create!(characteristic: "", address: "23 Bd de Chantenay, 44100 Nant
 file = URI.open("https://uploads.lebonbon.fr/source/2020/june/2008827/little-atlantique-brewery-nantes_2_400.jpg")
 lab.photo.attach(io: file, filename: "lab.png", content_type: "image/png")
 
-bureau = Place.create!(characteristic: "", address: "10 Quai François Mitterrand, 44000 Nantes", name:"Au Bureau
-", status:"places disponibles")
+bureau = Place.create!(characteristic: "", address: "10 Quai François Mitterrand, 44000 Nantes", name:"Au Bureau", status:"places disponibles")
 file = URI.open("https://static.actu.fr/uploads/2019/05/55557220_1846310605475174_2848458684785229824_o.jpg")
 bureau.photo.attach(io: file, filename: "bureau.png", content_type: "image/png")

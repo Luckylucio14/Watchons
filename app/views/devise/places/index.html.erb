@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<div class="cards-container">
+  <% @event.teams.each do |team|%>
+    <%=team.name%>
+  <%end%>
+    <% @places.each do |place|%>
+      <div class="card">
+      <%= place.caracteristic %>
+      <%= place.picture %>
+      <%= place.address %>
+      <%= place.name %>
+      <%= place.status %>
+    </div>
+  <% end %>
+</div>
