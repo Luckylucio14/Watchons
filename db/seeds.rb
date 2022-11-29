@@ -8,12 +8,12 @@
 require "open-uri"
 
 puts 'Cleaning database...'
-Place.destroy_all
 EventTeam.destroy_all
+EventPlace.destroy_all
 Event.destroy_all
 Team.destroy_all
+Place.destroy_all
 User.destroy_all
-EventPlace.destroy_all
 
 puts 'Creating Users...'
 # USERS
@@ -129,3 +129,25 @@ event_place7 = EventPlace.create!(event: match7, place: macbyrne)
 event_place8 = EventPlace.create!(event: match8, place: berlin)
 event_place9 = EventPlace.create!(event: match9, place: lab)
 event_place10 = EventPlace.create!(event: match10, place: bureau)
+
+event_place11 = EventPlace.create!(event: match10, place: LaScierie)
+event_place12 = EventPlace.create!(event: match9, place: Brasseurs)
+event_place13 = EventPlace.create!(event: match8, place: LeCascabel)
+event_place14 = EventPlace.create!(event: match7, place: LaBelleEquipe)
+event_place15 = EventPlace.create!(event: match6, place: Giggs)
+event_place16 = EventPlace.create!(event: match5, place: brady)
+event_place17 = EventPlace.create!(event: match4, place: macbyrne)
+event_place18 = EventPlace.create!(event: match3, place: berlin)
+event_place19 = EventPlace.create!(event: match2, place: lab)
+event_place20 = EventPlace.create!(event: match1, place: bureau)
+
+event_place21 = EventPlace.create!(event: match2, place: LaScierie)
+event_place22 = EventPlace.create!(event: match3, place: Brasseurs)
+event_place23 = EventPlace.create!(event: match4, place: LeCascabel)
+event_place24 = EventPlace.create!(event: match5, place: LaBelleEquipe)
+event_place25 = EventPlace.create!(event: match6, place: Giggs)
+event_place26 = EventPlace.create!(event: match7, place: brady)
+event_place27 = EventPlace.create!(event: match8, place: macbyrne)
+event_place28 = EventPlace.create!(event: match10, place: berlin)
+event_place29 = EventPlace.create!(event: match1, place: lab)
+event_place30 = EventPlace.create!(event: match9, place: bureau)

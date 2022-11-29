@@ -1,23 +1,27 @@
 <%# view de events %>
 
-<h1>Places</h1>
-<h1><%= @event.competition %></li></h1>
-<% @event.teams.each do |team|%>
-<%=team.name%>
-<%end%>
+<%# <h1>Places</h1> %>
+<div class="cards-container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <h1><%= @event.competition %></li></h1>
+      <% @event.teams.each do |team|%>
+      <%=team.name%>
+      <%end%>
 
-<% @event.places.each do |place|%>
-<%# <%=place.file%> %>
-<%=place.name%>
-<%=place.address%>
-<%=place.characteristic%>
-<%=place.status%>
+      <% @event.places.each do |place|%>
+      <%# <%=place.file%>
+      <%=place.name%>
+          <br>
+      <%=place.address%>
+          <br>
+      <%=place.characteristic%>
+        <br>
+      <%=place.status%>
+      <%end%>
+    </div>
+  </div>
+</div>
 
 
-
-
-
-<%end%>
-
-<br>
 <%= link_to "Retour au matchs", events_path %>
