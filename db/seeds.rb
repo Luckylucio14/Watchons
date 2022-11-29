@@ -9,8 +9,7 @@ require "open-uri"
 
 puts 'Cleaning database...'
 Place.destroy_all
-Event.destroy_all
-Match.destroy_all
+Event.destroy_al= Event.destroy_allgit 
 
 puts 'Creating Users...'
 # USERS
@@ -21,16 +20,16 @@ Anakin.photo.attach(io: )
 
 puts 'Creating Events...'
 # EVENTS
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
-match1 = Match.create!(competition:"", localisation:"", heure:"", date:"", channel:"")
+match1 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade de Lusail - Qatar", hour: "16h00", date: "09/12/2022", channel: "Being")
+match2 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade international de Khalifa - Qatar", hour: "20h00", date: "09/12/2022", channel: "TF1")
+match3 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade de Lusail - Qatar", hour: "16H00", date: "10/12/2022", channel: "Being")
+match4 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade 974 - Qatar", hour: "20H00", date: "10/12/2022", channel: "TF1")
+match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales", location: "Stade Al-Thumama - Qatar", hour: "20h00", date: "13/12/2022", channel: "Being")
+match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales", location: "Stade Al-Bayt - Qatar", hour: "20h00", date: "14/12/2022", channel: "TF1")
+match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place", location: "Stade Education City - Qatar", hour: "16h00", date: "17/12/2022", channel: "Being")
+match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "Stade Al-Bayt - Qatar", hour: "16h00", date: "18/12/2022", channel: "TF1")
+match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", hour: "15h00", date: "28/12/2022", channel: "Primevideo")
+match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", hour: "21h00", date: "28/12/2022", channel: "Primevideo")
 
 
 puts 'Creating Places...'
