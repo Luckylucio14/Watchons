@@ -75,4 +75,22 @@ event_team5 = EventTeam.create!(event: match5, team: team10)
 
 puts 'Creating Places...'
 # PLACES
+LaScierie = Place.create!(caracteristic:"" , adress:"3 allée de l'Ile Gloriette 44000 Nantes", name:"La Scierie", status:"Places disponibles")
+file = URI.open("http://www.lesbarres.com/media/image/slideshow/a1f8f0d08556369fa82d5ce29e775387b7a713e1.jpg")
+.photo.attach(io: file, filename:"LaScierie.png" content_type:"image/png")
 
+3Brasseurs = Place.create!(caracteristic:"" , adress:"Centre Commercial Carré 19 Parvis Neptune 44000 Nantes", name:"3 Brasseurs", status:"Places disponibles")
+file = URI.open("https://restaurants.3brasseurs.com/image/mobilosoft-testing?apiPath=rehab/les3brasseurs-fr/images/location/Nantes_feydeau&imageSize=h_300.jpg")
+.photo.attach(io: file, filename:"3Brasseurs.png" content_type:"image/png")
+
+LeCascabel = Place.create!(caracteristic:"" , adress:"1 Rue Kervégan 44000 Nantes", name:"Le Cascabel", status:"Places disponibles")
+file = URI.open("https://www.google.com/maps/uv?pb=!1s0x4805eea588d9a5c3%3A0x714dea4f8151dd19!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNS5uSIB_Vg6LAdM6BH96qTVFbS6QJeGaYGXI7Q%3Dw260-h175-n-k-no!5sle%20cascabel%20nantes%20-%20Buscar%20con%20Google!15sCgIgAQ&imagekey=!1e10!2sAF1QipPCmEIhZC0IewhtIpnrwRlV5ITmv1IwuErfrwwJ&hl=es&sa=X&ved=2ahUKEwi57vXewNP7AhVsTKQEHT9fCdAQ7ZgBKAB6BAgWEAI#.jpg")
+.photo.attach(io: file, filename:"LeCascabel.png" content_type:"image/png")
+
+LaBelleEquipe = Place.create!(caracteristic:"" , adress:"10 Quai de la Jonelière 44000 Nantes", name:"La belle equipe", status:"Places disponibles")
+file = URI.open("https://www.lbe-nantes.fr/i/la-belle-equipe-1877-bar-restaurant-salle-eiffel-rez-de-chausse/3/4/8/1/9/0/1/5/0/2/2/8/8/1548158245_437/5880eee8b302623787de9e0207b33df8.jpg")
+.photo.attach(io: file, filename:"LaBelleEquipe.png" content_type:"image/png")
+
+Giggs = Place.create!(caracteristic:"" , adress:"4 Pl. Saint-Pierre 44000 Nantes", name:"Gigg's", status:"Places disponibles")
+file = URI.open("https://cdn.schlouk-map.com/cache/gallery/uploads/images/places/giggs-irish-pub-625824ac437ab0.58323803.png")
+.photo.attach(io: file, filename:"LaBelleEquipe.png" content_type:"image/png")
