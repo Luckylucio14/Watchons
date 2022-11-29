@@ -13,6 +13,7 @@ EventTeam.destroy_all
 Event.destroy_all
 Team.destroy_all
 User.destroy_all
+EventPlace.destroy_all
 
 puts 'Creating Users...'
 # USERS
@@ -51,13 +52,13 @@ team9 = Team.create!(name: "Japon")
 team10 = Team.create!(name: "Ghana")
 puts 'Creating Events...'
 # EVENTS
-match1 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade de Lusail - Qatar", hour: "16h00", date: "09/12/2022", channel: "Being")
+match1 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade de Lusail - Qatar", hour: "16h00", date: "09/12/2022", channel: "Bein")
 match2 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade international de Khalifa - Qatar", hour: "20h00", date: "09/12/2022", channel: "TF1")
-match3 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade de Lusail - Qatar", hour: "16H00", date: "10/12/2022", channel: "Being")
+match3 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade de Lusail - Qatar", hour: "16H00", date: "10/12/2022", channel: "Bein")
 match4 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale", location: "Stade 974 - Qatar", hour: "20H00", date: "10/12/2022", channel: "TF1")
-match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales", location: "Stade Al-Thumama - Qatar", hour: "20h00", date: "13/12/2022", channel: "Being")
+match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales", location: "Stade Al-Thumama - Qatar", hour: "20h00", date: "13/12/2022", channel: "Bein")
 match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales", location: "Stade Al-Bayt - Qatar", hour: "20h00", date: "14/12/2022", channel: "TF1")
-match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place", location: "Stade Education City - Qatar", hour: "16h00", date: "17/12/2022", channel: "Being")
+match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place", location: "Stade Education City - Qatar", hour: "16h00", date: "17/12/2022", channel: "Bein")
 match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "Stade Al-Bayt - Qatar", hour: "16h00", date: "18/12/2022", channel: "TF1")
 match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", hour: "15h00", date: "28/12/2022", channel: "Primevideo")
 match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", hour: "21h00", date: "28/12/2022", channel: "Primevideo")
@@ -117,3 +118,14 @@ bureau = Place.create!(caracteristic: "", address: "10 Quai François Mitterrand
 ", status:"places disponibles")
 file = URI.open("https://static.actu.fr/uploads/2019/05/55557220_1846310605475174_2848458684785229824_o.jpg")
 bureau.photo.attach(io: file, filename: "bureau.png", content_type: "image/png")
+
+event_place1 = EventPlace.create!(event: match1, place: LaScierie)
+event_place2 = EventPlace.create!(event: match2, place: Brasseurs)
+event_place3 = EventPlace.create!(event: match3, place: LeCascabel)
+event_place4 = EventPlace.create!(event: match4, place: LaBelleEquipe)
+event_place5 = EventPlace.create!(event: match5, place: Giggs)
+event_place6 = EventPlace.create!(event: match6, place: brady)
+event_place7 = EventPlace.create!(event: match7, place: macbyrne)
+event_place8 = EventPlace.create!(event: match8, place: berlin)
+event_place9 = EventPlace.create!(event: match9, place: lab)
+event_place10 = EventPlace.create!(event: match10, place: bureau)
