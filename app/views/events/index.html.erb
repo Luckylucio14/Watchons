@@ -1,18 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <div class="cards-container">
-  <% @events.each do |event|%>
-    <div class="card">
-    <%# <% event.teams.each do |team| %>
-        <%# <%=team.name%>
-    <%# <% end %>
-    <li><%= event.competition %></li>
-    <li><%= event.location %></li>
-    <li><%= event.hour %></li>
-    <li><%= event.date %></li>
-    <li><%= event.channel %></li>
+  <div class="row">
+    <div class="col-12 col-s-6">
+      <% @events.each do |event|%>
+        <%= link_to  event_path(event) do %>
+        <div class="card">
+        <% event.teams.each do |team| %>
+            <h2><%=team.name %></h2>
+            <% end %>
+        <h4><%= event.competition %></h4>
+        <br>
+        <h4><%= event.location %></h4>
+        <br>
+        <h5><%= event.hour %></h5>
+        <br>
+        <%= event.date %>
+        <br>
+        <p><%= event.channel %></p>
+        </div>
+        <% end %>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
-
-</ul>
