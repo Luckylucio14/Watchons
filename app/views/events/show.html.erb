@@ -4,21 +4,32 @@
 <div class="cards-container">
   <div class="row">
     <div class="col-12 col-lg-6">
-      <h1><%= @event.competition %></li></h1>
-      <% @event.teams.each do |team|%>
-      <%=team.name%>
-      <%end%>
-
-      <% @event.places.each do |place|%>
-      <%# <%=place.file%>
-      <%=place.name%>
-          <br>
-      <%=place.address%>
-          <br>
-      <%=place.characteristic%>
-        <br>
-      <%=place.status%>
-      <%end%>
+    <%# div competition %>
+      <div class="competition">
+        <h1><%= @event.competition %></li></h1>
+      </div>
+      <%# div teams %>
+        <div class="team">
+          <% @event.teams.each do |team|%>
+          
+          <%=cl_image_tag team.photo.key, class: "picture", crop: :fill %>
+          <%=team.name%>
+          <%end%>
+        </div>
+        <%# div places %>
+            <div class="place">
+              <% @event.places.each do |place|%>
+              <%=cl_image_tag place.photo.key, class: "picture", crop: :fill %>
+              <br>
+              <%=place.name%>
+                  <br>
+              <%=place.address%>
+                  <br>
+              <%=place.characteristic%>
+                <br>
+              <%=place.status%>
+              <%end%>
+            </div>
     </div>
   </div>
 </div>
