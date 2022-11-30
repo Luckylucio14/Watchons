@@ -45,7 +45,7 @@ team1 = Team.create!(name: "France")
 file = URI.open("https://lfpl.fff.fr/wp-content/uploads/sites/20/2018/07/37218423_2230689070305145_6841979023896084480_n-3.png")
 team1.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
-team2 = Team.create!(name: "Brasil")
+team2 = Team.create!(name: "Bresil")
 file = URI.open("https://conteudo.cbf.com.br/cdn/imagens/escudos_selecoes_sn/brasil_principal_masculina.png")
 team2.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
@@ -82,14 +82,14 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/42/Football_G
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 puts 'Creating Events...'
 # EVENTS
-match1 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 09/12/2022 - 16h00 ", location: "Stade de Lusail - Qatar", hour: "16h00", date: Date.new(2022,12,9), channel: "Bein")
-match2 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 09/12/2022 - 20h00 ", location: "Stade international de Khalifa - Qatar", hour: "20h00", date: Date.new(2022,12,9), channel: "TF1")
-match3 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 10/12/2022 - 16h00 ", location: "Stade de Lusail - Qatar", hour: "16H00", date: Date.new(2022,12,10), channel: "Bein")
-match4 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 10/12/2022 - 20h00", location: "Stade 974 - Qatar", hour: "20H00", date: Date.new(2022,12,10), channel: "TF1")
-match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales - 13/12/2022 - 20h00 ", location: "Stade Al-Thumama - Qatar", hour: "20h00", date: Date.new(2022,12,13), channel: "Bein")
-match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales - 14/12/2022 - 20h00", location: "Stade Al-Bayt - Qatar", hour: "20h00", date: Date.new(2022,12,14), channel: "TF1")
-match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place - 17/12/2022 - 16h00 ", location: "Stade Education City - Qatar", hour: "16h00", date: Date.new(2022,12,17), channel: "Bein")
-match8 = Event.create!(competition: "Coupe du monde 2022 - Finale - 18/12/2022 - 16h00 ", location: "Stade Al-Bayt - Qatar", hour: "16h00", date: Date.new(2022,12,18), channel: "TF1")
+match1 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - ", date: Date.new(2022,12,9), channel: "Bein")
+match2 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade international de Khalifa - Qatar", hour: "20h00", date: Date.new(2022,12,9), channel: "TF1")
+match3 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - Qatar", hour: "16H00", date: Date.new(2022,12,10), channel: "Bein")
+match4 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade 974 - Qatar", hour: "20H00", date: Date.new(2022,12,10), channel: "TF1")
+match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Thumama - Qatar", hour: "20h00", date: Date.new(2022,12,13), channel: "Bein")
+match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Bayt - Qatar", hour: "20h00", date: Date.new(2022,12,14), channel: "TF1")
+match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place", location: "Stade Education City - Qatar", hour: "16h00", date: Date.new(2022,12,17), channel: "Bein")
+match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "Stade Al-Bayt - Qatar", hour: "16h00", date: Date.new(2022,12,18), channel: "TF1")
 match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", hour: "15h00", date: Date.new(2022,12,28), channel: "Primevideo")
 match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", hour: "21h00", date: Date.new(2022,12,28), channel: "Primevideo")
 
