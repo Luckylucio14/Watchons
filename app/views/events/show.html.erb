@@ -11,15 +11,15 @@
       <%# div teams %>
         <div class="team">
           <% @event.teams.each do |team|%>
-          
-          <%=cl_image_tag team.photo.key, class: "picture", crop: :fill %>
+
+          <%=cl_image_tag team.photo.key, class: "picture", crop: :fill, width: 200 %>
           <%=team.name%>
           <%end%>
         </div>
         <%# div places %>
             <div class="place">
               <% @event.places.each do |place|%>
-              <%=cl_image_tag place.photo.key, class: "picture", crop: :fill %>
+              <%=cl_image_tag place.photo.key, class: "picture", crop: :fill, width: 200 %>
               <br>
               <%=place.name%>
                   <br>
