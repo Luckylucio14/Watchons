@@ -7,19 +7,21 @@
     <%# div competition %>
       <div class="competition">
         <h1><%= @event.competition %></li></h1>
+        <p><%= @event.date %></p>
       </div>
       <%# div teams %>
         <div class="team">
           <% @event.teams.each do |team|%>
 
+
           <%=cl_image_tag team.photo.key, class: "picture", crop: :fill %>
-          <%=team.name%>
+          <h3><%=team.name%></h3><h3>VS</h3>
           <%end%>
         </div>
         <%# div places %>
             <div class="place">
               <% @event.places.each do |place|%>
-              <%=cl_image_tag place.photo.key, class: "picture", crop: :fill %>
+              <%=cl_image_tag place.photo.key, class: "picture", crop: :fill, width: 200 %>
               <br>
               <%=place.name%>
                   <br>
@@ -28,6 +30,9 @@
               <%=place.characteristic%>
                 <br>
               <%=place.status%>
+
+              <%= link_to "Voir le bar", place_path(place) %>
+
               <%end%>
             </div>
     </div>
@@ -36,4 +41,3 @@
 
 
 <%= link_to "Retour au matchs", events_path %>
-<%= link_to "Voir le bar", events_path %>
