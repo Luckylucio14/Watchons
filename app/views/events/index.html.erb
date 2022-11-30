@@ -7,7 +7,7 @@
         <div class="card">
         <% event.teams.each do |team| %>
           <h2><%=team.name %></h2>
-            <div><%=cl_image_tag team.photo.key, class: "picture", crop: :fill, width: 200 %></div>
+            <div><%=cl_image_tag team.photo.key, class: "picture", crop: :fill, width: 50 %></div>
           <% end %>
         <h4><%= event.competition %></h4>
         <br>
