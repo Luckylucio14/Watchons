@@ -81,16 +81,16 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/42/Football_G
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 puts 'Creating Events...'
 # EVENTS
-match1 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 09/12/2022 - 16h00 ", location: "Stade de Lusail - Qatar", hour: "16h00", date: "09/12/2022", channel: "Bein")
-match2 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 09/12/2022 - 20h00 ", location: "Stade international de Khalifa - Qatar", hour: "20h00", date: "09/12/2022", channel: "TF1")
-match3 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 10/12/2022 - 16h00 ", location: "Stade de Lusail - Qatar", hour: "16H00", date: "10/12/2022", channel: "Bein")
-match4 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 10/12/2022 - 20h00", location: "Stade 974 - Qatar", hour: "20H00", date: "10/12/2022", channel: "TF1")
-match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales - 13/12/2022 - 20h00 ", location: "Stade Al-Thumama - Qatar", hour: "20h00", date: "13/12/2022", channel: "Bein")
-match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales - 14/12/2022 - 20h00", location: "Stade Al-Bayt - Qatar", hour: "20h00", date: "14/12/2022", channel: "TF1")
-match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place - 17/12/2022 - 16h00 ", location: "Stade Education City - Qatar", hour: "16h00", date: "17/12/2022", channel: "Bein")
-match8 = Event.create!(competition: "Coupe du monde 2022 - Finale - 18/12/2022 - 16h00 ", location: "Stade Al-Bayt - Qatar", hour: "16h00", date: "18/12/2022", channel: "TF1")
-match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", hour: "15h00", date: "28/12/2022", channel: "Primevideo")
-match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", hour: "21h00", date: "28/12/2022", channel: "Primevideo")
+match1 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 09/12/2022 - 16h00 ", location: "Stade de Lusail - Qatar", hour: "16h00", date: Date.new(2022,12,9), channel: "Bein")
+match2 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 09/12/2022 - 20h00 ", location: "Stade international de Khalifa - Qatar", hour: "20h00", date: Date.new(2022,12,9), channel: "TF1")
+match3 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 10/12/2022 - 16h00 ", location: "Stade de Lusail - Qatar", hour: "16H00", date: Date.new(2022,12,10), channel: "Bein")
+match4 = Event.create!(competition: "Coupe du monde 2022 - Quarts de finale - 10/12/2022 - 20h00", location: "Stade 974 - Qatar", hour: "20H00", date: Date.new(2022,12,10), channel: "TF1")
+match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales - 13/12/2022 - 20h00 ", location: "Stade Al-Thumama - Qatar", hour: "20h00", date: Date.new(2022,12,13), channel: "Bein")
+match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finales - 14/12/2022 - 20h00", location: "Stade Al-Bayt - Qatar", hour: "20h00", date: Date.new(2022,12,14), channel: "TF1")
+match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place - 17/12/2022 - 16h00 ", location: "Stade Education City - Qatar", hour: "16h00", date: Date.new(2022,12,17), channel: "Bein")
+match8 = Event.create!(competition: "Coupe du monde 2022 - Finale - 18/12/2022 - 16h00 ", location: "Stade Al-Bayt - Qatar", hour: "16h00", date: Date.new(2022,12,18), channel: "TF1")
+match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", hour: "15h00", date: Date.new(2022,12,28), channel: "Primevideo")
+match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", hour: "21h00", date: Date.new(2022,12,28), channel: "Primevideo")
 
 #EVENT TEAM
 
@@ -105,16 +105,16 @@ event_team4 = EventTeam.create!(event: match4, team: team8)
 event_team5 = EventTeam.create!(event: match5, team: team9)
 event_team5 = EventTeam.create!(event: match5, team: team10)
 
-event_team6 = EventTeam.create!(event: match1, team: team2)
-event_team6 = EventTeam.create!(event: match1, team: team1)
-event_team7 = EventTeam.create!(event: match2, team: team3)
-event_team7 = EventTeam.create!(event: match2, team: team4)
-event_team8 = EventTeam.create!(event: match3, team: team5)
-event_team8 = EventTeam.create!(event: match3, team: team6)
-event_team9 = EventTeam.create!(event: match4, team: team7)
-event_team9 = EventTeam.create!(event: match4, team: team8)
-event_team10 = EventTeam.create!(event: match5, team: team9)
-event_team10 = EventTeam.create!(event: match5, team: team10)
+event_team6 = EventTeam.create!(event: match6, team: team2)
+event_team6 = EventTeam.create!(event: match6, team: team1)
+event_team7 = EventTeam.create!(event: match7, team: team3)
+event_team7 = EventTeam.create!(event: match7, team: team4)
+event_team8 = EventTeam.create!(event: match8, team: team5)
+event_team8 = EventTeam.create!(event: match8, team: team6)
+event_team9 = EventTeam.create!(event: match9, team: team7)
+event_team9 = EventTeam.create!(event: match9, team: team8)
+event_team10 = EventTeam.create!(event: match10, team: team9)
+event_team10 = EventTeam.create!(event: match10, team: team10)
 
 puts 'Creating Places...'
 # PLACES
