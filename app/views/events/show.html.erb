@@ -13,6 +13,7 @@
         <div class="team">
           <% @event.teams.each do |team|%>
 
+
           <%=cl_image_tag team.photo.key, class: "picture", crop: :fill %>
           <h3><%=team.name%></h3><h3>VS</h3>
           <%end%>
@@ -20,7 +21,7 @@
         <%# div places %>
             <div class="place">
               <% @event.places.each do |place|%>
-              <%=cl_image_tag place.photo.key, class: "picture", crop: :fill %>
+              <%=cl_image_tag place.photo.key, class: "picture", crop: :fill, width: 200 %>
               <br>
               <%=place.name%>
                   <br>
