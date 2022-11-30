@@ -1,17 +1,20 @@
 <%= render "shared/navbar"%>
 <div class="container">
+
     <%# name %>
     <div class="name">
-        <h1><%= @place.name%>💫</h1>
+        <h1><%= @place.name%></h1>
     </div>
+    
     <div class="row justify-content-center">
         <div class="col-12 col-lg-7">
         <%= cl_image_tag @place.photo.key, height: 474, width: 750,crop: :fill %>
     <div class="flexbox">
+
     <%# description%>
     <div class="description">
         <p><%=@place.characteristic %></p>
-    <div class="row justify-content-center">>
+    <div class="row justify-content-center">
     <p>J'y vais %></p>
     </div>
 
