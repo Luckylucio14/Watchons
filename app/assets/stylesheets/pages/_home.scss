@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .back_image {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(97, 97, 97)113%), url('https://acegif.com/wp-content/uploads/gif/beer-30.gif');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0)113%), url('https://acegif.com/wp-content/uploads/gif/beer-30.gif');
   // filter: contrast(90%);
   background-size: cover;
   background-position: center;
@@ -12,23 +12,42 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  position: absolute;
   width: 100%;
+  flex-direction: column;
 }
 
 .logo_homepage{
-  background-image: url("Component_homepage.png");
+  background-image: url("logo_homepage.png");
+  background-repeat:no-repeat;
+  background-position: center;
   height: 111px;
   width: 100%;
-  position: relative;
-  
+  margin-bottom: 30px;
+
 }
 
 .text_homepage{
-  color: $yellow;
-  padding: 10px;
+  color: white;
   text-align: center;
+  font-size: 30px;
+
+}
+
+.btn_homepage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255,122,0);
+  background: linear-gradient(90deg, rgba(255,122,0,1) 0%, rgba(255,139,8,1) 27%, rgba(255,200,36,1) 100%);
+  width: 322px;
+  height: 51px;
+  border-radius: 56px;
+  // padding-top: 7px;
+  margin-top: 30px;
+  a{
+    text-decoration: none;
+    color: black;
+  }
 
 }
