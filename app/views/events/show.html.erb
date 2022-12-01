@@ -5,7 +5,9 @@
 <div class="cards-container-show-events">
   <div class="row-show-events">
     <div class="col-12 col-lg-6">
-
+    <div class="logo">
+      <img src="../../images/Component 8 (2).png" alt="">
+    </div>
       <%# div competition %>
       <div class="competition-show-events">
         <%# <h1><%= @event.competition</li></h1> %>
@@ -14,17 +16,20 @@
 
       <%# div teams %>
       <div class="game-flex-container">
+      <div class="align">
         <h3 class="vs">VS</h3>
-
-        <% @event.teams.each do |team|%>
-        <div class="team d-flex align-items-center">
-          <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
-          <p><%=team.name%></p>
+          <% @event.teams.each do |team|%>
+          <div class="team d-flex align-items-center">
+            <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
+            <p><%=team.name%></p>
+          </div>
         </div>
         <%end%>
         <%# <p><%= @event.hour</p>  %>
+        <div class="hour">
+          <%= @event.hour("%H")%>
+        </div>
       </div>
-        <%= @event.hour("%H")%>
 
       <%# div places %>
       <div class="place">
@@ -39,7 +44,13 @@
               <br>
           <%# <%=place.characteristic%>
             <br>
-          <%=place.status%>
+          <%if place.status == "Places disponibles"%>
+            <i class="fa-solid fa-user"></i>
+          <% elsif place.status == "Quelques places" %>
+            <i class="fa-solid fa-users"></i>
+          <%else%>
+            <i class="fa-solid fa-user-group"></i>
+          <%end%>
 
           <%# <%= link_to "Voir le bar", place_path(place) %>
           </div>
