@@ -1,18 +1,22 @@
 class PlacesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show ]
+
   def index
     @places = Place.all
-    @markers = @flats.geocoded.map do |flat|
-      {
-        lat: flat.latitude,
-        lng: flat.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {flat: flat})
-      }
-    end
   end
-
+  
   def show
     @place = Place.find(params[:id])
+
+    @markers = 
+      [{
+        lat: @place.latitude,
+        lng: @place.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {places: @place}),
+        image_url: helpers.asset_url("https://raw.githubusercontent.com/lewagon/fullstack-images/master/logo.png ")
+      }]
+    
+
   end
 
   def update
