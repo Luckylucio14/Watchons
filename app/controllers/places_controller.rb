@@ -7,6 +7,7 @@ class PlacesController < ApplicationController
   
   def show
     @place = Place.find(params[:id])
+
     @markers = 
       [{
         lat: @place.latitude,
@@ -15,6 +16,7 @@ class PlacesController < ApplicationController
         image_url: helpers.asset_url("https://raw.githubusercontent.com/lewagon/fullstack-images/master/logo.png ")
       }]
     
+
   end
 
   def update

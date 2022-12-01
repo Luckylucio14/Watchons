@@ -42,7 +42,7 @@ chen.photo.attach(io: file, filename:"chen.png", content_type:"image/png")
 #TEAMS
 
 team1 = Team.create!(name: "France")
-file = URI.open("https://lfpl.fff.fr/wp-content/uploads/sites/20/2018/07/37218423_2230689070305145_6841979023896084480_n-3.png")
+file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/43/Logo_%C3%89quipe_France_Football_2018.svg/langfr-300px-Logo_%C3%89quipe_France_Football_2018.svg.png")
 team1.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
 team2 = Team.create!(name: "Bresil")
@@ -66,7 +66,7 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/fr/7/79/Football_Anglete
 team6.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
 team7 = Team.create!(name: "Belgique")
-file = URI.open("https://www.sportbusinessmag.com/wp-content/uploads/2018/06/Belgique.jpg")
+file = URI.open("https://files.slack.com/files-pri/T02NE0241-F04CV6PNQVD/langfr-800px-logo_f__d__ration_belge_football_2019.svg.png")
 team7.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
 team8 = Team.create!(name: "Argentine")
@@ -82,16 +82,16 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/42/Football_G
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 puts 'Creating Events...'
 # EVENTS
-match1 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - ", date: Date.new(2022,12,9), channel: "Bein")
-match2 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade international de Khalifa - Qatar", hour: "20h00", date: Date.new(2022,12,9), channel: "TF1")
-match3 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - Qatar", hour: "16H00", date: Date.new(2022,12,10), channel: "Bein")
-match4 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade 974 - Qatar", hour: "20H00", date: Date.new(2022,12,10), channel: "TF1")
-match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Thumama - Qatar", hour: "20h00", date: Date.new(2022,12,13), channel: "Bein")
-match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Bayt - Qatar", hour: "20h00", date: Date.new(2022,12,14), channel: "TF1")
-match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place", location: "Stade Education City - Qatar", hour: "16h00", date: Date.new(2022,12,17), channel: "Bein")
-match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "Stade Al-Bayt - Qatar", hour: "16h00", date: Date.new(2022,12,18), channel: "TF1")
-match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", hour: "15h00", date: Date.new(2022,12,28), channel: "Primevideo")
-match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", hour: "21h00", date: Date.new(2022,12,28), channel: "Primevideo")
+match1 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,9, 16, 0, 0), channel: "Bein")
+match2 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,9, 20, 0, 0), full_datetime: DateTime.new(2022,12,9, 20, 0, 0), channel: "TF1")
+match3 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - Qatar", full_datetime: DateTime.new(2022,12,10, 16, 0, 0), channel: "Bein")
+match4 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade 974 - Qatar", full_datetime: DateTime.new(2022,12,10, 20, 0, 0), channel: "TF1")
+match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Thumama - Qatar", full_datetime: DateTime.new(2022,12,13, 20, 0, 0), channel: "Bein")
+match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,14, 20, 0, 0), channel: "TF1")
+match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place", location: "Stade Education City - Qatar", full_datetime: DateTime.new(2022,12,17, 16, 0, 0), channel: "Bein")
+match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,18, 16, 0, 0), channel: "TF1")
+match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", full_datetime: DateTime.new(2022,12,28, 18, 0, 0), channel: "Primevideo")
+match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", full_datetime: DateTime.new(2022,12,28, 21, 0, 0), channel: "Primevideo")
 
 #EVENT TEAM
 
