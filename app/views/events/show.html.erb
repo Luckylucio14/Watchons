@@ -1,38 +1,44 @@
 <%# view de events %>
 
 <%# <h1>Places</h1> %>
-<div class="cards-container">
-  <div class="row">
+<%# <%= render "shared/navbar" %>
+<div class="cards-container-show-events">
+  <div class="row-show-events">
     <div class="col-12 col-lg-6">
     <%# div competition %>
-      <div class="competition">
-        <h1><%= @event.competition %></li></h1>
-        <p><%= @event.date.strftime %></p>
+      <div class="competition-show-events">
+        <%# <h1><%= @event.competition</li></h1> %>
+        <%# <p><%= @event.date.strftime("%d/%m/%Y")</p> %>
       </div>
       <%# div teams %>
-        <div class="team">
+        <div class="flex-container">
+        
+        <h3 class="vs">VS</h3>
           <% @event.teams.each do |team|%>
 
 
-          <%=cl_image_tag team.photo.key, class: "picture", crop: :fill %>
-          <h3><%=team.name%></h3><h3>VS</h3>
+          <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
+          <h3><%=team.name%></h3>
+
           <%end%>
+
         </div>
         <%# div places %>
             <div class="place">
               <% @event.places.each do |place|%>
-              <%=cl_image_tag place.photo.key, class: "picture", crop: :fill, width: 200 %>
-              <br>
-              <%=place.name%>
-                  <br>
-              <%=place.address%>
-                  <br>
-              <%=place.characteristic%>
+                <%= link_to  place_path(place) do %>
+                <%=cl_image_tag place.photo.key, class: "picture-show-events", width: 200 %>
                 <br>
-              <%=place.status%>
+                <%=place.name%>
+                    <br>
+                <%=place.address%>
+                    <br>
+                <%# <%=place.characteristic%>
+                  <br>
+                <%=place.status%>
 
-              <%= link_to "Voir le bar", place_path(place) %>
-
+                <%# <%= link_to "Voir le bar", place_path(place) %>
+                <%end%>
               <%end%>
             </div>
     </div>
@@ -40,4 +46,5 @@
 </div>
 
 
-<%= link_to "Retour au matchs", events_path %>
+<%# <%= link_to "Retour au matchs", events_path %>
+<%= render "shared/navbar" %>
