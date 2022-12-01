@@ -19,7 +19,7 @@
 
               </div>
               <div class="versus">
-                <img class="size_versus" src="../assets/images/vs.png" alt="">
+                <%=image_tag("vs.png")%>
               </div>
               <div class="team_last">
                 <%=cl_image_tag event.teams.last.photo.key, class: "picture", crop: :fill, width: 50 %>
@@ -30,7 +30,7 @@
 
             <div class="channel">
               <p><%= event.channel %></p>
-              <img src="../assets/images/TF1_logo.jpg" alt="">
+              <%=image_tag("TF1_logo.jpg")%>
             </div>
           </div>
         </div>
