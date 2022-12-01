@@ -4,11 +4,11 @@ class Event < ApplicationRecord
   has_many :event_teams
   has_many :teams, through: :event_teams
 
-  def hour
-    date.strftime("H%:%M")
+  def hour(hour)
+    full_datetime.strftime("%H:%M")
   end
 
   def date
-    date.strftime("d%/%m/%Y")
+    full_datetime.strftime("%d/%m/%Y")
   end
 end

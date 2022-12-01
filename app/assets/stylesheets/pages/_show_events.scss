@@ -2,15 +2,54 @@ body {
   background-color: rgb(44, 44, 44);
 }
 
+.game-flex-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(44, 44, 44);
+  border-radius: 5px;
+  font-size: 10px;
+  margin-top: 70px;
+  height: 60px;
+  position: relative;
+  color: whitesmoke;
+
+  .vs {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-weight: 1200px;
+    color: whitesmoke;
+  }
+  .team p {
+    margin: 0;
+    margin-left: 1rem;
+  }
+}
+
+.place {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(44, 44, 44);
+  margin: 10px;
+}
+
+.card{
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.picture-team-events {
+  width: 20px;
+  height: 20px;
+}
+
 .flex-container {
   display: flex;
   justify-content: space-between;
 }
 
-.h3{
-
-}
-.picture-team-events{
-  width: 30px;
-  height: 30px;
+.picture-show-events{
+  width: 100%;
 }

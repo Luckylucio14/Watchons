@@ -5,42 +5,47 @@
 <div class="cards-container-show-events">
   <div class="row-show-events">
     <div class="col-12 col-lg-6">
-    <%# div competition %>
+
+      <%# div competition %>
       <div class="competition-show-events">
         <%# <h1><%= @event.competition</li></h1> %>
         <%# <p><%= @event.date.strftime("%d/%m/%Y")</p> %>
       </div>
+
       <%# div teams %>
-        <div class="flex-container">
-        
+      <div class="game-flex-container">
         <h3 class="vs">VS</h3>
-          <% @event.teams.each do |team|%>
 
-
+        <% @event.teams.each do |team|%>
+        <div class="team d-flex align-items-center">
           <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
-          <h3><%=team.name%></h3>
-
-          <%end%>
-
+          <p><%=team.name%></p>
         </div>
-        <%# div places %>
-            <div class="place">
-              <% @event.places.each do |place|%>
-                <%= link_to  place_path(place) do %>
-                <%=cl_image_tag place.photo.key, class: "picture-show-events", width: 200 %>
-                <br>
-                <%=place.name%>
-                    <br>
-                <%=place.address%>
-                    <br>
-                <%# <%=place.characteristic%>
-                  <br>
-                <%=place.status%>
+        <%end%>
+        <%# <p><%= @event.hour</p>  %>
+      </div>
+        <%= @event.hour("%H")%>
 
-                <%# <%= link_to "Voir le bar", place_path(place) %>
-                <%end%>
-              <%end%>
-            </div>
+      <%# div places %>
+      <div class="place">
+        <% @event.places.each do |place|%>
+          <%= link_to  place_path(place) do %>
+          <div class="card">
+          <%=cl_image_tag place.photo.key, class: "picture-show-events", width: 200 %>
+          <br>
+          <%=place.name%>
+              <br>
+          <%=place.address%>
+              <br>
+          <%# <%=place.characteristic%>
+            <br>
+          <%=place.status%>
+
+          <%# <%= link_to "Voir le bar", place_path(place) %>
+          </div>
+          <%end%>
+        <%end%>
+      </div>
     </div>
   </div>
 </div>
