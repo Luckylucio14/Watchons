@@ -17,11 +17,12 @@ body {
 
   .vs {
     position: absolute;
-    left: 52%;
+    left: 50%;
     top: 30px;
     transform: translate(-50%, -50%);
     margin: 0;
-    font-weight:lighter
+    font-weight:bold;
+    font-weight: 900;
 
 
 
@@ -30,7 +31,7 @@ body {
   .team p {
     margin: 0;
     margin-left: 1rem;
-    font-size: 30px;
+    font-size: 10px;
     color: whitesmoke;
     border-color: white;
 
@@ -45,8 +46,8 @@ body {
 }
 
 .card{
-  margin-right: 80px;
-  margin-left: 80px;
+  margin-right: 20px;
+  margin-left: 20px;
   border-radius: 8px;
   padding-bottom: 20px;
   margin-bottom: 40px;
@@ -75,7 +76,7 @@ body {
 .hour{
 
   color: whitesmoke;
-  margin-top: 0px;
+  margin-top: -20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -83,14 +84,15 @@ body {
   text-align: initial;
   .tf1{
     top: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     margin-right: 10px;
     margin-top: 7px;
+    margin-left: -17px;
   }
 
   .hora{
-    margin-top: 21px;
-    font-size: 22px;
+    margin-top: 24px;
+    font-size: 12px;
   }
 
 }
@@ -98,7 +100,7 @@ body {
 .png{
   text-align: center;
   margin-top: 20px;
-  padding-left: 23px;
+  padding-left: 0px;
 
 }
 
@@ -107,7 +109,7 @@ body {
   text-decoration: none;
   font-weight: bolder;
   margin-top: 20px;
-  margin-left: 35px;
+  margin-left: 20px;
   font-size: large;
 }
 
@@ -115,12 +117,20 @@ body {
 text-align: right;
 margin-right: 20px;
 color: green;
+
+.fa-solid{
+  color: green;
+}
 }
 
 .encore {
   text-align: right;
   margin-right: 20px;
   color: orange;
+
+  .fa-solid{
+    color: orange;
+  }
   }
 
 .plein {
