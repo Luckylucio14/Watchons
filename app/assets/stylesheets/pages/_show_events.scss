@@ -15,16 +15,17 @@ body {
 
   .vs {
     position: absolute;
-    left: 50%;
+    left: 52%;
     top: 30px;
     transform: translate(-50%, -50%);
     margin: 0;
-    font-weight: 1200px;
+    font-weight: 900;
     color: whitesmoke;
   }
   .team p {
     margin: 0;
     margin-left: 1rem;
+    font-size: 15px;
   }
 }
 
@@ -37,12 +38,11 @@ body {
 
 .card{
   margin: 5px;
-  border-radius: 10px;
 }
 
 .picture-team-events {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .flex-container {
@@ -52,4 +52,16 @@ body {
 
 .picture-show-events{
   width: 100%;
+}
+
+.align{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hour{
+  justify-content: center;
+  color: whitesmoke;
+  text-align: center;
+  
 }
