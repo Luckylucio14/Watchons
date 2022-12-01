@@ -42,7 +42,7 @@ chen.photo.attach(io: file, filename:"chen.png", content_type:"image/png")
 #TEAMS
 
 team1 = Team.create!(name: "France")
-file = URI.open("https://lfpl.fff.fr/wp-content/uploads/sites/20/2018/07/37218423_2230689070305145_6841979023896084480_n-3.png")
+file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/43/Logo_%C3%89quipe_France_Football_2018.svg/langfr-300px-Logo_%C3%89quipe_France_Football_2018.svg.png")
 team1.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
 team2 = Team.create!(name: "Bresil")
@@ -66,7 +66,7 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/fr/7/79/Football_Anglete
 team6.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
 team7 = Team.create!(name: "Belgique")
-file = URI.open("https://www.sportbusinessmag.com/wp-content/uploads/2018/06/Belgique.jpg")
+file = URI.open("https://files.slack.com/files-pri/T02NE0241-F04CV6PNQVD/langfr-800px-logo_f__d__ration_belge_football_2019.svg.png")
 team7.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
 team8 = Team.create!(name: "Argentine")
@@ -82,16 +82,16 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/42/Football_G
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 puts 'Creating Events...'
 # EVENTS
-match1 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - ", date: Date.new(2022,12,9), channel: "Bein")
-match2 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade international de Khalifa - Qatar", hour: "20h00", date: Date.new(2022,12,9), channel: "TF1")
-match3 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - Qatar", hour: "16H00", date: Date.new(2022,12,10), channel: "Bein")
-match4 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade 974 - Qatar", hour: "20H00", date: Date.new(2022,12,10), channel: "TF1")
-match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Thumama - Qatar", hour: "20h00", date: Date.new(2022,12,13), channel: "Bein")
-match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Bayt - Qatar", hour: "20h00", date: Date.new(2022,12,14), channel: "TF1")
-match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place", location: "Stade Education City - Qatar", hour: "16h00", date: Date.new(2022,12,17), channel: "Bein")
-match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "Stade Al-Bayt - Qatar", hour: "16h00", date: Date.new(2022,12,18), channel: "TF1")
-match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", hour: "15h00", date: Date.new(2022,12,28), channel: "Primevideo")
-match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", hour: "21h00", date: Date.new(2022,12,28), channel: "Primevideo")
+match1 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,9, 16, 0, 0), channel: "Bein")
+match2 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,9, 20, 0, 0), full_datetime: DateTime.new(2022,12,9, 20, 0, 0), channel: "TF1")
+match3 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - Qatar", full_datetime: DateTime.new(2022,12,10, 16, 0, 0), channel: "Bein")
+match4 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade 974 - Qatar", full_datetime: DateTime.new(2022,12,10, 20, 0, 0), channel: "TF1")
+match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Thumama - Qatar", full_datetime: DateTime.new(2022,12,13, 20, 0, 0), channel: "Bein")
+match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,14, 20, 0, 0), channel: "TF1")
+match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place", location: "Stade Education City - Qatar", full_datetime: DateTime.new(2022,12,17, 16, 0, 0), channel: "Bein")
+match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,18, 16, 0, 0), channel: "TF1")
+match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", full_datetime: DateTime.new(2022,12,28, 18, 0, 0), channel: "Primevideo")
+match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", full_datetime: DateTime.new(2022,12,28, 21, 0, 0), channel: "Primevideo")
 
 #EVENT TEAM
 
@@ -128,11 +128,11 @@ Brasseurs = Place.create!(characteristic: "Une cuisine authentique dans l'esprit
 file = URI.open("https://www.radiofrance.fr/s3/cruiser-production/2017/08/ac545240-6ac1-41d6-accd-6193e6b50caa/870x489_dsc_7037.jpg")
 Brasseurs.photo.attach(io: file, filename: "Brasseurs.png", content_type: "image/png")
 
-LeCascabel = Place.create!(characteristic: "Une belle cascade de joie vous y attend", address: "1 Rue Kervégan 44000 Nantes", name:"Le Cascabel", status:"Places disponibles")
+LeCascabel = Place.create!(characteristic: "Une belle cascade de joie vous y attend", address: "1 Rue Kervégan 44000 Nantes", name:"Le Cascabel", status:"Complet")
 file = URI.open("https://www.google.com/maps/uv?pb=!1s0x4805eea588d9a5c3%3A0x714dea4f8151dd19!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNS5uSIB_Vg6LAdM6BH96qTVFbS6QJeGaYGXI7Q%3Dw260-h175-n-k-no!5sle%20cascabel%20nantes%20-%20Buscar%20con%20Google!15sCgIgAQ&imagekey=!1e10!2sAF1QipPCmEIhZC0IewhtIpnrwRlV5ITmv1IwuErfrwwJ&hl=es&sa=X&ved=2ahUKEwi57vXewNP7AhVsTKQEHT9fCdAQ7ZgBKAB6BAgWEAI#.jpg")
 LeCascabel.photo.attach(io: file, filename: "LeCascabel.png", content_type: "image/png")
 
-LaBelleEquipe = Place.create!(characteristic: "L'esprit d'équipe que l'on perde ou que l'on gagne",  address: "10 Quai de la Jonelière 44000 Nantes", name:"La belle equipe", status:"Places disponibles")
+LaBelleEquipe = Place.create!(characteristic: "L'esprit d'équipe que l'on perde ou que l'on gagne",  address: "10 Quai de la Jonelière 44000 Nantes", name:"La belle equipe", status:"Complet")
 file = URI.open("https://www.lbe-nantes.fr/i/la-belle-equipe-1877-bar-restaurant-salle-eiffel-rez-de-chausse/3/4/8/1/9/0/1/5/0/2/2/8/8/1548158245_437/5880eee8b302623787de9e0207b33df8.jpg")
 LaBelleEquipe.photo.attach(io: file, filename: "LaBelleEquipe.png", content_type: "image/png")
 
@@ -140,11 +140,11 @@ Giggs = Place.create!(characteristic: "Un match ne se joue pas que sur la pelous
 file = URI.open("https://cdn.schlouk-map.com/cache/gallery/uploads/images/places/giggs-irish-pub-625824ac437ab0.58323803.png")
 Giggs.photo.attach(io: file, filename: "LaBelleEquipe.png", content_type: "image/png")
 
-brady = Place.create!(characteristic: "Près du lieu unique, l'ambiance irlandaise à porter de chope", address: "22 Allée Commandant Charcot, 44000 Nantes", name:"Brady's", status:"places disponibles")
+brady = Place.create!(characteristic: "Près du lieu unique, l'ambiance irlandaise à porter de chope", address: "22 Allée Commandant Charcot, 44000 Nantes", name:"Brady's", status:"Quelques places")
 file = URI.open("https://cdn.schlouk-map.com/cache/gallery/uploads/images/places/bradys-62582df31d8dd1.32689537.png")
 brady.photo.attach(io: file, filename: "brady.png", content_type: "image/png")
 
-macbyrne = Place.create!(characteristic: "Il n'y a pas qu'en irlande qu'on sait savourer un moment de partage autour d'une pinte", address: "21 Rue des Petites Écuries, 44000 Nantes", name:"John McByrne", status:"places disponibles")
+macbyrne = Place.create!(characteristic: "Il n'y a pas qu'en irlande qu'on sait savourer un moment de partage autour d'une pinte", address: "21 Rue des Petites Écuries, 44000 Nantes", name:"John McByrne", status:"Quelques places")
 file = URI.open("https://fastly.4sqi.net/img/general/200x200/11116385_IN7iNR-dN1fQVnDLeOr-HautP4K0lpUP0E5rxduaGGY.jpg")
 macbyrne.photo.attach(io: file, filename: "macbyrne.png", content_type: "image/png")
 
@@ -152,11 +152,11 @@ berlin = Place.create!(characteristic: "Lieu de rencontre et de partage reconnu 
 file = URI.open("https://mvistatic.com/etablissements/2018-05/16163_crop_640-270_.jpg")
 berlin.photo.attach(io: file, filename: "berlin.png", content_type: "image/png")
 
-lab = Place.create!(characteristic: "En navibus, voiture, vélo, à pieds ou à cheval, tous les chemin mène au LAB", address: "23 Bd de Chantenay, 44100 Nantes", name:"Little Atlantique Brewery", status:"places disponibles")
+lab = Place.create!(characteristic: "En navibus, voiture, vélo, à pieds ou à cheval, tous les chemin mène au LAB", address: "23 Bd de Chantenay, 44100 Nantes", name:"Little Atlantique Brewery", status:"Complet")
 file = URI.open("https://uploads.lebonbon.fr/source/2020/june/2008827/little-atlantique-brewery-nantes_2_400.jpg")
 lab.photo.attach(io: file, filename: "lab.png", content_type: "image/png")
 
-bureau = Place.create!(characteristic: "Quoi de mieux que de se retrouver au bureau après une journée de travail ?", address: "10 Quai François Mitterrand, 44000 Nantes", name:"Au Bureau", status:"places disponibles")
+bureau = Place.create!(characteristic: "Quoi de mieux que de se retrouver au bureau après une journée de travail ?", address: "10 Quai François Mitterrand, 44000 Nantes", name:"Au Bureau", status:"Quelques places")
 file = URI.open("https://static.actu.fr/uploads/2019/05/55557220_1846310605475174_2848458684785229824_o.jpg")
 bureau.photo.attach(io: file, filename: "bureau.png", content_type: "image/png")
 
