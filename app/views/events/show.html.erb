@@ -39,7 +39,13 @@
               <br>
           <%# <%=place.characteristic%>
             <br>
-          <%=place.status%>
+          <%if place.status == "Places disponibles"%>
+            <i class="fa-solid fa-user"></i>
+          <% elsif place.status == "Quelques places" %>
+            <i class="fa-solid fa-users"></i>
+          <%else%>
+            <i class="fa-solid fa-user-group"></i>
+          <%end%>
 
           <%# <%= link_to "Voir le bar", place_path(place) %>
           </div>
