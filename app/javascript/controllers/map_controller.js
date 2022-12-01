@@ -28,7 +28,7 @@ export default class extends Controller {
       new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(this.map)
-      })
+      
 
       // Create a HTML element for your custom marker
       const customMarker = document.createElement("div")
@@ -43,6 +43,7 @@ export default class extends Controller {
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
         .addTo(this.map)
+      })
     }
 
   fitMapToMarkers() {
