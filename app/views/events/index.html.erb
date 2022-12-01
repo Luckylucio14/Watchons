@@ -1,22 +1,40 @@
+<%# <div class="picture" src="/home/maggle/code/Maggle974/Luc/Watchons/app/assets/images/navbar_avec_separation.png"></div> %>
 <%= render "shared/navbar" %>
-<div class="cards-container">
-  <div class="row">
-    <div class="col-12 col-s-6">
-      <% @events.each do |event|%>
-        <%= link_to  event_path(event) do %>
-        <div class="card">
-        <% event.teams.each do |team| %>
-          <h2><%=team.name %></h2>
-            <div><%=cl_image_tag team.photo.key, class: "picture", crop: :fill, width: 50 %></div>
-          <% end %>
-        <h4><%= event.competition %></h4>
-        <br>
-        <h4><%= event.location %></h4>
-        <br>
-        <p><%= event.channel %></p>
-        </div>
-        <% end %>
-      <% end %>
+
+<div class="main_index_container">
+  <div class="index_container">
+    <div class="day">
     </div>
+    <% @events.each do |event|%>
+      <%= link_to event_path(event) do %>
+        <div class="match_index_card">
+          <div class="event">
+            <h4 class="event_competition_type"><%= event.competition %></h4>
+          </div>
+          <div class="next_event">
+            <div class="contest">
+              <div class="team_first">
+                <%=cl_image_tag event.teams.first.photo.key, class: "picture", crop: :fill, width: 50 %>
+                <h2><%=event.teams.first.name %></h2>
+
+              </div>
+              <div class="versus">
+                <img class="size_versus" src="../assets/images/vs.png" alt="">
+              </div>
+              <div class="team_last">
+                <%=cl_image_tag event.teams.last.photo.key, class: "picture", crop: :fill, width: 50 %>
+                <h2><%=event.teams.last.name %></h2>
+
+              </div>
+            </div>
+
+            <div class="channel">
+              <p><%= event.channel %></p>
+              <img src="../assets/images/TF1_logo.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
