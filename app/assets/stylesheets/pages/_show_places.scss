@@ -1,13 +1,31 @@
-.map{
-    border-radius: 45px;
-    display: flex;
-    ;
+.place_show_container {
+  height: 100vh;
+
+  .name {
+  color: azure;
+  }
+
+  .sentence{
+  color: azure;
+  }
 }
 
-.name {
-color: azure;
-}
 
-.sentence{
-color: azure;
+.btn_show{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255,122,0);
+  background: linear-gradient(90deg, rgba(255,122,0,1) 0%, rgba(255,139,8,1) 27%, rgba(255,200,36,1) 100%);
+  width: 322px;
+  height: 51px;
+  border-radius: 56px;
+  position: relative;
+  bottom: 24px;
+  left: 33px;
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
 }

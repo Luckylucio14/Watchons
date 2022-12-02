@@ -4,18 +4,18 @@ class PlacesController < ApplicationController
   def index
     @places = Place.all
   end
-  
+
   def show
     @place = Place.find(params[:id])
 
-    @markers = 
+    @markers =
       [{
         lat: @place.latitude,
         lng: @place.longitude,
         info_window: render_to_string(partial: "info_window", locals: {places: @place}),
-        image_url: helpers.asset_url("https://raw.githubusercontent.com/lewagon/fullstack-images/master/logo.png ")
+        image_url: helpers.asset_url("brazil.png")
       }]
-    
+
 
   end
 
