@@ -1,76 +1,75 @@
 <%# view de events %>
 
 <%# <h1>Places</h1> %>
-<%# <%= render "shared/navbar" %>
 <div class="cards-container-show-events">
   <div class="row-show-events">
     <div class="col-12 col-lg-6">
-    <div class="logo">
-      <div class="png"><%= image_tag "Component 8 (2).png",height:60, width: 80%></div>
-    </div>
+      <div class="logo">
+        <i class="fa-solid fa-backward icon-back"></i>
+        <%= image_tag "Component 8 (2).png", class:"png"%>
+      </div>
+
       <%# div competition %>
       <div class="competition-show-events">
         <%# <h1><%= @event.competition</li></h1> %>
         <%# <p><%= @event.date.strftime("%d/%m/%Y")</p> %>
       </div>
 
-      <%# div teams %>
+      <%# teams %>
       <div class="game-flex-container">
-      <div class="align">
-        <h3 class="vs">VS</h3>
+        <div class="align">
+          <h3 class="vs">VS</h3>
           <% @event.teams.each do |team|%>
-          <div class="team d-flex align-items-center">
-            <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
-            <p><%=team.name%></p>
-          </div>
+            <div class="team d-flex align-items-center">
+              <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
+              <p><%=team.name%></p>
+            </div>
+          <%end%>
         </div>
-        <%end%>
-        <%# <p><%= @event.hour</p>  %>
+
+        <%# Hour %>
         <div class="hour">
-          <div class="png"><%= image_tag "TF1.jpeg",height:10, width: 40,class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+          <div class="png"><%= image_tag "TF1.jpeg",height:10,class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
         </div>
       </div>
 
-      <%# div places %>
+      <%# places %>
       <div class="place">
         <% @event.places.each do |place|%>
           <%= link_to  place_path(place),class: "lien" do %>
-          <div class="div card">
-            <div class="card-photo">
-              <%=cl_image_tag place.photo.key, class: "picture-show-events", width: 200 %>
-            </div>
-              <div class="description">
-              <div class="description-name">
-                <%=place.name%>
-
-                    <br>
-                <%=place.address%>
-                </div>
-                <%# <%=place.characteristic%>
-                  <div class="dispo">
-                    <%if place.status == "Places disponibles"%>
-                      <i class="fa-solid fa-user"></i>
-                  </div>
-                    <div class= "encore">
-                      <% elsif place.status == "Quelques places" %>
-                        <i class="fa-solid fa-users"></i>
-                      </div>
-                      <div class="plein">
-                    <%else%>
-                      <i id="red" class="fa-solid fa-screen-users"></i>
-                    <%end%>
-                      </div>
+            <div class=" bar-card">
+              <div class="card-photo">
+                <%=cl_image_tag place.photo.key, class: "picture-show-events", width: 200 %>
               </div>
-          </div>
+              <div class="description">
+                <div class="description-name">
+                  <%=place.name%>
+                      <br>
+                  <%=place.address%>
+                </div>
 
-          <%# <%= link_to "Voir le bar", place_path(place) %>
+                <%# <%=place.characteristic%>
+                <%if place.status == "Places disponibles"%>
+                  <div class="dispo">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                <% elsif place.status == "Quelques places" %>
+                  <div class= "encore">
+                    <i class="fa-solid fa-user-group"></i>
+                  </div>
+                <%else%>
+                  <div class="plein">
+                    <i class="fa-solid fa-users"></i>
+                  </div>
+                <%end%>
+              </div>
+            </div>
           <%end%>
         <%end%>
       </div>
     </div>
   </div>
 </div>
-
 
 <%# <%= link_to "Retour au matchs", events_path %>
 <%= render "shared/navbar" %>
