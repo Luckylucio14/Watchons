@@ -9,14 +9,14 @@
 
     <div class="game-flex-container">
         <div class="align">
-        <h3 class="vs">VS</h3>
-            <% @event.teams.each do |team|%>
-                <div class="team d-flex align-items-center">
+            <h3 class="vs">VS</h3>
+            <%# <% @event.teams.each do |team|%>
+            <div class="team d-flex align-items-center">
                 <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
-                <p><%=team.name%></p>
-            </div>
+            <p><%=team.name%></p>
         </div>
-        <%end%>
+    </div>
+    <%end%>
         
     <%# description%>
     <div class="flexbox">
@@ -26,14 +26,14 @@
         </div>
             
         <%# address %>
-            <div class="address">
+        <div class="address">
             <h1><%= @place.address%></h1>
-            </div>
+        </div>
         
         <%# icone %>
         <%# phrase descriptif %>    
         <div class="sentence">
-        <h1><%=@place.characteristic%></h1>
+            <h1><%=@place.characteristic%></h1>
         </div>
     </div>
     <%# jauge %>
