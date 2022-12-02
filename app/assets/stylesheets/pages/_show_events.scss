@@ -7,11 +7,13 @@ body {
   justify-content: space-around;
   background-color: rgb(44, 44, 44);
   border-radius: 5px;
-  font-size: 10px;
-  margin-top: 70px;
+  font-size: 30px;
+  margin-top: 10px;
   height: 60px;
   position: relative;
   color: whitesmoke;
+  border-color: white;
+  font-weight: bold;
 
   .vs {
     position: absolute;
@@ -19,12 +21,20 @@ body {
     top: 30px;
     transform: translate(-50%, -50%);
     margin: 0;
-    font-weight: 1200px;
-    color: whitesmoke;
+    font-weight:bold;
+    font-weight: 900;
+
+
+
+
   }
   .team p {
     margin: 0;
     margin-left: 1rem;
+    font-size: 10px;
+    color: whitesmoke;
+    border-color: white;
+
   }
 }
 
@@ -32,17 +42,21 @@ body {
   display: flex;
   flex-direction: column;
   background-color: rgb(44, 44, 44);
-  margin: 10px;
+  margin-bottom: 20px;
 }
 
 .card{
-  margin: 5px;
-  border-radius: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+
 }
 
 .picture-team-events {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .flex-container {
@@ -52,4 +66,83 @@ body {
 
 .picture-show-events{
   width: 100%;
+}
+
+.align{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hour{
+
+  color: whitesmoke;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 10px;
+  text-align: initial;
+  .tf1{
+    top: 30px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-top: 7px;
+    margin-left: -17px;
+  }
+
+  .hora{
+    margin-top: 24px;
+    font-size: 12px;
+  }
+
+}
+
+.png{
+  text-align: center;
+  margin-top: 20px;
+  padding-left: 0px;
+
+}
+
+.description{
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: large;
+}
+
+.dispo {
+text-align: right;
+margin-right: 20px;
+color: green;
+
+.fa-solid{
+  color: green;
+}
+}
+
+.encore {
+  text-align: right;
+  margin-right: 20px;
+  color: orange;
+
+  .fa-solid{
+    color: orange;
+  }
+  }
+
+.plein {
+    text-align: right;
+    margin-right: 20px;
+    color: red;
+  }
+.lien{
+  color: black;
+  text-decoration: none;
+}
+
+.competition-show-events{
+  border-color: white;
 }

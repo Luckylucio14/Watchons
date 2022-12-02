@@ -16,10 +16,11 @@ export default class extends Controller {
       style: "mapbox://styles/pdunleav/cjofefl7u3j3e2sp0ylex3cyb"
     })
     console.log(this.MarkersValue)
-      this.#addMarkersToMap()
-      this.#fitMapToMarkers()
+      this.addMarkersToMap()
+      this.fitMapToMarkers()
   }
-  #addMarkersToMap() {
+
+  addMarkersToMap() {
     console.log(this.markersValue)
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
@@ -27,7 +28,7 @@ export default class extends Controller {
       new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(this.map)
-      })
+      
 
       // Create a HTML element for your custom marker
       const customMarker = document.createElement("div")
@@ -42,9 +43,10 @@ export default class extends Controller {
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
         .addTo(this.map)
+      })
     }
-  }
-  #fitMapToMarkers() {
+
+  fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
