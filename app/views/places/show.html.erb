@@ -1,6 +1,11 @@
-<div class="container">
+<div class="place_show_container">
 
     <%# event : prendre le même que sur la show de l'event %>
+    <div class="row-show-place">
+    <div class="col-12 col-lg-6">
+    <div class="logo_team">
+        <div class="png"><%= image_tag "Component 8 (2).png",height:60, width: 80%></div>
+    </div>
 
     <%# description%>
     <div class="flexbox">
@@ -10,14 +15,14 @@
         </div>
 
         <%# address %>
-            <div class="address">
+        <div class="address">
             <h1><%= @place.address%></h1>
-            </div>
-
+        </div>
+        
         <%# icone %>
         <%# phrase descriptif %>
         <div class="sentence">
-        <h1><%=@place.characteristic%></h1>
+            <h1><%=@place.characteristic%></h1>
         </div>
     </div>
     <%# jauge %>
@@ -27,7 +32,7 @@
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    <h2>J'y vais %></h2>
+    <div class= "btn_homepage btn_show"><%= link_to "J'y vais", events_path %></div>
 </div>
 
 <%= render "shared/navbar"%>
