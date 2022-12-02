@@ -1,6 +1,5 @@
-<%# <div class="picture" src="/home/maggle/code/Maggle974/Luc/Watchons/app/assets/images/navbar_avec_separation.png"></div> %>
-<%= render "shared/navbar" %>
 
+<<<<<<< HEAD
 <div class="main_index_container">
   <div class="index_container">
     <div class="day">
@@ -33,9 +32,30 @@
               <%=image_tag("TF1_logo.jpg")%>
             </div>
           </div>
+=======
+<div class="cards-container">
+  <div class="row">
+    <div class="col-12 col-s-6">
+      <% @events.each do |event|%>
+        <%= link_to  event_path(event) do %>
+        <div class="card-match">
+        <% event.teams.each do |team| %>
+          <h2><%=team.name %></h2>
+            <div><%=cl_image_tag team.photo.key, class: "picture", crop: :fill, width: 50 %></div>
+          <% end %>
+        <h4><%= event.competition %></h4>
+        <br>
+        <%# <h4><%= event.date.strftime("%d/%m/%Y")</h4>  %>
+        <%= event.hour("%H")%>
+        <br>
+        <%# <h4><%= event.location</h4> %>
+        <br>
+        <p><%= event.channel %></p>
+>>>>>>> 094c563a8672c28f14a38547aa71deb589d3b7fa
         </div>
+        <% end %>
       <% end %>
-    <% end %>
+        <%= render "shared/navbar" %>
+    </div>
   </div>
 </div>
-<%= render "shared/navbar" %>
