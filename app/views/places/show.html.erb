@@ -7,16 +7,6 @@
         <div class="png"><%= image_tag "Component 8 (2).png",height:60, width: 80%></div>
     </div>
 
-    <div class="place-flex-container">
-        <div class="align_place">
-            <h3 class="vs">VS</h3>
-                <% @team.name do |team|
-                <div class="team d-flex align-items-center">
-                <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
-                <p><%=team.name%></p>
-            </div>
-        </div>    
-    </div>  
     <%# description%>
     <div class="flexbox">
         <%# name %>
@@ -42,7 +32,7 @@
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    <h2>J'y vais %></h2>
+    <div class= "btn_homepage btn_show"><%= link_to "J'y vais", events_path %></div>
 </div>
 
 <%= render "shared/navbar"%>
