@@ -31,7 +31,13 @@
 
         <%# Hour %>
         <div class="hour">
+        <%if @event.channel == "TF1"%>
           <div class="png"><%= image_tag "TF1.jpeg",height:10,class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+        <% elsif @event.channel == "Bein" %>
+        <div class="png"><%= image_tag "Bein_sport_logo.svg.png",height:30,class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+        <% else %>
+        <div class="png"><%= image_tag "Amazon-Prime-Video-Symbole.jpg",height:30,class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+        <%end%>
         </div>
       </div>
 
