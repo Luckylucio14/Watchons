@@ -1,23 +1,22 @@
-<div class="container">
+<div class="place_show_container">
 
     <%# event : prendre le même que sur la show de l'event %>
-    <div class="row-show-events">
+    <div class="row-show-place">
     <div class="col-12 col-lg-6">
-    <div class="logo">
+    <div class="logo_team">
         <div class="png"><%= image_tag "Component 8 (2).png",height:60, width: 80%></div>
     </div>
 
-    <div class="game-flex-container">
-        <div class="align">
+    <div class="place-flex-container">
+        <div class="align_place">
             <h3 class="vs">VS</h3>
-            <%# <% @event.teams.each do |team|%>
-            <div class="team d-flex align-items-center">
+                <% @team.name do |team|
+                <div class="team d-flex align-items-center">
                 <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
-            <p><%=team.name%></p>
-        </div>
-    </div>
-    <%end%>
-        
+                <p><%=team.name%></p>
+            </div>
+        </div>    
+    </div>  
     <%# description%>
     <div class="flexbox">
         <%# name %>
