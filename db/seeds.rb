@@ -148,7 +148,7 @@ macbyrne = Place.create!(characteristic: "Il n'y a pas qu'en irlande qu'on sait 
 file = URI.open("https://fastly.4sqi.net/img/general/200x200/11116385_IN7iNR-dN1fQVnDLeOr-HautP4K0lpUP0E5rxduaGGY.jpg")
 macbyrne.photo.attach(io: file, filename: "macbyrne.png", content_type: "image/png")
 
-berlin = Place.create!(characteristic: "Lieu de rencontre et de partage reconnu Quoi vous ne connaissez pas ? On vous attend pour vous montrer",  address: "95 Boulevard Gabriel Lauriol, 44300 Nantes", name:"Berlin 1989", status:"places disponibles")
+berlin = Place.create!(characteristic: "Lieu de rencontre et de partage reconnu Quoi vous ne connaissez pas ? On vous attend pour vous montrer",  address: "95 Boulevard Gabriel Lauriol, 44300 Nantes", name:"Berlin 1989", status:"Places disponibles")
 file = URI.open("https://mvistatic.com/etablissements/2018-05/16163_crop_640-270_.jpg")
 berlin.photo.attach(io: file, filename: "berlin.png", content_type: "image/png")
 
