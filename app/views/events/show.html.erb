@@ -5,6 +5,7 @@
   <div class="row-show-events">
     <div class="col-12 col-lg-6">
       <div class="logo">
+<%# <%= link_to "Retour au matchs", events_path %>
       <%= link_to events_path,class: "lien" do %>
         <i class="fa-solid fa-backward icon-back"></i>
         <% end %>
@@ -21,10 +22,13 @@
       <div class="game-flex-container">
         <div class="align">
           <h3 class="vs">VS</h3>
-          <% @event.teams.each do |team|%>
+          <% @events.each do |event|%>
             <div class="team d-flex align-items-center">
-              <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
-              <p><%=team.name%></p>
+              <%=cl_image_tag @event.teams.first.photo.key, class: "picture", crop: :fill, width: 50 %>
+              <h2><%=@event.teams.first.name %></h2>
+              <%=cl_image_tag @event.teams.last.photo.key, class: "picture", crop: :fill, width: 50 %>
+              <h2><%=@event.teams.last.name %></h2>
+              <%# <p><%=team.name</p>  %>
             </div>
           <%end%>
         </div>
@@ -79,5 +83,4 @@
   </div>
 </div>
 
-<%# <%= link_to "Retour au matchs", events_path %>
 <%= render "shared/navbar" %>
