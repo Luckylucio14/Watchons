@@ -10,6 +10,12 @@
   }
 }
 
+.wrap_ma{
+  display: flex;
+
+}
+
+
 
 .btn_show{
   display: flex;
@@ -20,9 +26,8 @@
   width: 322px;
   height: 51px;
   border-radius: 56px;
-  position: relative;
-  bottom: 24px;
-  left: 33px;
+  position: fixed;
+  bottom: 95px;
   a{
     text-decoration: none;
     color: black;
