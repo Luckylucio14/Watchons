@@ -32,11 +32,11 @@
         <%# Hour %>
         <div class="hour">
         <%if @event.channel == "TF1"%>
-          <div class="png"><%= image_tag "TF1.jpeg",height:10,class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+          <div class="png"><%= image_tag "TF1.jpeg",height:12,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
         <% elsif @event.channel == "Bein" %>
-        <div class="png"><%= image_tag "Bein_sport_logo.svg.png",height:30,class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+        <div class="png"><%= image_tag "Bein_sport_ana_logo.png",height:13, width: 35,class: "bein"%></div><div class="hora"><%= @event.hour("%H")%></div>
         <% else %>
-        <div class="png"><%= image_tag "Amazon-Prime-Video-Symbole.jpg",height:30,class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+        <div class="png"><%= image_tag "Amazon-Prime-Video-Symbole.jpg",height:30 ,class: "amazonprime"%></div><div class="hora"><%= @event.hour("%H")%></div>
         <%end%>
         </div>
       </div>
@@ -61,9 +61,9 @@
                   <div class="dispo">
                     <i class="fa-solid fa-user"></i>
                   </div>
-                <% elsif place.status == "Quelques places" %>
+                <% elsif place.status == "Quelque places" %>
                   <div class= "encore">
-                    <i class="fa-solid fa-user-group"></i>
+                    <i class="fa-solid fa-user-plus"></i>
                   </div>
                 <%else%>
                   <div class="plein">

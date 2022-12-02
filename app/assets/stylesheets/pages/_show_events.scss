@@ -72,6 +72,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 22px;
 
     .hora{
       font-size: 12px;
@@ -111,6 +112,10 @@
     text-align: right;
     margin-right: 0px;
     color: red;
+
+    .fa-solid{
+      color: red;
+    }
   }
   .lien{
     color: black;
