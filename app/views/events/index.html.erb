@@ -2,17 +2,19 @@
 <div class="main_index_container">
   <div class="index_container">
     <div class="day">
+      <%# <p>DEMAIN</p> %>
     </div>
     <% @events.each do |event|%>
       <%= link_to event_path(event) do %>
         <div class="match_index_card">
           <div class="event">
+            <%# <%=image_tag("football_fifa_worldcup.png")%>
             <h4 class="event_competition_type"><%= event.competition %></h4>
           </div>
           <div class="next_event">
             <div class="contest">
               <div class="team team_first">
-                <%=cl_image_tag event.teams.first.photo.key, class: "picture", crop: :fill, width: 50 %>
+                <%=cl_image_tag event.teams.first.photo.key, class: "picture" %>
                 <h2><%=event.teams.first.name %></h2>
 
               </div>
@@ -20,14 +22,13 @@
                 <%=image_tag("vs.png")%>
               </div>
               <div class="team team_last">
-                <%=cl_image_tag event.teams.last.photo.key, class: "picture", crop: :fill, width: 50 %>
+                <%=cl_image_tag event.teams.last.photo.key, class: "picture" %>
                 <h2><%=event.teams.last.name %></h2>
 
               </div>
             </div>
 
             <div class="channel">
-              <p><%= event.channel %></p>
               <%=image_tag("TF1.jpeg")%>
               <%= event.hour("%H")%>
             </div>
