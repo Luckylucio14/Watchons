@@ -5,7 +5,6 @@
   <div class="row-show-events">
     <div class="col-12 col-lg-6">
       <div class="logo">
-<%# <%= link_to "Retour au matchs", events_path %>
       <%= link_to events_path,class: "lien" do %>
         <i class="fa-solid fa-backward icon-back"></i>
         <% end %>
@@ -22,13 +21,10 @@
       <div class="game-flex-container">
         <div class="align">
           <h3 class="vs">VS</h3>
-          <% @events.each do |event|%>
+          <% @event.teams.each do |team|%>
             <div class="team d-flex align-items-center">
-              <%=cl_image_tag @event.teams.first.photo.key, class: "picture", crop: :fill, width: 50 %>
-              <h2><%=@event.teams.first.name %></h2>
-              <%=cl_image_tag @event.teams.last.photo.key, class: "picture", crop: :fill, width: 50 %>
-              <h2><%=@event.teams.last.name %></h2>
-              <%# <p><%=team.name</p>  %>
+              <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
+              <p><%=team.name%></p>
             </div>
           <%end%>
         </div>
@@ -36,7 +32,7 @@
         <%# Hour %>
         <div class="hour">
         <%if @event.channel == "TF1"%>
-          <div class="png"><%= image_tag "TF1.jpeg",height:12,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+          <div class="png"><%= image_tag "TF1.jpeg",height:10,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
         <% elsif @event.channel == "Bein" %>
         <div class="png"><%= image_tag "Bein_sport_ana_logo.png",height:13, width: 35,class: "bein"%></div><div class="hora"><%= @event.hour("%H")%></div>
         <% else %>
@@ -65,9 +61,9 @@
                   <div class="dispo">
                     <i class="fa-solid fa-user"></i>
                   </div>
-                <% elsif place.status == "Quelque places" %>
+                <%elsif place.status == "Quelques places" %>
                   <div class= "encore">
-                    <i class="fa-solid fa-user-plus"></i>
+                    <i class="fa-solid fa-user-group"></i>
                   </div>
                 <%else%>
                   <div class="plein">
@@ -83,4 +79,5 @@
   </div>
 </div>
 
+<%# <%= link_to "Retour au matchs", events_path %>
 <%= render "shared/navbar" %>
