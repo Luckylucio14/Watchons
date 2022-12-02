@@ -13,7 +13,7 @@
           </div>
           <div class="next_event">
             <div class="contest">
-              <div class="team_first">
+              <div class="team team_first">
                 <%=cl_image_tag event.teams.first.photo.key, class: "picture", crop: :fill, width: 50 %>
                 <h2><%=event.teams.first.name %></h2>
 
@@ -21,7 +21,7 @@
               <div class="versus">
                 <%=image_tag("vs.png")%>
               </div>
-              <div class="team_last">
+              <div class="team team_last">
                 <%=cl_image_tag event.teams.last.photo.key, class: "picture", crop: :fill, width: 50 %>
                 <h2><%=event.teams.last.name %></h2>
 

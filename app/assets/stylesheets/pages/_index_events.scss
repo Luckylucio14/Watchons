@@ -61,24 +61,23 @@
   padding: 15px;
 }
 
-.team_first {
+.team {
   display: flex;
   width: 32%;
   align-items: center;
   text-align: center;
-  flex-direction: row;
   font-family: "Young Serif", sans-serif;
   text-decoration: none;
 }
 
+.team_first {
+  display: flex;
+  flex-direction: row;
+}
+
 .team_last {
   display: flex;
-  width: 32%;
-  align-items: center;
-  text-align: center;
   flex-direction: row-reverse;
-  font-family: "Young Serif", sans-serif;
-  text-decoration: none;
 }
 
 .size_versus {
