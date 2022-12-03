@@ -36,7 +36,7 @@
         <% elsif @event.channel == "Bein" %>
         <div class="png"><%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div><div class="hora"><%= @event.hour("%H")%></div>
         <% else %>
-        <div class="png"><%= image_tag "prime-video-ok.jpg",height:13, width: 35, class: "amazonprime"%></div><div class="hora"><%= @event.hour("%H")%></div>
+        <div class="png"><%= image_tag "prime-video-ok.jpg",height:1, width: 35, class: "amazonprime"%></div><div class="hora"><%= @event.hour("%H")%></div>
         <%end%>
         </div>
       </div>
