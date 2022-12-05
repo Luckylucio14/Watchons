@@ -41,11 +41,7 @@
   width: 100%;
   padding: -3px 0px 0px 0px !important;
   margin: 0px;
-<<<<<<< HEAD
   background-image: url("img_world_cup_red.jpg");
-=======
-  background-image: url("https://thumbs.dreamstime.com/z/kharkiv-ucrania-julio-editorial-ilustrativo-del-logo-de-qatar-sobre-blanco-con-fútbol-en-el-gol-copa-mundial-la-fifa-231513229.jpg");
->>>>>>> 20a8c6593985910c0c857f8d824628921d573b71
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -64,8 +60,9 @@
 
 .event_competition_type {
   color: #7E062A;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
+  height: 70px;
 
 }
 
@@ -80,7 +77,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 15px;
+  padding: 15px 0px;
+
+  h4 {
+    margin: 0px 10px;
+  }
 }
 
 .team {
@@ -134,7 +135,7 @@
   display: flex;
   flex-direction: row;
   width: 80%;
-  height: 30%;
+  height: 75%;
   justify-content: flex-start;
   align-items: center;
   align-content: flex-end;
@@ -149,4 +150,9 @@
   width: 80px;
   object-fit: contain;
   padding: 0 20px;
+
+}
+
+.amazonprime {
+  height: 40px;
 }
