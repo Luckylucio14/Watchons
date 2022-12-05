@@ -31,7 +31,7 @@
   border-bottom-left-radius: 4%;
   border-bottom-right-radius: 8%;
   width: 90vw;
-  height: 300px;
+  height: 220px;
   margin: 30px 5%;
   padding: 2px 0 0 0;
 }
@@ -41,7 +41,7 @@
   width: 100%;
   padding: -3px 0px 0px 0px !important;
   margin: 0px;
-  background-image: url("img_world_cup_red.jpg");
+  background-image: url("picture_world_cup.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -52,17 +52,17 @@
   justify-content: center;
 
   // img {
-  //   width: 100%;
-  //   object-fit: cover;
-  // }
+    //   width: 100%;
+    //   object-fit: cover;
+    // }
 
-}
+  }
+
 
 .event_competition_type {
-  color: #7E062A;
+  color: white;
   font-weight: bolder;
   text-align: center;
-  height: 70px;
 
 }
 
@@ -70,6 +70,15 @@
   color: black !important;
   height: 60%;
   padding: 20px;
+}
+
+
+.past_event {
+  color: black !important;
+  height: 60%;
+  padding: 20px;
+  background-color: gray;
+  opacity: 40%;
 }
 
 .contest {
@@ -135,7 +144,7 @@
   display: flex;
   flex-direction: row;
   width: 80%;
-  height: 75%;
+  height: 50%;
   justify-content: flex-start;
   align-items: center;
   align-content: flex-end;
