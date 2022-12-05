@@ -9,20 +9,20 @@
                 <%= image_tag "Component 8 (2).png", class:"png" %>
             </div>
         </div>
+        <div class="card_diffusion_event"> 
+            <div class="game-flex-container">
+                <div class="align">
+                    <h3 class="vs">VS</h3>
 
-        <div class="game-flex-container">
-            <div class="align">
-                <h3 class="vs">VS</h3>
-
-                <div class="team_first">
-                <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
-                <p class="first"><%=@event.teams.first.name%></p>
+                    <div class="team_first">
+                    <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
+                    <p class="first"><%=@event.teams.first.name%></p>
+                    </div>
+                    <div class="team_last">
+                    <%=cl_image_tag @event.teams.last.photo.key, class: "picture-team-events"%>
+                    <p class="last"><%=@event.teams.last.name%></p>
                 </div>
-                <div class="team_last">
-                <%=cl_image_tag @event.teams.last.photo.key, class: "picture-team-events"%>
-                <p class="last"><%=@event.teams.last.name%></p>
             </div>
-
         </div>
 
         <%# Hour %>
@@ -60,11 +60,11 @@
 
     <%# MAP %>
     <div class= "wrap_map">
-    <div class="map" style="width: 100%; height: 400px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    <div class= " btn_show"><%= link_to "J'y vais", events_path %></div>
+        <div class="map" style="width: 100%; height: 400px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        <div class= " btn_show"><%= link_to "J'y vais", events_path %></div>
 
     </div>
 </div>
