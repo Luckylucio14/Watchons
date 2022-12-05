@@ -61,17 +61,33 @@
                 <%# <%=place.characteristic%>
                 <%if place.status == "Places disponibles"%>
                   <div class="dispo d-flex justify-content-end">
+                    <i class="fa-solid fa-wheelchair-move"></i>
+                    <i class="fa-solid fa-tv"></i>
+                    <i class="fa-solid fa-dog"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-smoking"></i>
+
                     <p class="m-0">Places disponibles</p>
                     <i class="fa-solid fa-user"></i>
 
                   </div>
                 <%elsif place.status == "Quelques places" %>
                   <div class= "encore d-flex justify-content-end">
+                    <i class="fa-solid fa-martini-glass-citrus"></i>
+                    <i class="fa-solid fa-dog"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-tv"></i>
+                    <i class="fa-solid fa-smoking"></i>
+
                     <p class="m-0">Encore quelques places</p>
                     <i class="fa-solid fa-user-group"></i>
                   </div>
                 <%else%>
                   <div class="plein d-flex justify-content-end">
+                    <i class="fa-solid fa-tv"></i>
+                    <i class="fa-solid fa-dog"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-smoking"></i>
                     <p class="m-0">Complet</p>
                     <i class="fa-solid fa-users"></i>
                   </div>
