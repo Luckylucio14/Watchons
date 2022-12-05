@@ -6,6 +6,7 @@ class PlacesController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:event_id])
     @place = Place.find(params[:id])
 
     @markers =
