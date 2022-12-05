@@ -15,7 +15,7 @@
             <div class="contest">
               <div class="team team_first">
                 <%=cl_image_tag event.teams.first.photo.key, class: "picture" %>
-                <h2><%=event.teams.first.name %></h2>
+                <h4><%=event.teams.first.name %></h4>
 
               </div>
               <div class="versus">
@@ -23,14 +23,19 @@
               </div>
               <div class="team team_last">
                 <%=cl_image_tag event.teams.last.photo.key, class: "picture" %>
-                <h2><%=event.teams.last.name %></h2>
+                <h4><%=event.teams.last.name %></h4>
 
               </div>
             </div>
 
             <div class="channel">
-              <%=image_tag("TF1.jpeg")%>
-              <%= event.hour("%H")%>
+             <%if event.channel == "TF1"%>
+            <div class="png"><%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%></div><div class="hora"><%= event.hour("%H")%></div>
+              <% elsif event.channel == "Bein" %>
+            <div class="png"><%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div><div class="hora"><%= event.hour("%H")%></div>
+              <% else %>
+            <div class="png"><%= image_tag "prime-video-ok.jpg",height:1, width: 200, class: "amazonprime"%></div><div class="hora"><%= event.hour("%H")%></div>
+            <%end%>
             </div>
           </div>
         </div>
