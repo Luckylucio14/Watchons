@@ -21,23 +21,27 @@
       <div class="game-flex-container">
         <div class="align">
           <h3 class="vs">VS</h3>
-          <% @event.teams.each do |team|%>
-            <div class="team d-flex align-items-center">
-              <%=cl_image_tag team.photo.key, class: "picture-team-events"%>
-              <p><%=team.name%></p>
+
+            <div class="team_first">
+              <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
+              <p class="first"><%=@event.teams.first.name%></p>
             </div>
-          <%end%>
+            <div class="team_last">
+            <%=cl_image_tag @event.teams.last.photo.key, class: "picture-team-events"%>
+              <p class="last"><%=@event.teams.last.name%></p>
+              </div>
+
         </div>
 
         <%# Hour %>
         <div class="hour">
-        <%if @event.channel == "TF1"%>
-          <div class="png"><%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
-        <% elsif @event.channel == "Bein" %>
-        <div class="png"><%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div><div class="hora"><%= @event.hour("%H")%></div>
-        <% else %>
-        <div class="png"><%= image_tag "prime-video-ok.jpg",height:1, width: 35, class: "amazonprime"%></div><div class="hora"><%= @event.hour("%H")%></div>
-        <%end%>
+          <%if @event.channel == "TF1"%>
+            <div class="png"><%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+          <% elsif @event.channel == "Bein" %>
+          <div class="png"><%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div><div class="hora"><%= @event.hour("%H")%></div>
+          <% else %>
+          <div class="png"><%= image_tag "prime-video-ok.jpg",height:1, width: 35, class: "amazonprime"%></div><div class="hora"><%= @event.hour("%H")%></div>
+          <%end%>
         </div>
       </div>
 

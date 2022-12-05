@@ -18,20 +18,34 @@
       margin: 0;
       font-weight:bold;
       font-weight: 900;
+      color:rgb(255, 200, 36)
     }
 
-    .team:last-child {
 
-    }
-    .team p {
-      margin: 0;
-      margin-left: 1rem;
-      font-size: 10px;
+    .first {
       color: whitesmoke;
-      border-color: white;
+      margin-left: 10px;
+      margin-top: 10px;
     }
-  }
 
+    .last {
+      color: whitesmoke;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    }
+    .team_last {
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: 20px;
+
+    }
+
+    .team_first {
+      margin-right: 14px;
+      font-size: 20px;
+    }
 
 
   .place {
@@ -159,8 +173,6 @@
       top: -1px;
       position: relative;
       left: 16px;
-
-
     }
 
     .back{
