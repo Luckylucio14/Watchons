@@ -2,19 +2,20 @@
   height: 100vh;
 
   .name {
-  color: azure;
+  color: whitesmoke;
   }
 
   .sentence{
-  color: azure;
+  color: whitesmoke;
   }
 }
 
-.wrap_ma{
-  display: flex;
 
+
+.mapboxgl-canvas {
+  // position: sticky;
+  // top: 0;
 }
-
 
 
 .btn_show{
@@ -26,8 +27,10 @@
   width: 322px;
   height: 51px;
   border-radius: 56px;
-  position: fixed;
+  position: sticky;
   bottom: 95px;
+  margin-top: -83px;
+  margin-left: 48px;
   a{
     text-decoration: none;
     color: black;
