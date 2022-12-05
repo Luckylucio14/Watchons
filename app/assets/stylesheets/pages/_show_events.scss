@@ -2,8 +2,6 @@
   .card-photo {
     background-position: center !important;
     background-size: cover !important;
-    text-shadow: 4px 4px 6px rgb(0, 0, 0 / 99%);
-    box-shadow: 0 0 15px rgb(0, 0, 0 / 40%);
   }
 
   .game-flex-container {
@@ -58,7 +56,7 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(44, 44, 44);
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     padding-inline: 10px;
   }
 
@@ -130,12 +128,12 @@
     text-align: right;
     margin-right: 0px;
     color: green;
-    position: absolute;
-    font-size: 16px;
-
+    // position: absolute;
+    // font-size: 16px;
 
     .fa-solid{
       color: green;
+      margin-left: 15px;
     }
   }
 
@@ -143,10 +141,11 @@
     text-align: right;
     margin-right: 0px;
     color: orange;
-    
 
+    margin-left: 15px;
     .fa-solid{
       color: orange;
+      margin-left: 15px;
     }
   }
 
@@ -158,6 +157,7 @@
 
     .fa-solid{
       color: red;
+      margin-left: 15px;
     }
   }
   .lien{

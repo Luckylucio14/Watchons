@@ -50,7 +50,7 @@
         <% @event.places.each do |place|%>
           <%= link_to  event_place_path(@event, place),class: "lien" do %>
             <div class=" bar-card">
-              <div class="card-photo picture-show-events" style="background: url(<%= cl_image_path(place.photo.key)%>);">
+              <div class="card-photo picture-show-events" style="background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(place.photo.key)%>);">
                 <div class="namebar"></div><%=place.name%>
               </div>
               <div class="description">
@@ -60,16 +60,19 @@
 
                 <%# <%=place.characteristic%>
                 <%if place.status == "Places disponibles"%>
-                  <div class="dispo">
-                    <p>Viens, tu verras comment on est bien!</p><i class="fa-solid fa-user"></i>
+                  <div class="dispo d-flex justify-content-end">
+                    <p class="m-0">Places disponibles</p>
+                    <i class="fa-solid fa-user"></i>
                   </div>
                 <%elsif place.status == "Quelques places" %>
-                  <div class= "encore">
-                    <%# <p>Depeche toi! ou tu perdras ta place</p><i class="fa-solid fa-user-group"></i> %>
+                  <div class= "encore d-flex justify-content-end">
+                    <p class="m-0">Encore quelques places</p>
+                    <i class="fa-solid fa-user-group"></i>
                   </div>
                 <%else%>
-                  <div class="plein">
-                    <%# <p>Trop tar cherche un autre bar!</p><i class="fa-solid fa-users"></i> %>
+                  <div class="plein d-flex justify-content-end">
+                    <p class="m-0">Complet</p>
+                    <i class="fa-solid fa-users"></i>
                   </div>
                 <%end%>
               </div>
