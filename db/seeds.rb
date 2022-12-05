@@ -82,8 +82,8 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/42/Football_G
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 puts 'Creating Events...'
 # EVENTS
-match1 = Event.create!(competition: "Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,9, 16, 0, 0), channel: "Bein")
-match2 = Event.create!(competition: "Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,9, 20, 0, 0), full_datetime: DateTime.new(2022,12,9, 20, 0, 0), channel: "TF1")
+match1 = Event.create!(competition: "Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,5, 16, 0, 0), channel: "Bein")
+match2 = Event.create!(competition: "Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,6, 20, 0, 0), channel: "TF1")
 match3 = Event.create!(competition: "Quart de finale", location: "Stade de Lusail - Qatar", full_datetime: DateTime.new(2022,12,10, 16, 0, 0), channel: "Bein")
 match4 = Event.create!(competition: "Quart de finale", location: "Stade 974 - Qatar", full_datetime: DateTime.new(2022,12,10, 20, 0, 0), channel: "TF1")
 match5 = Event.create!(competition: "Demi-finale", location: "Stade Al-Thumama - Qatar", full_datetime: DateTime.new(2022,12,13, 20, 0, 0), channel: "Bein")
