@@ -120,12 +120,12 @@ event_team10 = EventTeam.create!(event: match10, team: team10)
 puts 'Creating Places...'
 # PLACES
 
-LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoignant un lieu de partage", address: "3 allée de l'Ile Gloriette 44000 Nantes", name:"La Scierie", status:"Places disponibles")
+LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoignant un lieu de partage", address: "3 allée de l'Ile Gloriette 44000 Nantes", name:"La Scierie", status:"Places disponibles Viens,tu verras comment on est bien!")
 file = URI.open("http://www.lesbarres.com/media/image/slideshow/a1f8f0d08556369fa82d5ce29e775387b7a713e1.jpg")
 LaScierie.photo.attach(io: file, filename: "LaScierie.png", content_type: "image/png")
 
 Brasseurs = Place.create!(characteristic: "Une cuisine authentique dans l'esprit des anciennes brasseries. De moments généreux et conviviaux à déguster", address: "Centre Commercial Carré 19 Parvis Neptune 44000 Nantes", name:"3 Brasseurs", status:"Places disponibles")
-file = URI.open("https://www.radiofrance.fr/s3/cruiser-production/2017/08/ac545240-6ac1-41d6-accd-6193e6b50caa/870x489_dsc_7037.jpg")
+file = URI.open("https://www.3brasseurs.com/medias/images/visual/joinus-02.jpg")
 Brasseurs.photo.attach(io: file, filename: "Brasseurs.png", content_type: "image/png")
 
 LeCascabel = Place.create!(characteristic: "Une belle cascade de joie vous y attend", address: "1 Rue Kervégan 44000 Nantes", name:"Le Cascabel", status:"Complet")

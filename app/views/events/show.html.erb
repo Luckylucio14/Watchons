@@ -50,28 +50,26 @@
         <% @event.places.each do |place|%>
           <%= link_to  event_place_path(@event, place),class: "lien" do %>
             <div class=" bar-card">
-              <div class="card-photo">
-                <%=cl_image_tag place.photo.key, class: "picture-show-events", width: 200 %>
+              <div class="card-photo picture-show-events" style="background: url(<%= cl_image_path(place.photo.key)%>);">
+                <div class="namebar"></div><%=place.name%>
               </div>
               <div class="description">
                 <div class="description-name">
-                  <%=place.name%>
-                      <br>
                   <%=place.address%>
                 </div>
 
                 <%# <%=place.characteristic%>
                 <%if place.status == "Places disponibles"%>
                   <div class="dispo">
-                    <i class="fa-solid fa-user"></i>
+                    <p>Viens, tu verras comment on est bien!</p><i class="fa-solid fa-user"></i>
                   </div>
                 <%elsif place.status == "Quelques places" %>
                   <div class= "encore">
-                    <i class="fa-solid fa-user-group"></i>
+                    <%# <p>Depeche toi! ou tu perdras ta place</p><i class="fa-solid fa-user-group"></i> %>
                   </div>
                 <%else%>
                   <div class="plein">
-                    <i class="fa-solid fa-users"></i>
+                    <%# <p>Trop tar cherche un autre bar!</p><i class="fa-solid fa-users"></i> %>
                   </div>
                 <%end%>
               </div>
