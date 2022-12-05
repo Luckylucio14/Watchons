@@ -1,12 +1,29 @@
 .navbar-lewagon {
-  justify-content: space-around;
   background-color: black;
+  padding: 10px;
+  position: static;
+  width: 100%;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.fa-house{
+  color:$yellow;
+  font-size: 25px;
+}
+.fa-message{
+  color: $yellow;
+  font-size: 25px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.fa-user{
+  color: $yellow;
+  font-size: 25px;
+}
+.navbar_watchons{
+  justify-content: space-around;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.nav-item{
+  display: flex;
+  justify-content: space-around;
 }
