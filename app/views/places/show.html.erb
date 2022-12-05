@@ -3,69 +3,73 @@
         <div class="col-12 col-lg-6">
             <%# LOGO %>
             <div class="logo">
-            <%= link_to event_path(@event),class: "lien" do %>
-                <i class="fa-solid fa-backward icon-back"></i>
+                <%= link_to event_path(@event),class: "lien" do %>
+                    <i class="fa-solid fa-backward icon-back"></i>
                 <% end %>
-                <%= image_tag "Component 8 (2).png", class:"png" %>
+                <%= image_tag "Component 8 (2).png", class:"logo" %>
             </div>
         </div>
+        
+        <div class="card_diffusion_event"> 
+            <div class="game-flex-container">
+                <div class="align">
+                    <h3 class="vs">VS</h3>
 
-        <div class="game-flex-container">
-            <div class="align">
-                <h3 class="vs">VS</h3>
-
-                <div class="team_first">
-                <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
-                <p class="first"><%=@event.teams.first.name%></p>
+                    <div class="team_first">
+                        <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
+                        <p class="first"><%=@event.teams.first.name%></p>
+                    </div>
+                    <div class="team_last">
+                        <%=cl_image_tag @event.teams.last.photo.key, class: "picture-team-events"%>
+                        <p class="last"><%=@event.teams.last.name%></p>
+                    </div>
                 </div>
-                <div class="team_last">
-                <%=cl_image_tag @event.teams.last.photo.key, class: "picture-team-events"%>
-                <p class="last"><%=@event.teams.last.name%></p>
-            </div>
 
-        </div>
-
-        <%# Hour %>
-        <div class="hour">
-            <%if @event.channel == "TF1"%>
-                <div class="png"><%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
-            <% elsif @event.channel == "Bein" %>
-            <div class="png"><%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div><div class="hora"><%= @event.hour("%H")%></div>
-            <% else %>
-            <div class="png"><%= image_tag "prime-video-ok.jpg",height:1, width: 35, class: "amazonprime"%></div><div class="hora"><%= @event.hour("%H")%></div>
-            <%end%>
+                <%# Hour %>
+                <div class="hour">
+                    <%if @event.channel == "TF1"%>
+                        <div class="channel"><%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+                    <% elsif @event.channel == "Bein" %>
+                        <%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%>
+                        <div class="hora"><%= @event.hour("%H")%></div>
+                    <% else %>
+                        <%= image_tag "prime-video-ok.jpg",height:1, width: 35, class: "amazonprime"%>
+                        <div class="hora"><%= @event.hour("%H")%></div>
+                    <%end%>
+                </div>
             </div>
         </div>
 
         <%# description%>
         <div class="flexbox">
-        <%# name %>
-        <div class="name">
-            <h1><%=@place.name%></h1>
-        </div>
+            <%# name %>
+            <div class="name">
+                <h1 class="naming_place"><%=@place.name%></h1>
+            </div>
 
-        <%# address %>
-        <div class="address">
-            <h1><%= @place.address%></h1>
-        </div>
+            <%# address %>
+            <div class="address">
+                <h1><%= @place.address%></h1>
+            </div>
 
-        <%# icone %>
-        <%# phrase descriptif %>
-        <div class="sentence">
-            <h1><%=@place.characteristic%></h1>
-        </div>
-    
+            <%# icone %>
+            <%# phrase descriptif %>
+            <div class="sentence">
+                <h1><%=@place.characteristic%></h1>
+            </div>
+        
         <%# jauge %>
-    </div>
+        </div>
 
-    <%# MAP %>
-    <div class= "wrap_map">
-    <div class="map" style="width: 100%; height: 400px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    <div class= " btn_show"><%= link_to "J'y vais", events_path %></div>
+        <%# MAP %>
+        <div class= "wrap_map">
+            <div class="map" style="width: 100%; height: 400px;"
+                data-controller="map"
+                data-map-markers-value="<%= @markers.to_json %>"
+                data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+            <div class= " btn_show"><%= link_to "J'y vais", events_path %></div>
 
+        </div>
     </div>
 </div>
 
