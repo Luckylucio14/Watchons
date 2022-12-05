@@ -1,14 +1,44 @@
+<div class="cards-container-show-events">
+    <div class="row-show-events">
+        <div class="col-12 col-lg-6">
+            <%# LOGO %>
+            <div class="logo">
+            <%= link_to event_path(@event),class: "lien" do %>
+                <i class="fa-solid fa-backward icon-back"></i>
+                <% end %>
+                <%= image_tag "Component 8 (2).png", class:"png" %>
+            </div>
+        </div>
 
-<div class="place_show_container">
+        <div class="game-flex-container">
+            <div class="align">
+                <h3 class="vs">VS</h3>
 
-    <%# event : prendre le même que sur la show de l'event %>
-    <div class="row-show-place">
-      <div class="logo_team">
-          <div class="png"><%= image_tag "Component 8 (2).png",height:60, width: 80%></div>
-      </div>
+                <div class="team_first">
+                <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
+                <p class="first"><%=@event.teams.first.name%></p>
+                </div>
+                <div class="team_last">
+                <%=cl_image_tag @event.teams.last.photo.key, class: "picture-team-events"%>
+                <p class="last"><%=@event.teams.last.name%></p>
+            </div>
 
-      <%# description%>
-      <div class="flexbox">
+        </div>
+
+        <%# Hour %>
+        <div class="hour">
+            <%if @event.channel == "TF1"%>
+                <div class="png"><%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+            <% elsif @event.channel == "Bein" %>
+            <div class="png"><%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div><div class="hora"><%= @event.hour("%H")%></div>
+            <% else %>
+            <div class="png"><%= image_tag "prime-video-ok.jpg",height:1, width: 35, class: "amazonprime"%></div><div class="hora"><%= @event.hour("%H")%></div>
+            <%end%>
+            </div>
+        </div>
+
+        <%# description%>
+        <div class="flexbox">
         <%# name %>
         <div class="name">
             <h1><%=@place.name%></h1>
@@ -24,8 +54,8 @@
         <div class="sentence">
             <h1><%=@place.characteristic%></h1>
         </div>
-      </div>
-      <%# jauge %>
+    
+        <%# jauge %>
     </div>
 
     <%# MAP %>

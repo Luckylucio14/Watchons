@@ -48,7 +48,7 @@
       <%# places %>
       <div class="place">
         <% @event.places.each do |place|%>
-          <%= link_to  place_path(place),class: "lien" do %>
+          <%= link_to  event_place_path(@event, place),class: "lien" do %>
             <div class=" bar-card">
               <div class="card-photo">
                 <%=cl_image_tag place.photo.key, class: "picture-show-events", width: 200 %>
