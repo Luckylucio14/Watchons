@@ -15,14 +15,7 @@
 
   .sentence{
   color: whitesmoke;
-  width: 322px;
-  height: 51px;
   }
-}
-
-.wrap_ma{
-  display: flex;
-
 }
 
 .card-diffusion-event{
@@ -35,6 +28,11 @@
 .address{
   color: whitesmoke;
   font-size: 16px;
+
+.mapboxgl-canvas {
+  // position: sticky;
+  // top: 0;
+
 }
 
 .sentence{
@@ -51,8 +49,10 @@
   width: 322px;
   height: 51px;
   border-radius: 56px;
-  position: fixed;
+  position: sticky;
   bottom: 95px;
+  margin-top: -83px;
+  margin-left: 48px;
   a{
     text-decoration: none;
     color: black;

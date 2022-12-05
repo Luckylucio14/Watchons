@@ -82,14 +82,14 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/42/Football_G
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 puts 'Creating Events...'
 # EVENTS
-match1 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,9, 16, 0, 0), channel: "Bein")
-match2 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,9, 20, 0, 0), full_datetime: DateTime.new(2022,12,9, 20, 0, 0), channel: "TF1")
-match3 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade de Lusail - Qatar", full_datetime: DateTime.new(2022,12,10, 16, 0, 0), channel: "Bein")
-match4 = Event.create!(competition: "Coupe du monde 2022 - Quart de finale", location: "Stade 974 - Qatar", full_datetime: DateTime.new(2022,12,10, 20, 0, 0), channel: "TF1")
-match5 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Thumama - Qatar", full_datetime: DateTime.new(2022,12,13, 20, 0, 0), channel: "Bein")
-match6 = Event.create!(competition: "Coupe du monde 2022 - Demi-finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,14, 20, 0, 0), channel: "TF1")
-match7 = Event.create!(competition: "Coupe du monde 2022 - Match pour la 3e place", location: "Stade Education City - Qatar", full_datetime: DateTime.new(2022,12,17, 16, 0, 0), channel: "Bein")
-match8 = Event.create!(competition: "Coupe du monde 2022 - Finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,18, 16, 0, 0), channel: "TF1")
+match1 = Event.create!(competition: "Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,9, 16, 0, 0), channel: "Bein")
+match2 = Event.create!(competition: "Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,9, 20, 0, 0), full_datetime: DateTime.new(2022,12,9, 20, 0, 0), channel: "TF1")
+match3 = Event.create!(competition: "Quart de finale", location: "Stade de Lusail - Qatar", full_datetime: DateTime.new(2022,12,10, 16, 0, 0), channel: "Bein")
+match4 = Event.create!(competition: "Quart de finale", location: "Stade 974 - Qatar", full_datetime: DateTime.new(2022,12,10, 20, 0, 0), channel: "TF1")
+match5 = Event.create!(competition: "Demi-finale", location: "Stade Al-Thumama - Qatar", full_datetime: DateTime.new(2022,12,13, 20, 0, 0), channel: "Bein")
+match6 = Event.create!(competition: "Demi-finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,14, 20, 0, 0), channel: "TF1")
+match7 = Event.create!(competition: "3ème place", location: "Stade Education City - Qatar", full_datetime: DateTime.new(2022,12,17, 16, 0, 0), channel: "Bein")
+match8 = Event.create!(competition: "Finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,18, 16, 0, 0), channel: "TF1")
 match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", full_datetime: DateTime.new(2022,12,28, 18, 0, 0), channel: "Primevideo")
 match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", full_datetime: DateTime.new(2022,12,28, 21, 0, 0), channel: "Primevideo")
 
@@ -120,12 +120,12 @@ event_team10 = EventTeam.create!(event: match10, team: team10)
 puts 'Creating Places...'
 # PLACES
 
-LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoignant un lieu de partage", address: "3 allée de l'Ile Gloriette 44000 Nantes", name:"La Scierie", status:"Places disponibles")
+LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoignant un lieu de partage", address: "3 allée de l'Ile Gloriette 44000 Nantes", name:"La Scierie", status:"Places disponibles Viens,tu verras comment on est bien!")
 file = URI.open("http://www.lesbarres.com/media/image/slideshow/a1f8f0d08556369fa82d5ce29e775387b7a713e1.jpg")
 LaScierie.photo.attach(io: file, filename: "LaScierie.png", content_type: "image/png")
 
 Brasseurs = Place.create!(characteristic: "Une cuisine authentique dans l'esprit des anciennes brasseries. De moments généreux et conviviaux à déguster", address: "Centre Commercial Carré 19 Parvis Neptune 44000 Nantes", name:"3 Brasseurs", status:"Places disponibles")
-file = URI.open("https://www.radiofrance.fr/s3/cruiser-production/2017/08/ac545240-6ac1-41d6-accd-6193e6b50caa/870x489_dsc_7037.jpg")
+file = URI.open("https://www.3brasseurs.com/medias/images/visual/joinus-02.jpg")
 Brasseurs.photo.attach(io: file, filename: "Brasseurs.png", content_type: "image/png")
 
 LeCascabel = Place.create!(characteristic: "Une belle cascade de joie vous y attend", address: "1 Rue Kervégan 44000 Nantes", name:"Le Cascabel", status:"Complet")
