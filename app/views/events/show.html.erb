@@ -1,16 +1,13 @@
 <%# view de events %>
-
 <%# <h1>Places</h1> %>
 <div class="cards-container-show-events">
   <div class="row-show-events">
     <div>
 
       <%= link_to events_path,class: "lien" do %>
-        <i class="fa-solid fa-backward icon-back"></i>
+        <i id="backlogo" class="fa-solid fa-backward icon-back"></i>
         <% end %>
-        
         <%= image_tag "Component 8 (2).png", class:"logoW" %>
-
       <%# div competition %>
       <div class="competition-show-events">
         <%# <h1><%= @event.competition</li></h1> %>
@@ -20,7 +17,7 @@
       <%# teams %>
       <div class="game-flex-container">
         <div class="align">
-          <h3 class="vs">VS</h3>
+          <h3 class="vs"><%= image_tag "vs.png" %></h3>
 
             <div class="team_first">
               <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
@@ -30,9 +27,7 @@
             <%=cl_image_tag @event.teams.last.photo.key, class: "picture-team-events"%>
               <p class="last"><%=@event.teams.last.name%></p>
               </div>
-
         </div>
-
         <%# Hour %>
         <div class="hour">
           <%if @event.channel == "TF1"%>
@@ -50,30 +45,47 @@
         <% @event.places.each do |place|%>
           <%= link_to  event_place_path(@event, place),class: "lien" do %>
             <div class=" bar-card">
-              <div class="card-photo">
-                <%=cl_image_tag place.photo.key, class: "picture-show-events", width: 200 %>
+              <div class="card-photo picture-show-events" style="background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(place.photo.key)%>);">
+                <div class="namebar"></div><%=place.name%>
               </div>
               <div class="description">
                 <div class="description-name">
-                  <%=place.name%>
-                      <br>
                   <%=place.address%>
                 <div class="city-show-events">
                   <%=place.city%>
                 </div>
                 </div>
-
                 <%# <%=place.characteristic%>
                 <%if place.status == "Places disponibles"%>
-                  <div class="dispo">
+                  <div class="dispo d-flex justify-content">
+                    <i id="handicap" class="fa-solid fa-wheelchair-move"></i>
+                    <i id="tv" class="fa-solid fa-tv"></i>
+                    <i id="dog" class="fa-solid fa-dog"></i>
+                    <i id="wifi" class="fa-solid fa-wifi"></i>
+                    <i id="smoke" class="fa-solid fa-smoking"></i>
+
+                    <p class="m-0">20%</p>
                     <i class="fa-solid fa-user"></i>
+
                   </div>
                 <%elsif place.status == "Quelques places" %>
-                  <div class= "encore">
+                  <div class= "encore d-flex justify-content">
+                    <i id="cocktail" class="fa-solid fa-martini-glass-citrus"></i>
+                    <i id="dog" class="fa-solid fa-dog"></i>
+                    <i id="wifi" class="fa-solid fa-wifi"></i>
+                    <i id="tv" class="fa-solid fa-tv"></i>
+                    <i id="smoke" class="fa-solid fa-smoking"></i>
+
+                    <p class="m-0">70%</p>
                     <i class="fa-solid fa-user-group"></i>
                   </div>
                 <%else%>
-                  <div class="plein">
+                  <div class="plein d-flex justify-content">
+                    <i id="tv" class="fa-solid fa-tv"></i>
+                    <i id="dog" class="fa-solid fa-dog"></i>
+                    <i id="wifi" class="fa-solid fa-wifi"></i>
+                    <i id="smoke" class="fa-solid fa-smoking"></i>
+                    <p class="m-0">100%</p>
                     <i class="fa-solid fa-users"></i>
                   </div>
                 <%end%>
