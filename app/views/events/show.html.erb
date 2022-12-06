@@ -6,9 +6,9 @@
     <div class="col-12 col-lg-6">
       <div class="logo">
       <%= link_to events_path,class: "lien" do %>
-        <i class="fa-solid fa-backward icon-back"></i>
+        <i id="backlogo" class="fa-solid fa-backward icon-back"></i>
         <% end %>
-        <%= image_tag "Component 8 (2).png", class:"png" %>
+        <%= image_tag "Component 8 (2).png", class:"logoW" %>
       </div>
 
       <%# div competition %>
@@ -20,7 +20,7 @@
       <%# teams %>
       <div class="game-flex-container">
         <div class="align">
-          <h3 class="vs">VS</h3>
+          <h3 class="vs"><%= image_tag "vs.png" %></h3>
 
             <div class="team_first">
               <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
@@ -60,18 +60,36 @@
 
                 <%# <%=place.characteristic%>
                 <%if place.status == "Places disponibles"%>
-                  <div class="dispo d-flex justify-content-end">
-                    <p class="m-0">Places disponibles</p>
+                  <div class="dispo d-flex justify-content">
+                    <i id="handicap" class="fa-solid fa-wheelchair-move"></i>
+                    <i id="tv" class="fa-solid fa-tv"></i>
+                    <i id="dog" class="fa-solid fa-dog"></i>
+                    <i id="wifi" class="fa-solid fa-wifi"></i>
+                    <i id="smoke" class="fa-solid fa-smoking"></i>
+
+                    <p class="m-0">20%</p>
                     <i class="fa-solid fa-user"></i>
+
                   </div>
                 <%elsif place.status == "Quelques places" %>
-                  <div class= "encore d-flex justify-content-end">
-                    <p class="m-0">Encore quelques places</p>
+                  <div class= "encore d-flex justify-content">
+                    <i id="cocktail" class="fa-solid fa-martini-glass-citrus"></i>
+                    <i id="dog" class="fa-solid fa-dog"></i>
+                    <i id="wifi" class="fa-solid fa-wifi"></i>
+                    <i id="tv" class="fa-solid fa-tv"></i>
+                    <i id="smoke" class="fa-solid fa-smoking"></i>
+
+                    <p class="m-0">70%</p>
                     <i class="fa-solid fa-user-group"></i>
                   </div>
                 <%else%>
-                  <div class="plein d-flex justify-content-end">
-                    <p class="m-0">Complet</p>
+                  <div class="plein d-flex justify-content">
+                    <i id="tv" class="fa-solid fa-tv"></i>
+                    <i id="dog" class="fa-solid fa-dog"></i>
+                    <i id="wifi" class="fa-solid fa-wifi"></i>
+                    <i id="smoke" class="fa-solid fa-smoking"></i>
+
+                    <p class="m-0">100%</p>
                     <i class="fa-solid fa-users"></i>
                   </div>
                 <%end%>
