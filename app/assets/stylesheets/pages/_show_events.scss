@@ -37,12 +37,16 @@
       color: whitesmoke;
       margin-left: 10px;
       margin-top: 10px;
+      font-size: 16px;
+      font-weight: lighter;
     }
 
     .last {
       color: whitesmoke;
       margin-right: 10px;
       margin-top: 10px;
+      font-size: 16px;
+      font-weight: lighter;
     }
   }
 
@@ -53,12 +57,13 @@
   .team_last {
     display: flex;
     flex-direction: row-reverse;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .team_first {
+    display: flex;
     margin-right: 14px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .place {
@@ -112,7 +117,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 76px;
+    bottom: 30px;
     padding-left: 5px;
 
   }
