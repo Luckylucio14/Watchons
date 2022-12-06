@@ -136,7 +136,7 @@ LaBelleEquipe = Place.create!(characteristic: "L'esprit d'équipe que l'on perde
 file = URI.open("https://www.lbe-nantes.fr/i/la-belle-equipe-1877-bar-restaurant-salle-eiffel-rez-de-chausse/3/4/8/1/9/0/1/5/0/2/2/8/8/1548158245_437/5880eee8b302623787de9e0207b33df8.jpg")
 LaBelleEquipe.photo.attach(io: file, filename: "LaBelleEquipe.png", content_type: "image/png")
 
-Giggs = Place.create!(characteristic: "Un match ne se joue pas que sur la pelouse", address: "4 Pl. Saint-Pierre 44000 Nantes", name:"Gigg's", status:"Places disponibles")
+Giggs = Place.create!(characteristic: "Un match ne se joue pas que sur la pelouse", address: "4 Place Saint-Pierre, près de Cathédrale St-Pierre, 44000 Nantes", name:"Gigg's", status:"Places disponibles")
 file = URI.open("https://cdn.schlouk-map.com/cache/gallery/uploads/images/places/giggs-irish-pub-625824ac437ab0.58323803.png")
 Giggs.photo.attach(io: file, filename: "LaBelleEquipe.png", content_type: "image/png")
 
