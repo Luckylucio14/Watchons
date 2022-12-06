@@ -30,42 +30,36 @@
   border-radius: 5px;
   border-bottom-right-radius: 10px;
   width: 90vw;
-  height: 220px;
-  margin: 30px 5%;
+  margin: 7px 5%;
+  overflow: hidden;
 }
 
 .event {
   height: 40%;
   width: 100%;
   margin: 0px;
-  background-image: url("picture_world_cup.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("picture_world_cup.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   display: flex;
+  height: 70px;
   align-items: center;
   justify-content: center;
-
-  // img {
-    //   width: 100%;
-    //   object-fit: cover;
-    // }
-
-  }
-
+}
 
 .event_competition_type {
   color: white;
   font-weight: bolder;
-  text-align: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .next_event {
   color: black !important;
-  padding: 20px;
+  padding: 12px 20px;
 }
-
 
 .past_event {
   color: black !important;
@@ -80,69 +74,57 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 15px 0px;
 
   h4 {
-    margin: 0px 10px;
+    margin: 0px;
+    font-size: 16px;
   }
 }
 
 .team {
   display: flex;
-  width: 32%;
   align-items: center;
-  text-align: center;
-  font-family: "Young Serif", sans-serif;
   text-decoration: none;
 }
 
 .team_first {
-  display: flex;
-  flex-direction: row;
-
-  h2 {
-  padding: 0 0 0 20px;
-
+  h4 {
+    padding: 0 0 0 20px;
   }
 }
-
 .team_last {
-  display: flex;
   flex-direction: row-reverse;
 
-  h2 {
-  padding: 0 20px 0 0;
-
+  h4 {
+    padding: 0 20px 0 0;
   }
 }
 
 .size_versus {
   height: 20px;
   width: 20px;
-
 }
 
 .versus {
   width: 32%;
   text-align: center;
-
 }
 
 .team img {
-  height: 40px;
-  width: 40px;
-
+  height: 25px;
 }
 
 .channel {
   display: flex;
-  flex-direction: row;
-  width: 80%;
-  height: 50%;
   justify-content: flex-start;
-  align-items: center;
   align-content: flex-end;
   font-weight: bold;
+  margin-top: 15px;
+
+  .hora {
+    font-size: 16px;
+    margin-left: 15px;
+  }
 
   p {
     padding: 0px !important;
@@ -150,10 +132,7 @@
 }
 
 .channel img {
-  width: 80px;
-  object-fit: contain;
-  padding: 0 20px;
-
+  height: 10px;
 }
 
 .amazonprime {
