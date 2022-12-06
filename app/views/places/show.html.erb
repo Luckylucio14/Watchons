@@ -2,11 +2,11 @@
     <div class="row-show-events">
         <div class="col-12 col-lg-6">
             <%# LOGO %>
-            <div class="logo">
-                <%= link_to event_path(@event),class: "lien" do %>
-                    <i class="fa-solid fa-backward icon-back"></i>
+                <div class="logo">
+            <%= link_to event_path(@event),class: "lien" do %>
+                <i class="fa-solid fa-backward icon-back"></i>
                 <% end %>
-                <%= image_tag "Component 8 (2).png", class:"logo" %>
+                <%= image_tag "Component 8 (2).png", class:"png" %>
             </div>
         </div>
         
@@ -41,7 +41,6 @@
         </div>
 
         <%# description%>
-        <div class="flexbox">
             <%# name %>
             <div class="name">
                 <h1 class="naming_place"><%=@place.name%></h1>
@@ -49,18 +48,17 @@
 
             <%# address %>
             <div class="address">
-                <h1><%= @place.address%></h1>
+                <h1 class="address_place"><%= @place.address%></h1>
             </div>
 
-            <%# icone %>
             <%# phrase descriptif %>
             <div class="sentence">
-                <h1><%=@place.characteristic%></h1>
+                <h1 class="sentence_place"><%=@place.characteristic%></h1>
             </div>
         
-        <%# jauge %>
-        </div>
-
+            <%# jauge & icons %>
+        
+            
         <%# MAP %>
         <div class= "wrap_map">
             <div class="map" style="width: 100%; height: 400px;"
