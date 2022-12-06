@@ -7,7 +7,7 @@
       <%= link_to events_path,class: "lien" do %>
         <i id="backlogo" class="fa-solid fa-backward icon-back"></i>
         <% end %>
-        <%= image_tag "Component 8 (2).png", class:"logoW" %>
+        <%= image_tag "Component 8 (2).png", class:"logoW-show-event" %>
       <%# div competition %>
       <div class="competition-show-events">
         <%# <h1><%= @event.competition</li></h1> %>
@@ -15,40 +15,40 @@
       </div>
 
       <%# teams %>
-      <div class="game-flex-container">
+      <div class="game-flex-container-show-events">
         <div class="align">
-          <h3 class="vs"><%= image_tag "vs.png" %></h3>
+          <h3 class="vs-show-events"><%= image_tag "vs.png" %></h3>
 
-            <div class="team_first">
+            <div class="team_first-show-events">
               <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
-              <p class="first"><%=@event.teams.first.name%></p>
+              <p class="first-show-events"><%=@event.teams.first.name%></p>
             </div>
-            <div class="team_last">
+            <div class="team_last-show-events">
             <%=cl_image_tag @event.teams.last.photo.key, class: "picture-team-events"%>
-              <p class="last"><%=@event.teams.last.name%></p>
+              <p class="last-show-events"><%=@event.teams.last.name%></p>
               </div>
         </div>
         <%# Hour %>
-        <div class="hour">
+        <div class="hour-show-event">
           <%if @event.channel == "TF1"%>
-            <div class="png"><%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
+            <div class="png1"><%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%></div><div class="hora"><%= @event.hour("%H")%></div>
           <% elsif @event.channel == "Bein" %>
-          <div class="png"><%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div><div class="hora"><%= @event.hour("%H")%></div>
+          <div class="png1"><%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div><div class="hora"><%= @event.hour("%H")%></div>
           <% else %>
-          <div class="png"><%= image_tag "prime-video-ok.jpg",height:1, width: 35, class: "amazonprime"%></div><div class="hora"><%= @event.hour("%H")%></div>
+          <div class="png1"><%= image_tag "prime-video-ok.jpg",height:1, width: 35, class: "amazonprime"%></div><div class="hora"><%= @event.hour("%H")%></div>
           <%end%>
         </div>
       </div>
 
       <%# places %>
-      <div class="place">
+      <div class="place-show-events">
         <% @event.places.each do |place|%>
           <%= link_to  event_place_path(@event, place),class: "lien" do %>
-            <div class=" bar-card">
+            <div class=" bar-card1">
               <div class="card-photo picture-show-events" style="background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(place.photo.key)%>);">
-                <div class="namebar"></div><%=place.name%>
+                <div class="namebar-show-events"></div><%=place.name%>
               </div>
-              <div class="description">
+              <div class="description-show-events">
                 <div class="description-name">
                   <%=place.address%>
                 <div class="city-show-events">
@@ -57,7 +57,7 @@
                 </div>
                 <%# <%=place.characteristic%>
                 <%if place.status == "Places disponibles"%>
-                  <div class="dispo d-flex justify-content align-items-center">
+                  <div class="dispo-show-events d-flex justify-content align-items-center">
                     <i id="handicap" class="fa-solid fa-wheelchair-move"></i>
                     <i id="tv" class="fa-solid fa-tv"></i>
                     <i id="dog" class="fa-solid fa-dog"></i>
@@ -69,7 +69,7 @@
 
                   </div>
                 <%elsif place.status == "Quelques places" %>
-                  <div class= "encore d-flex justify-content align-items-center">
+                  <div class= "encore-show-events d-flex justify-content align-items-center">
                     <i id="cocktail" class="fa-solid fa-martini-glass-citrus"></i>
                     <i id="dog" class="fa-solid fa-dog"></i>
                     <i id="wifi" class="fa-solid fa-wifi"></i>
@@ -80,7 +80,7 @@
                     <i class="fa-solid fa-user-group"></i>
                   </div>
                 <%else%>
-                  <div class="plein d-flex justify-content align-items-center">
+                  <div class="plein-show-events d-flex justify-content align-items-center">
                     <i id="tv" class="fa-solid fa-tv"></i>
                     <i id="dog" class="fa-solid fa-dog"></i>
                     <i id="wifi" class="fa-solid fa-wifi"></i>
