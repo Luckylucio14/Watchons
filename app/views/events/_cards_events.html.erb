@@ -27,11 +27,11 @@
           <div class="">
             <%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%>
           </div>
-          <div class="hora"><%= event.hour("%H")%></div>
+          <div class="hour_event_index"><%= event.hour("%H")%></div>
         <% elsif event.channel == "Bein" %>
           <div class="">
             <%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div>
-            <div class="hora"><%= event.hour("%H")%>
+            <div class="hour_event_index"><%= event.hour("%H")%>
           </div>
         <% else %>
           <div class=""><%= image_tag "prime-video-ok.jpg",height:1, width: 200, class: "amazonprime"%></div><div class="hora"><%= event.hour("%H")%></div>

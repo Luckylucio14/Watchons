@@ -1,7 +1,8 @@
 // Specific CSS for your home-page
 .back_image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0)113%), url('https://acegif.com/wp-content/uploads/gif/beer-30.gif');
+
   // filter: contrast(90%);
+
   background-size: cover;
   background-position: center;
   height:100vh;
@@ -15,6 +16,17 @@
   flex-direction: column;
 }
 
+.filtre_grey{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0)113%), url('https://acegif.com/wp-content/uploads/gif/beer-30.gif');
+  position: absolute;
+  filter: grayscale(100%);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+}
+
+
 .logo_homepage{
   background-image: url("logo_homepage.png");
   background-repeat:no-repeat;
@@ -22,13 +34,17 @@
   height: 111px;
   width: 100%;
   margin-bottom: 30px;
+  z-index: 10;
 
 }
 
 .text_homepage{
   color: white;
   text-align: center;
-  font-size: 30px;
+  z-index: 11;
+  h3{
+    font-size: 25px;
+  }
 
 }
 
@@ -43,9 +59,11 @@
   border-radius: 56px;
   // padding-top: 7px;
   margin-top: 30px;
+  z-index: 12;
   a{
     text-decoration: none;
     color: black;
   }
+
 
 }
