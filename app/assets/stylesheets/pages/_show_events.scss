@@ -129,8 +129,9 @@
     text-align: right;
     margin-right: 0px;
     color: green;
-    // position: absolute;
-    // font-size: 16px;
+    .m-0{
+      padding-left: 78px;
+    }
 
     .fa-solid{
       color: green;
@@ -140,25 +141,37 @@
 
   .encore {
     text-align: right;
-    margin-right: 0px;
-    color: orange;
 
-    margin-left: 15px;
+    color: orange;
+    margin-left: Opx;
+
+    .m-0{
+      padding-left: 71px;
+}
+    }
+
     .fa-solid{
       color: orange;
       margin-left: 15px;
     }
   }
 
+
+
+
   .plein {
     text-align: right;
-    margin-right: 0px;
+    margin-left: 0px;
     color: red;
 
+    .m-0{
+      padding-left: 97px;
+    }
 
     .fa-solid{
       color: red;
       margin-left: 15px;
+
     }
   }
 
@@ -194,12 +207,12 @@
     margin-left: 329px;
     position: relative;
   }
-}
+
 
   #backlogo{
     margin-left: 10px;
     margin-top: 30px;
-  
+
 
 
     .fa-solid{
@@ -207,4 +220,35 @@
       color:rgb(255, 200, 36)
 
     }
+
+  }
+
+  #tv{
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+
+  #dog{
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+
+  #wifi{
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+
+  #cocktail{
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+
+  #smoke{
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+
+  #handicap{
+    margin-left: 0px;
+    margin-right: 15px;
   }
