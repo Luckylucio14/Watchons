@@ -190,28 +190,29 @@
     border-color: white;
   }
 
-  .logo{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-  }
+  // .logo{
+  //   display: flex;
+  //   justify-content: center;
+  //   padding-top: 20px;
+  // }
 
   .icon-back {
     position: absolute;
-    top: 45px;
+    top: 10px;
     left: 10px;
     font-size: 25px;
-    color:rgb(255, 200, 36)
+    color:rgb(255, 200, 36);
+    padding-left: 0px;
   }
 
-  .logo {
-    width: 80px;
 
-  }
   .logoW{
 
-    margin-left: 329px;
+    width: 94px;
     position: relative;
+    left: 158px;
+    height: 82px;
+    padding-top: 10px;
   }
 
 
