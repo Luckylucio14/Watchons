@@ -12,10 +12,18 @@
   .h3{
     color: whitesmoke;
   }
+}
 
-  .sentence{
-  color: whitesmoke;
-  }
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-12{
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-diffusion-event{
@@ -23,10 +31,18 @@
 }
 .naming_place{
   color: whitesmoke;
-  font-size: 21px;
+  font-size: 16px;
+  padding-top: 22px;
+  padding-left: 20px;
+  font-weight: bold;
 }
 .address{
   color: whitesmoke;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.address_place{
   font-size: 16px;
 }
 
@@ -37,8 +53,13 @@
 }
 
 .sentence{
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.sentence_place{
   color: whitesmoke;
-  
+  font-size: 16px;
 }
 
 .btn_show{
