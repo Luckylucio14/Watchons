@@ -4,7 +4,7 @@
     background-size: cover !important;
   }
 
-  .game-flex-container {
+  .game-flex-container-show-events {
     background-color: #1c1c1c;
     border-radius: 5px;
     font-size: 30px;
@@ -20,7 +20,7 @@
     height: 91px;
     border-radius: 5px;
 
-    .vs {
+    .vs-show-events {
       position: absolute;
       left: 50%;
       top: 35px;
@@ -33,7 +33,7 @@
     }
 
 
-    .first {
+    .first-show-events {
       color: whitesmoke;
       margin-left: 10px;
       margin-top: 10px;
@@ -41,7 +41,7 @@
       font-weight: lighter;
     }
 
-    .last {
+    .last-show-events {
       color: whitesmoke;
       padding-right: 10px;
       margin-top: 10px;
@@ -50,24 +50,24 @@
     }
   }
 
-  .channel {
+  .channel-show-events {
     width: 40px;
   }
 
-  .team_last {
+  .team_last-show-events {
     display: flex;
     flex-direction: row-reverse;
     font-size: 16px;
     margin-left: 10px;
   }
 
-  .team_first {
+  .team_first-show-events {
     display: flex;
     margin-right: 14px;
     font-size: 16px;
   }
 
-  .place {
+  .place-show-events {
     display: flex;
     flex-direction: column;
     background-color: rgb(44, 44, 44);
@@ -75,7 +75,7 @@
     padding-inline: 10px;
   }
 
-  .bar-card{
+  .bar-card1{
     border-radius: 8px;
     margin-bottom: 40px;
     background-color: white;
@@ -112,7 +112,7 @@
     justify-content: space-between;
   }
 
-  .hour{
+  .hour-show-event{
     color: whitesmoke;
     display: flex;
     justify-content: center;
@@ -131,7 +131,7 @@
 
   }
 
-  .description{
+  .description-show-events{
     color: black;
     text-decoration: none;
     font-weight: bolder;
@@ -139,7 +139,7 @@
     font-size: large;
   }
 
-  .dispo {
+  .dispo-show-events {
     text-align: right;
     margin-right: 0px;
     color: green;
@@ -155,7 +155,7 @@
     }
   }
 
-  .encore {
+  .encore-show-events {
     text-align: right;
 
     color: orange;
@@ -178,7 +178,7 @@
 
 
 
-  .plein {
+  .plein-show-events {
     text-align: right;
     margin-left: 0px;
     color: red;
@@ -222,7 +222,7 @@
   }
 
 
-  .logoW{
+  .logoW-show-event{
 
     width: 94px;
     position: relative;
@@ -278,4 +278,9 @@
 
   .city-show-events{
     font-weight: lighter;
+  }
+
+  .png1{
+    height: 82px;
+    margin-top: 19px;
   }
