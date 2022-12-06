@@ -29,7 +29,7 @@
       font-weight:bold;
       font-weight: 900;
       color:whitesmoke;
-      image: url("picture_world_cup.jpg");
+
     }
 
 
@@ -135,6 +135,8 @@
     text-align: right;
     margin-right: 0px;
     color: green;
+    margin-bottom: -17px;
+    margin-top: 6px;
     .m-0{
       padding-left: 78px;
     }
@@ -150,6 +152,8 @@
 
     color: orange;
     margin-left: Opx;
+    margin-bottom: -17px;
+    margin-top: 6px;
 
     .m-0{
       padding-left: 71px;
@@ -169,6 +173,8 @@
     text-align: right;
     margin-left: 0px;
     color: red;
+    margin-top: 6px;
+    margin-bottom: -17px;
 
     .m-0{
       padding-left: 97px;
@@ -190,28 +196,30 @@
     border-color: white;
   }
 
-  .logo{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-  }
+  // .logo{
+  //   display: flex;
+  //   justify-content: center;
+  //   padding-top: 20px;
+  // }
 
   .icon-back {
     position: absolute;
-    top: 45px;
+    top: 10px;
     left: 10px;
     font-size: 25px;
-    color:rgb(255, 200, 36)
-  }
-
-  .logo {
-    width: 80px;
+    color:rgb(255, 200, 36);
+    padding-left: 0px;
 
   }
+
+
   .logoW{
 
-    margin-left: 329px;
+    width: 94px;
     position: relative;
+    left: 158px;
+    height: 82px;
+    padding-top: 10px;
   }
 
 
@@ -257,4 +265,8 @@
   #handicap{
     margin-left: 0px;
     margin-right: 15px;
+  }
+
+  .city-show-events{
+    font-weight: lighter;
   }
