@@ -132,7 +132,7 @@ LeCascabel = Place.create!(characteristic: "Une belle cascade de joie vous y att
 file = URI.open("https://www.google.com/maps/uv?pb=!1s0x4805eea588d9a5c3%3A0x714dea4f8151dd19!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNS5uSIB_Vg6LAdM6BH96qTVFbS6QJeGaYGXI7Q%3Dw260-h175-n-k-no!5sle%20cascabel%20nantes%20-%20Buscar%20con%20Google!15sCgIgAQ&imagekey=!1e10!2sAF1QipPCmEIhZC0IewhtIpnrwRlV5ITmv1IwuErfrwwJ&hl=es&sa=X&ved=2ahUKEwi57vXewNP7AhVsTKQEHT9fCdAQ7ZgBKAB6BAgWEAI#.jpg")
 LeCascabel.photo.attach(io: file, filename: "LeCascabel.png", content_type: "image/png")
 
-LaBelleEquipe = Place.create!(characteristic: "L'esprit d'équipe que l'on perde ou que l'on gagne",  address: "10 Quai de la Jonelière 44000 Nantes", name:"La belle equipe", status:"Complet")
+LaBelleEquipe = Place.create!(characteristic: "L'esprit d'équipe que l'on perde ou que l'on gagne",  address: "10 Quai de la Jonelière,face à l'Erdre, 44000 Nantes", name:"La belle equipe", status:"Complet")
 file = URI.open("https://www.lbe-nantes.fr/i/la-belle-equipe-1877-bar-restaurant-salle-eiffel-rez-de-chausse/3/4/8/1/9/0/1/5/0/2/2/8/8/1548158245_437/5880eee8b302623787de9e0207b33df8.jpg")
 LaBelleEquipe.photo.attach(io: file, filename: "LaBelleEquipe.png", content_type: "image/png")
 
