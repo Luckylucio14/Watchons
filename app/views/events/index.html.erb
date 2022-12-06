@@ -4,50 +4,21 @@
     <div class="day">
       <%# <p>DEMAIN</p> %>
     </div>
+
+    <h1><%= "Aujourd'hui" %></h1>
+    <% @events_today.each do |event|%>
+      <%= render "cards_events", event: event %>
+    <% end %>
+
+    <h1><%= "Demain" %></h1>
+    <% @events_tomorrow.each do |event|%>
+      <%= render "cards_events", event: event %>
+    <% end %>
+
+    <h1><%= "Plus tard" %></h1>
     <% @events.each do |event|%>
-      <% event_class = Time.now > event.full_datetime ? "past_event" : "next_event" %>
-      <%= link_to event_path(event) do %>
-        <div class="match_index_card">
-          <div class="event">
-            <%# <%=image_tag("football_fifa_worldcup.png")%>
-            <h4 class="event_competition_type"><%= event.competition %></h4>
-          </div>
-          <div class=<%=event_class%>>
-            <div class="contest">
-              <div class="team team_first">
-                <%=cl_image_tag event.teams.first.photo.key, class: "picture" %>
-                <h4><%=event.teams.first.name %></h4>
-
-              </div>
-              <div class="versus">
-                <%=image_tag("vs.png")%>
-              </div>
-              <div class="team team_last">
-                <%=cl_image_tag event.teams.last.photo.key, class: "picture" %>
-                <h4><%=event.teams.last.name %></h4>
-
-              </div>
-            </div>
-            <div class="channel">
-              <% if event.channel == "TF1"%>
-                <div class="png">
-                  <%= image_tag "TF1.jpeg",height:13,width: 35, class: "tf1"%>
-                </div>
-                <div class="hora"><%= event.hour("%H")%></div>
-              <% elsif event.channel == "Bein" %>
-                <div class="png">
-                  <%= image_tag "bein-ok.jpg",height:13, width: 35,class: "bein"%></div>
-                  <div class="hora"><%= event.hour("%H")%>
-                </div>
-              <% else %>
-                <div class="png"><%= image_tag "prime-video-ok.jpg",height:1, width: 200, class: "amazonprime"%></div><div class="hora"><%= event.hour("%H")%></div>
-              <%end%>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      <% end %>
+        <%= render "cards_events", event: event %>
+    <% end %>
     </div>
-  </div>
   <%= render "shared/navbar" %>
 </div>
