@@ -6,10 +6,10 @@
     <div>
 
       <%= link_to events_path,class: "lien" do %>
-        <i id="backlogo" class="fa-solid fa-backward icon-back"></i>
+        <i class="fa-solid fa-backward icon-back"></i>
         <% end %>
+        
         <%= image_tag "Component 8 (2).png", class:"logoW" %>
-
 
       <%# div competition %>
       <div class="competition-show-events">
@@ -20,7 +20,7 @@
       <%# teams %>
       <div class="game-flex-container">
         <div class="align">
-          <h3 class="vs"><%= image_tag "vs.png" %></h3>
+          <h3 class="vs">VS</h3>
 
             <div class="team_first">
               <%=cl_image_tag @event.teams.first.photo.key, class: "picture-team-events"%>
@@ -50,11 +50,13 @@
         <% @event.places.each do |place|%>
           <%= link_to  event_place_path(@event, place),class: "lien" do %>
             <div class=" bar-card">
-              <div class="card-photo picture-show-events" style="background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(place.photo.key)%>);">
-                <div class="namebar"></div><%=place.name%>
+              <div class="card-photo">
+                <%=cl_image_tag place.photo.key, class: "picture-show-events", width: 200 %>
               </div>
               <div class="description">
                 <div class="description-name">
+                  <%=place.name%>
+                      <br>
                   <%=place.address%>
                 <div class="city-show-events">
                   <%=place.city%>
@@ -63,36 +65,15 @@
 
                 <%# <%=place.characteristic%>
                 <%if place.status == "Places disponibles"%>
-                  <div class="dispo d-flex justify-content">
-                    <i id="handicap" class="fa-solid fa-wheelchair-move"></i>
-                    <i id="tv" class="fa-solid fa-tv"></i>
-                    <i id="dog" class="fa-solid fa-dog"></i>
-                    <i id="wifi" class="fa-solid fa-wifi"></i>
-                    <i id="smoke" class="fa-solid fa-smoking"></i>
-
-                    <p class="m-0">20%</p>
+                  <div class="dispo">
                     <i class="fa-solid fa-user"></i>
-
                   </div>
                 <%elsif place.status == "Quelques places" %>
-                  <div class= "encore d-flex justify-content">
-                    <i id="cocktail" class="fa-solid fa-martini-glass-citrus"></i>
-                    <i id="dog" class="fa-solid fa-dog"></i>
-                    <i id="wifi" class="fa-solid fa-wifi"></i>
-                    <i id="tv" class="fa-solid fa-tv"></i>
-                    <i id="smoke" class="fa-solid fa-smoking"></i>
-
-                    <p class="m-0">70%</p>
+                  <div class= "encore">
                     <i class="fa-solid fa-user-group"></i>
                   </div>
                 <%else%>
-                  <div class="plein d-flex justify-content">
-                    <i id="tv" class="fa-solid fa-tv"></i>
-                    <i id="dog" class="fa-solid fa-dog"></i>
-                    <i id="wifi" class="fa-solid fa-wifi"></i>
-                    <i id="smoke" class="fa-solid fa-smoking"></i>
-
-                    <p class="m-0">100%</p>
+                  <div class="plein">
                     <i class="fa-solid fa-users"></i>
                   </div>
                 <%end%>
