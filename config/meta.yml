@@ -1,5 +1,5 @@
 meta_product_name: "Watchons"
 meta_title: "Watchons - Watchons"
 meta_description: "Regarder des matchs dans un bar"
-meta_image: "components 8(2).png" # should exist in `app/assets/images/`
-twitter_account: "@product_twitter_account"   # required for Twitter Cards
+meta_image: "logo_homepage.png" # should exist in `app/assets/images/`
+twitter_account: "@equipedefrance"   # required for Twitter Cards
