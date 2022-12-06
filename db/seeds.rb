@@ -125,10 +125,10 @@ file = URI.open("http://www.lesbarres.com/media/image/slideshow/a1f8f0d08556369f
 LaScierie.photo.attach(io: file, filename: "LaScierie.png", content_type: "image/png")
 
 Brasseurs = Place.create!(characteristic: "Une cuisine authentique dans l'esprit des anciennes brasseries. De moments généreux et conviviaux à déguster", address: "Centre Commercial Carré 19 Parvis Neptune 44000 Nantes", name:"3 Brasseurs", status:"Places disponibles")
-file = URI.open("https://www.3brasseurs.com/medias/images/visual/joinus-02.jpg")
+file = URI.open("https://i.ytimg.com/vi/CblVTS5fTFE/maxresdefault.jpg")
 Brasseurs.photo.attach(io: file, filename: "Brasseurs.png", content_type: "image/png")
 
-LeCascabel = Place.create!(characteristic: "Une belle cascade de joie vous y attend", address: "1 Rue Kervégan 44000 Nantes", name:"Le Cascabel", status:"Complet")
+LeCascabel = Place.create!(characteristic: "Une belle cascade de joie vous y attend", address: "1 Rue Kervégan,Quartier Bouffay, 44000 Nantes", name:"Le Cascabel", status:"Complet")
 file = URI.open("https://www.google.com/maps/uv?pb=!1s0x4805eea588d9a5c3%3A0x714dea4f8151dd19!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNS5uSIB_Vg6LAdM6BH96qTVFbS6QJeGaYGXI7Q%3Dw260-h175-n-k-no!5sle%20cascabel%20nantes%20-%20Buscar%20con%20Google!15sCgIgAQ&imagekey=!1e10!2sAF1QipPCmEIhZC0IewhtIpnrwRlV5ITmv1IwuErfrwwJ&hl=es&sa=X&ved=2ahUKEwi57vXewNP7AhVsTKQEHT9fCdAQ7ZgBKAB6BAgWEAI#.jpg")
 LeCascabel.photo.attach(io: file, filename: "LeCascabel.png", content_type: "image/png")
 
@@ -152,7 +152,7 @@ berlin = Place.create!(characteristic: "Lieu de rencontre et de partage reconnu 
 file = URI.open("https://mvistatic.com/etablissements/2018-05/16163_crop_640-270_.jpg")
 berlin.photo.attach(io: file, filename: "berlin.png", content_type: "image/png")
 
-lab = Place.create!(characteristic: "En navibus, voiture, vélo, à pieds ou à cheval, tous les chemin mène au LAB", address: "23 Bd de Chantenay, 44100 Nantes", name:"Little Atlantique Brewery", status:"Complet")
+lab = Place.create!(characteristic: "En navibus, voiture, vélo, à pieds ou à cheval, tous les chemin mène au LAB", address: "23 Boulevard de Chantenay, 44100 Nantes", name:"Little Atlantique Brewery", status:"Complet")
 file = URI.open("https://uploads.lebonbon.fr/source/2020/june/2008827/little-atlantique-brewery-nantes_2_400.jpg")
 lab.photo.attach(io: file, filename: "lab.png", content_type: "image/png")
 
