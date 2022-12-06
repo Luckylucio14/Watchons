@@ -14,7 +14,7 @@
   }
 }
 
-.logo{
+.logo_item{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,6 +60,16 @@
 .sentence_place{
   color: whitesmoke;
   font-size: 16px;
+}
+
+.status_situation{
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+.png{
+  height: 82px;
+  margin-top: 19px;
 }
 
 .btn_show{
