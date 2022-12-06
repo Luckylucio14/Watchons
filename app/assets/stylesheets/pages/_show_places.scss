@@ -1,6 +1,28 @@
 .place_show_container {
   height: 100vh;
 
+  .png-show-place{
+    height: 82px;
+    width: 94px;
+    position: relative;
+    left: 143px;
+}
+
+.icon-back-show {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 25px;
+  color:rgb(255, 200, 36);
+  padding-left: 0px;
+}
+
+  .first{
+
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
   .name {
     color: whitesmoke;
     margin-left: 10px;
@@ -32,7 +54,7 @@
 .naming_place{
   color: whitesmoke;
   font-size: 16px;
-  padding-top: 22px;
+
   padding-left: 20px;
   font-weight: bold;
 }
@@ -57,7 +79,7 @@
 
 .sentence{
   padding-left: 20px;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .sentence_place{
@@ -74,21 +96,24 @@
   height: 82px;
   margin-top: 19px;
 }
-.dispo-show{
+.dispo-places{
+  padding-left: 20px;
   color:green;
     .fa-solid{
     color:green;
   }
 }
 
-.encore-show{
+.encore-show-places{
+  padding-left: 20px;
   color:orange;
   .fa-solid{
     color:orange;
   }
 }
 
-.plein-show{
+.plein-show-places{
+  padding-left: 20px;
   color:red;
   .fa-solid{
     color:red;
@@ -113,4 +138,15 @@
     color: black;
   }
 
+}
+
+.cards-container-show-events {
+  height: 100vh;
+}
+.wrap_map {
+  height: 100%;
+}
+
+.map {
+  height: 100%;
 }
