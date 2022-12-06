@@ -74,6 +74,26 @@
   height: 82px;
   margin-top: 19px;
 }
+.dispo-show{
+  color:green;
+    .fa-solid{
+    color:green;
+  }
+}
+
+.encore-show{
+  color:orange;
+  .fa-solid{
+    color:orange;
+  }
+}
+
+.plein-show{
+  color:red;
+  .fa-solid{
+    color:red;
+  }
+}
 
 .btn_show{
   display: flex;
