@@ -16,8 +16,8 @@ export default class extends Controller {
       style: "mapbox://styles/pdunleav/cjofefl7u3j3e2sp0ylex3cyb"
     })
     console.log(this.MarkersValue)
-      this.#addMarkersToMap()
-      this.#fitMapToMarkers()
+      this.addMarkersToMap()
+      this.fitMapToMarkers()
   }
 
   addMarkersToMap() {
