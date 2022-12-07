@@ -1,12 +1,7 @@
 .place_show_container {
   height: 100vh;
 
-  .png-show-place{
-    height: 82px;
-    width: 94px;
-    position: relative;
-    left: 143px;
-}
+
 
 .icon-back-show {
   position: absolute;
@@ -36,17 +31,24 @@
   }
 }
 
+.png-show-place{
+  height: 82px;
+  width: 94px;
+  position: relative;
+  left: -2px;
+}
+
 .logo_item{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.col-12{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
+// .col-12{
+//   display:flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
 .card-diffusion-event{
   margin-left: 17px
@@ -73,8 +75,8 @@
   // top: 0;
   width: 414.4px;
   height: 406px;
-  border-top-left-radius: 14%;
-  border-top-right-radius: 14%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .sentence{
@@ -96,24 +98,34 @@
   height: 82px;
   margin-top: 19px;
 }
-.dispo-places{
+
+.icon-wrapper{
   padding-left: 20px;
+
+}
+
+.gauge-wrapper-dispo{
+  padding-right: 20px;
   color:green;
+  padding-left: 20px;
     .fa-solid{
     color:green;
   }
 }
 
-.encore-show-places{
-  padding-left: 20px;
+.gauge-wrapper-encore{
+  padding-right: 20px;
   color:orange;
+  padding-left: 20px;
   .fa-solid{
     color:orange;
   }
 }
 
-.plein-show-places{
-  padding-left: 20px;
+.gauge-wrapper-plein{
+
+  padding-right: 20px;
+  padding-bottom: 9px;
   color:red;
   .fa-solid{
     color:red;
@@ -130,7 +142,7 @@
   height: 51px;
   border-radius: 56px;
   position: sticky;
-  bottom: 95px;
+  bottom: 120px;
   margin-top: -83px;
   margin-left: 48px;
   a{
@@ -143,9 +155,7 @@
 .cards-container-show-events {
   height: 100vh;
 }
-.wrap_map {
-  height: 100%;
-}
+
 
 .map {
   height: 100%;
