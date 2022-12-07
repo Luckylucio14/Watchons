@@ -47,36 +47,32 @@
                 <h1 class="address_place"><%= @place.address%></h1>
             </div>
             <%# jauge & icons %>
-            <%if @place.status == "Places disponibles"%>
-                    <div class="dispo-show-places d-flex justify-content align-items-center">
-                        <i id="handicap" class="fa-solid fa-wheelchair-move"></i>
-                        <i id="tv" class="fa-solid fa-tv"></i>
-                        <i id="dog" class="fa-solid fa-dog"></i>
-                        <i id="wifi" class="fa-solid fa-wifi"></i>
-                        <i id="smoke" class="fa-solid fa-smoking"></i>
-                        <p class="m-0">20%</p>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                <%elsif @place.status == "Quelques places" %>
-                    <div class="encore-show-places d-flex justify-content align-items-center">
-                    <i id="cocktail" class="fa-solid fa-martini-glass-citrus"></i>
-                    <i id="dog" class="fa-solid fa-dog"></i>
-                    <i id="wifi" class="fa-solid fa-wifi"></i>
-                    <i id="tv" class="fa-solid fa-tv"></i>
-                    <i id="smoke" class="fa-solid fa-smoking"></i>
-                    <p class="m-0">70%</p>
-                    <i class="fa-solid fa-user-group"></i>
-                    </div>
-                <%else%>
-                    <div class="plein-show-places d-flex justify-content align-items-center">
+
+                <div class="dispo-show-places d-flex justify-content-between align-items-center">
+                  <div class="icon-wrapper">
+                    <i id="handicap" class="fa-solid fa-wheelchair-move"></i>
                     <i id="tv" class="fa-solid fa-tv"></i>
                     <i id="dog" class="fa-solid fa-dog"></i>
                     <i id="wifi" class="fa-solid fa-wifi"></i>
                     <i id="smoke" class="fa-solid fa-smoking"></i>
-                    <p class="m-0">100%</p>
-                    <i class="fa-solid fa-users"></i>
+                  </div>
+                  <%if @place.status == "Places disponibles"%>
+                    <div class="gauge-wrapper-dispo d-flex">
+                      <p class="m-0">20%</p>
+                      <i class="fa-solid fa-user"></i>
                     </div>
-                <%end%>
+                  <%elsif @place.status == "Quelques places" %>
+                    <div class="gauge-wrapper-encore d-flex">
+                      <p class="m-0">70%</p>
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                  <%else%>
+                    <div class="gauge-wrapper-plein d-flex">
+                      <p class="m-0">100%</p>
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                  <%end%>
+                </div>
 
             <%# phrase descriptif %>
             <%# <div class="sentence">
@@ -90,7 +86,7 @@
                 data-controller="map"
                 data-map-markers-value="<%= @markers.to_json %>"
                 data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-            <div class= " btn_show"><%= link_to "J'y vais", events_path %></div>
+            <div class= " btn_show"><%= link_to "J'y vais", "https://goo.gl/maps/6D6chY1DSAd2b69j9", target: "_blank" %></div>
 
         </div>
     </div>
