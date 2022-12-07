@@ -39,10 +39,10 @@
         <%# description%>
             <%# name %>
             <div class= "lien_chatroom">
-            <div>
+            <div class= "lien_chatroom_wrapper">
             <%= link_to chatroom_path(@place.chatrooms.last) do %>
               <i class="fa-solid fa-walkie-talkie"></i>
-              <p><strong>Forum</strong></p><%=@place.name %>
+              <p><strong>Forum</strong></p>
               <% end %>
             </div>
             <div>

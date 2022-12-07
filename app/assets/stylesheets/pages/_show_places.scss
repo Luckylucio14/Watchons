@@ -57,13 +57,11 @@
   color: whitesmoke;
   font-size: 16px;
 
-  padding-left: 20px;
   font-weight: bold;
 }
 .address{
   color: whitesmoke;
   font-size: 16px;
-  padding-left: 20px;
 }
 
 .address_place{
@@ -163,10 +161,13 @@
 
 .lien_chatroom{
   display: flex;
-  justify-content: space-around;
-  margin-right: 15px;
+  justify-content: space-between;
+  margin-inline: 20px;
   flex-direction: row-reverse;
-  text-decoration: none;
+
+  .lien_chatroom_wrapper{
+    text-align: right;
+  }
 
   a{
   text-decoration: none;
