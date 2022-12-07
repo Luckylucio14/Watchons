@@ -16,12 +16,61 @@ class PlacesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: {places: @place}),
         image_url: helpers.asset_url("Component 8 (2).png")
       }]
+  end
 
+  def edit
+        @place = Place.find(params[:id])
+        @place.update(params[:place, :status])
+        if @place.status = "Complet"
+
+          redirect_to place_path(@place)
+        elsif @place.status = "Places disponibles"
+
+          redirect_to place_path(@place)
+        else @place.status = "Places disponibles"
+      end
+  end
+
+  # def update
+  #   @place = Place.find(params[:id])
+  #   @place.update(params[:place])
+  #   redirect_to place_path(@place)
+  # end
+
+  def plein
+    @place = Place.find(params[:id])
+    # retrouver le place
+    @place.update(params[:place, :status])
+    if@place.status = "complet"
+    # update la palce avec le bon statut
+    redirect_to place_path(@place)
+    # rediriger vers une page
+  end
+
+  def encore
+    @place = Place.find(params[:id])
+    # retrouver le place
+    @place.update(params[:place, :status])
+
+    # update la palce avec le bon statut
+    redirect_to place_path(@place)
+    # rediriger vers une page
 
   end
 
-  def update
+  def dispo
+    @place = Place.find(params[:id])
+    # retrouver le place
+    @place.update(params[:place, :status])
+    # update la palce avec le bon statut
+    redirect_to place_path(@place)
+    # rediriger vers une page
+
   end
+
+
+
+
 
 #   def create
 #     @booking = Booking.new(booking_params)
