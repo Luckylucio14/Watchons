@@ -14,28 +14,29 @@ EventPlace.destroy_all
 Event.destroy_all
 Team.destroy_all
 Place.destroy_all
+Message.destroy_all
 User.destroy_all
 
 puts 'Creating Users...'
 # USERS
 
-william = User.create!(email:"william.wallace@gmail.com", password:"123456")
+william = User.create!(email:"william.wallace@gmail.com", password:"123456", nickname:"william")
 file = URI.open("http://idata.over-blog.com/0/47/62/15/articles/braveheart02.jpg")
 william.photo.attach(io: file, filename:"william.png", content_type:"image/png")
 
-just = User.create!(email:"just.leblanc@gmail.com", password:"123456")
+just = User.create!(email:"just.leblanc@gmail.com", password:"123456", nickname:"just")
 file = URI.open("https://image.over-blog.com/3kvxExbDMdbVgTl-ZmbPJuWvIho=/filters:no_upscale()/image%2F0995038%2F20210423%2Fob_bd5b6a_capture-15.png")
 just.photo.attach(io: file, filename:"just.png", content_type:"image/png")
 
-lisa = User.create!(email:"lisa.plenske@gmail.com", password:"123456")
+lisa = User.create!(email:"lisa.plenske@gmail.com", password:"123456",nickname:"lisa" )
 file = URI.open("https://static1.purebreak.com/articles/8/15/71/98/@/625978-le-destin-de-lisa-que-devient-alexandr-diapo-2.jpg")
 lisa.photo.attach(io: file, filename:"lisa.png", content_type:"image/png")
 
-laouni = User.create!(email:"laouni.mouhid@gmail.com", password:"123456")
+laouni = User.create!(email:"laouni.mouhid@gmail.com", password:"123456", nickname:"laouni")
 file = URI.open("https://www.gala.fr/imgre/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fprismamedia_people.2F2017.2F06.2F30.2Fc699862d-dd6c-4c2d-936e-0d5acc660d4e.2Ejpeg/100x100/quality/80/la-fouine.jpg")
 laouni.photo.attach(io: file, filename:"laouni.png", content_type:"image/png")
 
-chen = User.create!(email:"chun.li@wanadoo.fr", password:"123456")
+chen = User.create!(email:"chun.li@wanadoo.fr", password:"123456", nickname:"chun")
 file = URI.open("https://static.wikia.nocookie.net/streetfighter/images/1/15/Chun-Li_animated_movie.png/revision/latest/scale-to-width-down/1086?cb=20180126014842")
 chen.photo.attach(io: file, filename:"chen.png", content_type:"image/png")
 
@@ -83,16 +84,16 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/42/Football_G
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 puts 'Creating Events...'
 # EVENTS
-match1 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,9, 16, 0, 0), channel: "Bein")
-match2 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,9, 20, 0, 0), channel: "TF1")
-match3 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade de Lusail - Qatar", full_datetime: DateTime.new(2022,12,10, 16, 0, 0), channel: "Bein")
+match1 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,7, 16, 0, 0), channel: "Bein")
+match2 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,7, 20, 0, 0), channel: "TF1")
+match3 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade de Lusail - Qatar", full_datetime: DateTime.new(2022,12,8, 16, 0, 0), channel: "Bein")
 match4 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade 974 - Qatar", full_datetime: DateTime.new(2022,12,10, 20, 0, 0), channel: "TF1")
 match5 = Event.create!(competition: "Coupe du Monde - Demi-finale", location: "Stade Al-Thumama - Qatar", full_datetime: DateTime.new(2022,12,13, 20, 0, 0), channel: "Bein")
 match6 = Event.create!(competition: "Coupe du Monde - Demi-finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,14, 20, 0, 0), channel: "TF1")
 match7 = Event.create!(competition: "Coupe du Monde - 3ème place", location: "Stade Education City - Qatar", full_datetime: DateTime.new(2022,12,17, 16, 0, 0), channel: "Bein")
 match8 = Event.create!(competition: "Coupe du Monde - Finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,18, 16, 0, 0), channel: "TF1")
-match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", full_datetime: DateTime.new(2022,12,28, 18, 0, 0), channel: "Primevideo")
-match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", full_datetime: DateTime.new(2022,12,28, 21, 0, 0), channel: "Primevideo")
+# match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", full_datetime: DateTime.new(2022,12,28, 18, 0, 0), channel: "Primevideo")
+# match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", full_datetime: DateTime.new(2022,12,28, 21, 0, 0), channel: "Primevideo")
 
 #EVENT TEAM
 
@@ -113,10 +114,10 @@ event_team7 = EventTeam.create!(event: match7, team: team3)
 event_team7 = EventTeam.create!(event: match7, team: team4)
 event_team8 = EventTeam.create!(event: match8, team: team5)
 event_team8 = EventTeam.create!(event: match8, team: team6)
-event_team9 = EventTeam.create!(event: match9, team: team7)
-event_team9 = EventTeam.create!(event: match9, team: team8)
-event_team10 = EventTeam.create!(event: match10, team: team9)
-event_team10 = EventTeam.create!(event: match10, team: team10)
+# event_team9 = EventTeam.create!(event: match9, team: team7)
+# event_team9 = EventTeam.create!(event: match9, team: team8)
+# event_team10 = EventTeam.create!(event: match10, team: team9)
+# event_team10 = EventTeam.create!(event: match10, team: team10)
 
 puts 'Creating Places...'
 # PLACES
@@ -169,11 +170,11 @@ event_place5 = EventPlace.create!(event: match5, place: Giggs)
 event_place6 = EventPlace.create!(event: match6, place: brady)
 event_place7 = EventPlace.create!(event: match7, place: macbyrne)
 event_place8 = EventPlace.create!(event: match8, place: berlin)
-event_place9 = EventPlace.create!(event: match9, place: lab)
-event_place10 = EventPlace.create!(event: match10, place: bureau)
+# event_place9 = EventPlace.create!(event: match9, place: lab)
+# event_place10 = EventPlace.create!(event: match10, place: bureau)
 
-event_place11 = EventPlace.create!(event: match10, place: LaScierie)
-event_place12 = EventPlace.create!(event: match9, place: Brasseurs)
+# event_place11 = EventPlace.create!(event: match10, place: LaScierie)
+# event_place12 = EventPlace.create!(event: match9, place: Brasseurs)
 event_place13 = EventPlace.create!(event: match8, place: LeCascabel)
 event_place14 = EventPlace.create!(event: match7, place: LaBelleEquipe)
 event_place15 = EventPlace.create!(event: match6, place: Giggs)
@@ -187,12 +188,12 @@ event_place21 = EventPlace.create!(event: match2, place: LaScierie)
 event_place22 = EventPlace.create!(event: match3, place: Brasseurs)
 event_place23 = EventPlace.create!(event: match4, place: LeCascabel)
 event_place24 = EventPlace.create!(event: match5, place: LaBelleEquipe)
-event_place25 = EventPlace.create!(event: match10, place: Giggs)
+# event_place25 = EventPlace.create!(event: match10, place: Giggs)
 event_place26 = EventPlace.create!(event: match7, place: brady)
 event_place27 = EventPlace.create!(event: match8, place: macbyrne)
 event_place28 = EventPlace.create!(event: match6, place: berlin)
 event_place29 = EventPlace.create!(event: match1, place: lab)
-event_place30 = EventPlace.create!(event: match9, place: bureau)
+# event_place30 = EventPlace.create!(event: match9, place: bureau)
 
 event_place31 = EventPlace.create!(event: match3, place: LaScierie)
 event_place32 = EventPlace.create!(event: match4, place: Brasseurs)
@@ -200,14 +201,14 @@ event_place33 = EventPlace.create!(event: match5, place: LeCascabel)
 event_place34 = EventPlace.create!(event: match6, place: LaBelleEquipe)
 event_place35 = EventPlace.create!(event: match7, place: Giggs)
 event_place36 = EventPlace.create!(event: match8, place: brady)
-event_place37 = EventPlace.create!(event: match9, place: macbyrne)
+# event_place37 = EventPlace.create!(event: match9, place: macbyrne)
 event_place38 = EventPlace.create!(event: match1, place: berlin)
-event_place39 = EventPlace.create!(event: match10, place: lab)
+# event_place39 = EventPlace.create!(event: match10, place: lab)
 event_place40 = EventPlace.create!(event: match2, place: bureau)
 
-event_place41 = EventPlace.create!(event: match9, place: LaScierie)
+# event_place41 = EventPlace.create!(event: match9, place: LaScierie)
 event_place42 = EventPlace.create!(event: match5, place: Brasseurs)
-event_place43 = EventPlace.create!(event: match10, place: LeCascabel)
+# event_place43 = EventPlace.create!(event: match10, place: LeCascabel)
 event_place44 = EventPlace.create!(event: match3, place: LaBelleEquipe)
 event_place45 = EventPlace.create!(event: match8, place: Giggs)
 event_place46 = EventPlace.create!(event: match2, place: brady)
@@ -215,3 +216,16 @@ event_place47 = EventPlace.create!(event: match1, place: macbyrne)
 event_place48 = EventPlace.create!(event: match4, place: berlin)
 event_place49 = EventPlace.create!(event: match6, place: lab)
 event_place50 = EventPlace.create!(event: match7, place: bureau)
+
+
+Chatroom.create(name: "LaScierie", place: LaScierie)
+Chatroom.create(name: "Brasseurs", place: Brasseurs)
+Chatroom.create(name: "LeCascabel", place: LeCascabel)
+Chatroom.create(name: "LaBelleEquipe", place: LaBelleEquipe)
+Chatroom.create(name: "Giggs", place: Giggs)
+Chatroom.create(name: "brady", place: brady)
+Chatroom.create(name: "macbyrne", place: macbyrne)
+Chatroom.create(name: "berlin", place: berlin)
+Chatroom.create(name: "lab", place: lab)
+Chatroom.create(name: "bureau", place: bureau)
+Chatroom.create(name: "Général")

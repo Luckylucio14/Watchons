@@ -6,12 +6,12 @@ Rails.application.routes.draw do
     resources :places, only: %i[show]
   end
 
-  resources :places, only: %i[update edit] do
-    member do
-      patch :plein
-      patch :encore
-      patch :dispo
-    end
+
+  resources :places, only: %i[update edit]
+
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+
   end
 
 end

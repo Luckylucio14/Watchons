@@ -57,13 +57,11 @@
   color: whitesmoke;
   font-size: 16px;
 
-  padding-left: 20px;
   font-weight: bold;
 }
 .address{
   color: whitesmoke;
   font-size: 16px;
-  padding-left: 20px;
 }
 
 .address_place{
@@ -155,10 +153,26 @@
 }
 
 .cards-container-show-events {
-  height: 100vh;
+  margin-bottom: 100px;
 }
 
 
 .map {
   height: 100%;
+}
+
+.lien_chatroom{
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 20px;
+  flex-direction: row-reverse;
+
+  .lien_chatroom_wrapper{
+    text-align: right;
+  }
+
+  a{
+  text-decoration: none;
+  color: white;
+  }
 }
