@@ -6,8 +6,14 @@ Rails.application.routes.draw do
     resources :places, only: %i[show]
   end
 
-  resources :places, only: %i[update edit]
-  
+  resources :places, only: %i[update edit] do
+    member do
+      patch :plein
+      patch :encore
+      patch :dispo
+    end
+  end
+
 end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
