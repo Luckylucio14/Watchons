@@ -160,3 +160,16 @@
 .map {
   height: 100%;
 }
+
+.lien_chatroom{
+  display: flex;
+  justify-content: space-around;
+  margin-right: 15px;
+  flex-direction: row-reverse;
+  text-decoration: none;
+
+  a{
+  text-decoration: none;
+  color: white;
+  }
+}

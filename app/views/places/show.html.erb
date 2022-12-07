@@ -38,13 +38,22 @@
 
         <%# description%>
             <%# name %>
-            <div class="name">
-                <h1 class="naming_place"><%=@place.name%></h1>
+            <div class= "lien_chatroom">
+            <div>
+            <%= link_to chatroom_path(@place.chatrooms.last) do %>
+              <i class="fa-solid fa-walkie-talkie"></i>
+              <p><strong>Forum</strong></p><%=@place.name %>
+              <% end %>
             </div>
-
+            <div>
+            <div class="name">
+              <h1 class="naming_place"><%=@place.name%> </h1>
+            </div>
             <%# address %>
             <div class="address">
                 <h1 class="address_place"><%= @place.address%></h1>
+            </div>
+            </div>
             </div>
             <%# jauge & icons %>
 
