@@ -41,33 +41,34 @@ chen.photo.attach(io: file, filename:"chen.png", content_type:"image/png")
 
 #TEAMS
 
-team1 = Team.create!(name: "France")
-file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/43/Logo_%C3%89quipe_France_Football_2018.svg/langfr-300px-Logo_%C3%89quipe_France_Football_2018.svg.png")
+team1 = Team.create!(name: "Angleterre")
+file = URI.open("https://upload.wikimedia.org/wikipedia/fr/7/79/Football_Angleterre_maillot.png")
 team1.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
-team2 = Team.create!(name: "Bresil")
-file = URI.open("https://conteudo.cbf.com.br/cdn/imagens/escudos_selecoes_sn/brasil_principal_masculina.png")
-team2.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
-
-team3 = Team.create!(name: "Espagne")
-file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Logo_%C3%89quipe_Espagne_Football_-_2021.svg/langfr-800px-Logo_%C3%89quipe_Espagne_Football_-_2021.svg.png")
-team3.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
-
-team4 = Team.create!(name: "Portugal")
-file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Football_Portugal_federation.svg/langfr-800px-Football_Portugal_federation.svg.png")
-team4.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
-
-team5 = Team.create!(name: "Cameroun")
-file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/e/e2/Logo_F%C3%A9d%C3%A9ration_Camerounaise_Football.svg/langfr-800px-Logo_F%C3%A9d%C3%A9ration_Camerounaise_Football.svg.png")
-team5.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
-
-team6 = Team.create!(name: "Angleterre")
-file = URI.open("https://upload.wikimedia.org/wikipedia/fr/7/79/Football_Angleterre_maillot.png")
+team6 = Team.create!(name: "France")
+file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/43/Logo_%C3%89quipe_France_Football_2018.svg/langfr-300px-Logo_%C3%89quipe_France_Football_2018.svg.png")
 team6.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
-team7 = Team.create!(name: "Belgique")
-file = URI.open("https://files.slack.com/files-pri/T02NE0241-F04CV6PNQVD/langfr-800px-logo_f__d__ration_belge_football_2019.svg.png")
+team2 = Team.create!(name: "Croatie")
+file = URI.open("https://upload.wikimedia.org/wikipedia/fr/0/07/F%C3%A9d%C3%A9ration_de_Croatie_de_football_-_Logo.svg")
+team2.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+team3 = Team.create!(name: "Brésil")
+file = URI.open("https://conteudo.cbf.com.br/cdn/imagens/escudos_selecoes_sn/brasil_principal_masculina.png")
+team3.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+team4 = Team.create!(name: "Maroc")
+file = URI.open("https://upload.wikimedia.org/wikipedia/fr/6/69/Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg")
+team4.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+team7 = Team.create!(name: "Portugal")
+file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Football_Portugal_federation.svg/langfr-800px-Football_Portugal_federation.svg.png")
 team7.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+team5 = Team.create!(name: "Pays-Bas")
+file = URI.open("https://upload.wikimedia.org/wikipedia/fr/7/76/Logo_%C3%89quipe_Football_Pays_Bas.svg")
+team5.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
 
 team8 = Team.create!(name: "Argentine")
 file = URI.open("https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Argentina_national_football_team_logo.svg/800px-Argentina_national_football_team_logo.svg.png")
@@ -95,14 +96,14 @@ match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Pa
 
 #EVENT TEAM
 
+event_team1 = EventTeam.create!(event: match1, team: team3)
 event_team1 = EventTeam.create!(event: match1, team: team2)
-event_team1 = EventTeam.create!(event: match1, team: team1)
-event_team2 = EventTeam.create!(event: match2, team: team3)
-event_team2 = EventTeam.create!(event: match2, team: team4)
-event_team3 = EventTeam.create!(event: match3, team: team5)
-event_team3 = EventTeam.create!(event: match3, team: team6)
-event_team4 = EventTeam.create!(event: match4, team: team7)
-event_team4 = EventTeam.create!(event: match4, team: team8)
+event_team2 = EventTeam.create!(event: match2, team: team5)
+event_team2 = EventTeam.create!(event: match2, team: team8)
+event_team3 = EventTeam.create!(event: match3, team: team4)
+event_team3 = EventTeam.create!(event: match3, team: team7)
+event_team4 = EventTeam.create!(event: match4, team: team6)
+event_team4 = EventTeam.create!(event: match4, team: team1)
 event_team5 = EventTeam.create!(event: match5, team: team9)
 event_team5 = EventTeam.create!(event: match5, team: team10)
 
@@ -120,7 +121,7 @@ event_team10 = EventTeam.create!(event: match10, team: team10)
 puts 'Creating Places...'
 # PLACES
 
-LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoignant un lieu de partage", address: "3 allée de l'Ile Gloriette", city: "44000 Nantes", name:"La Scierie", status:"Places disponibles Viens,tu verras comment on est bien!")
+LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoignant un lieu de partage", address: "3 allée de l'Ile Gloriette", city: "44000 Nantes", name:"La Scierie", status:"Places disponibles")
 file = URI.open("http://www.lesbarres.com/media/image/slideshow/a1f8f0d08556369fa82d5ce29e775387b7a713e1.jpg")
 LaScierie.photo.attach(io: file, filename: "LaScierie.png", content_type: "image/png")
 
@@ -148,7 +149,7 @@ macbyrne = Place.create!(characteristic: "Il n'y a pas qu'en irlande qu'on sait 
 file = URI.open("https://fastly.4sqi.net/img/general/200x200/11116385_IN7iNR-dN1fQVnDLeOr-HautP4K0lpUP0E5rxduaGGY.jpg")
 macbyrne.photo.attach(io: file, filename: "macbyrne.png", content_type: "image/png")
 
-berlin = Place.create!(characteristic: "Lieu de rencontre et de partage reconnu Quoi vous ne connaissez pas ? On vous attend pour vous montrer",  address: "95 Boulevard Gabriel Lauriol", city: "44300 Nantes", name:"Berlin 1989", status:"places disponibles")
+berlin = Place.create!(characteristic: "Lieu de rencontre et de partage reconnu Quoi vous ne connaissez pas ? On vous attend pour vous montrer",  address: "95 Boulevard Gabriel Lauriol", city: "44300 Nantes", name:"Berlin 1989", status:"Places disponibles")
 file = URI.open("https://mvistatic.com/etablissements/2018-05/16163_crop_640-270_.jpg")
 berlin.photo.attach(io: file, filename: "berlin.png", content_type: "image/png")
 
