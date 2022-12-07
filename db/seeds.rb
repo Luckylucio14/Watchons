@@ -14,28 +14,29 @@ EventPlace.destroy_all
 Event.destroy_all
 Team.destroy_all
 Place.destroy_all
+Message.destroy_all
 User.destroy_all
 
 puts 'Creating Users...'
 # USERS
 
-william = User.create!(email:"william.wallace@gmail.com", password:"123456")
+william = User.create!(email:"william.wallace@gmail.com", password:"123456", nickname:"william")
 file = URI.open("http://idata.over-blog.com/0/47/62/15/articles/braveheart02.jpg")
 william.photo.attach(io: file, filename:"william.png", content_type:"image/png")
 
-just = User.create!(email:"just.leblanc@gmail.com", password:"123456")
+just = User.create!(email:"just.leblanc@gmail.com", password:"123456", nickname:"just")
 file = URI.open("https://image.over-blog.com/3kvxExbDMdbVgTl-ZmbPJuWvIho=/filters:no_upscale()/image%2F0995038%2F20210423%2Fob_bd5b6a_capture-15.png")
 just.photo.attach(io: file, filename:"just.png", content_type:"image/png")
 
-lisa = User.create!(email:"lisa.plenske@gmail.com", password:"123456")
+lisa = User.create!(email:"lisa.plenske@gmail.com", password:"123456",nickname:"lisa" )
 file = URI.open("https://static1.purebreak.com/articles/8/15/71/98/@/625978-le-destin-de-lisa-que-devient-alexandr-diapo-2.jpg")
 lisa.photo.attach(io: file, filename:"lisa.png", content_type:"image/png")
 
-laouni = User.create!(email:"laouni.mouhid@gmail.com", password:"123456")
+laouni = User.create!(email:"laouni.mouhid@gmail.com", password:"123456", nickname:"laouni")
 file = URI.open("https://www.gala.fr/imgre/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fprismamedia_people.2F2017.2F06.2F30.2Fc699862d-dd6c-4c2d-936e-0d5acc660d4e.2Ejpeg/100x100/quality/80/la-fouine.jpg")
 laouni.photo.attach(io: file, filename:"laouni.png", content_type:"image/png")
 
-chen = User.create!(email:"chun.li@wanadoo.fr", password:"123456")
+chen = User.create!(email:"chun.li@wanadoo.fr", password:"123456", nickname:"chun")
 file = URI.open("https://static.wikia.nocookie.net/streetfighter/images/1/15/Chun-Li_animated_movie.png/revision/latest/scale-to-width-down/1086?cb=20180126014842")
 chen.photo.attach(io: file, filename:"chen.png", content_type:"image/png")
 
@@ -214,3 +215,16 @@ event_place47 = EventPlace.create!(event: match1, place: macbyrne)
 event_place48 = EventPlace.create!(event: match4, place: berlin)
 event_place49 = EventPlace.create!(event: match6, place: lab)
 event_place50 = EventPlace.create!(event: match7, place: bureau)
+
+
+Chatroom.create(name: "LaScierie", place: LaScierie)
+Chatroom.create(name: "Brasseurs", place: Brasseurs)
+Chatroom.create(name: "LeCascabel", place: LeCascabel)
+Chatroom.create(name: "LaBelleEquipe", place: LaBelleEquipe)
+Chatroom.create(name: "Giggs", place: Giggs)
+Chatroom.create(name: "brady", place: brady)
+Chatroom.create(name: "macbyrne", place: macbyrne)
+Chatroom.create(name: "berlin", place: berlin)
+Chatroom.create(name: "lab", place: lab)
+Chatroom.create(name: "bureau", place: bureau)
+Chatroom.create(name: "Général")
