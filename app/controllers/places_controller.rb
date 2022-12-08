@@ -24,12 +24,15 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
     @event = Event.find(params[:event_id])
 
-    if @place.status == "Places disponibles"
+    if @place.status == "Vide"
+      @place.status = "Places disponibles"
+    elsif @place.status == "Places disponibles"
       @place.status = "Quelques places"
     elsif @place.status == "Quelques places"
       @place.status = "Complet"
     end
     @place.save
+    
     redirect_to event_place_path(@event, @place)
   end
 
