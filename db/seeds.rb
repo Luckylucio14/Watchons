@@ -83,6 +83,8 @@ team9.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 team10 = Team.create!(name: "Ghana")
 file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/42/Football_Ghana_federation.svg/langfr-800px-Football_Ghana_federation.svg.png")
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+
 puts 'Creating Events...'
 # EVENTS
 match1 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,7, 16, 0, 0), channel: "Bein")
