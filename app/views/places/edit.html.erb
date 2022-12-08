@@ -1,9 +1,9 @@
 <h1 class="tittre">T'es bien installé?</h1>
 <h2>D'apres toi est-il possible d'accueillir encore des supporters?</h2>
 
-<button type=”button” class=”btn-dispo”> Plein de places </button>
+<button type=”button” class=”btn-dispo”><%=button_to 'dispo', place_path%> Plein de places </button>
 
 
-<button type=”button” class=”btn-dispo”> Encore quelque places </button>
+<button type=”button” class=”btn-dispo”><%=button_to 'encore', place_path%> Encore quelque places </button>
 
-<button type=”button” class=”btn-dispo”> Trop tard cherche un autre </button>
+<button type=”button” class=”btn-dispo”><%=button_to 'plein', place_path%> Trop tard cherche un autre </button>
