@@ -71,25 +71,50 @@ team5 = Team.create!(name: "Pays-Bas")
 file = URI.open("https://upload.wikimedia.org/wikipedia/fr/7/76/Logo_%C3%89quipe_Football_Pays_Bas.svg")
 team5.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
-
 team8 = Team.create!(name: "Argentine")
 file = URI.open("https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Argentina_national_football_team_logo.svg/800px-Argentina_national_football_team_logo.svg.png")
 team8.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
-team9 = Team.create!(name: "Japon")
-file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/8/84/Japan_national_football_team_crest.svg/langfr-800px-Japan_national_football_team_crest.svg.png")
+team9 = Team.create!(name: "Vainqueur Quart de finale 1")
+file = URI.open("https://www.fanzo.com/en/_next/image?url=https%3A%2F%2Fmatchpint-cdn.matchpint.cloud%2Fshared%2F%2Fimagenes%2Fteams%2F%2Fno-logo.png&w=1080&q=75")
 team9.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
-team10 = Team.create!(name: "Ghana")
-file = URI.open("https://upload.wikimedia.org/wikipedia/fr/thumb/4/42/Football_Ghana_federation.svg/langfr-800px-Football_Ghana_federation.svg.png")
+team10 = Team.create!(name: "Vainqueur Quart de finale 2")
+file = URI.open("https://www.fanzo.com/en/_next/image?url=https%3A%2F%2Fmatchpint-cdn.matchpint.cloud%2Fshared%2F%2Fimagenes%2Fteams%2F%2Fno-logo.png&w=1080&q=75")
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 
 
 puts 'Creating Events...'
+
+team11 = Team.create!(name: "Vainqueur Quart de finale 3")
+file = URI.open("https://www.fanzo.com/en/_next/image?url=https%3A%2F%2Fmatchpint-cdn.matchpint.cloud%2Fshared%2F%2Fimagenes%2Fteams%2F%2Fno-logo.png&w=1080&q=75")
+team11.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+team12 = Team.create!(name: "Vainqueur Quart de finale 4")
+file = URI.open("https://www.fanzo.com/en/_next/image?url=https%3A%2F%2Fmatchpint-cdn.matchpint.cloud%2Fshared%2F%2Fimagenes%2Fteams%2F%2Fno-logo.png&w=1080&q=75")
+team12.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+team13 = Team.create!(name: "Vainqueur Demi-finale 1")
+file = URI.open("https://www.fanzo.com/en/_next/image?url=https%3A%2F%2Fmatchpint-cdn.matchpint.cloud%2Fshared%2F%2Fimagenes%2Fteams%2F%2Fno-logo.png&w=1080&q=75")
+team13.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+team14 = Team.create!(name: "Vainqueur Demi-finale 2")
+file = URI.open("https://www.fanzo.com/en/_next/image?url=https%3A%2F%2Fmatchpint-cdn.matchpint.cloud%2Fshared%2F%2Fimagenes%2Fteams%2F%2Fno-logo.png&w=1080&q=75")
+team14.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+team15 = Team.create!(name: "Perdant Demi-finale 1")
+file = URI.open("https://www.fanzo.com/en/_next/image?url=https%3A%2F%2Fmatchpint-cdn.matchpint.cloud%2Fshared%2F%2Fimagenes%2Fteams%2F%2Fno-logo.png&w=1080&q=75")
+team15.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+team16 = Team.create!(name: "Perdant Demi-finale 2")
+file = URI.open("https://www.fanzo.com/en/_next/image?url=https%3A%2F%2Fmatchpint-cdn.matchpint.cloud%2Fshared%2F%2Fimagenes%2Fteams%2F%2Fno-logo.png&w=1080&q=75")
+team16.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+
 # EVENTS
-match1 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,7, 16, 0, 0), channel: "Bein")
-match2 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,7, 20, 0, 0), channel: "TF1")
-match3 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade de Lusail - Qatar", full_datetime: DateTime.new(2022,12,8, 16, 0, 0), channel: "Bein")
+match1 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade de Lusail - ", full_datetime: DateTime.new(2022,12,9, 16, 0, 0), channel: "Bein")
+match2 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade international de Khalifa - Qatar", full_datetime: DateTime.new(2022,12,9, 20, 0, 0), channel: "TF1")
+match3 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade de Lusail - Qatar", full_datetime: DateTime.new(2022,12,10, 16, 0, 0), channel: "Bein")
 match4 = Event.create!(competition: "Coupe du Monde - Quart de finale", location: "Stade 974 - Qatar", full_datetime: DateTime.new(2022,12,10, 20, 0, 0), channel: "TF1")
 match5 = Event.create!(competition: "Coupe du Monde - Demi-finale", location: "Stade Al-Thumama - Qatar", full_datetime: DateTime.new(2022,12,13, 20, 0, 0), channel: "Bein")
 match6 = Event.create!(competition: "Coupe du Monde - Demi-finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,14, 20, 0, 0), channel: "TF1")
@@ -111,12 +136,12 @@ event_team4 = EventTeam.create!(event: match4, team: team1)
 event_team5 = EventTeam.create!(event: match5, team: team9)
 event_team5 = EventTeam.create!(event: match5, team: team10)
 
-event_team6 = EventTeam.create!(event: match6, team: team2)
-event_team6 = EventTeam.create!(event: match6, team: team1)
-event_team7 = EventTeam.create!(event: match7, team: team3)
-event_team7 = EventTeam.create!(event: match7, team: team4)
-event_team8 = EventTeam.create!(event: match8, team: team5)
-event_team8 = EventTeam.create!(event: match8, team: team6)
+event_team6 = EventTeam.create!(event: match6, team: team11)
+event_team6 = EventTeam.create!(event: match6, team: team12)
+event_team7 = EventTeam.create!(event: match7, team: team15)
+event_team7 = EventTeam.create!(event: match7, team: team16)
+event_team8 = EventTeam.create!(event: match8, team: team13)
+event_team8 = EventTeam.create!(event: match8, team: team14)
 # event_team9 = EventTeam.create!(event: match9, team: team7)
 # event_team9 = EventTeam.create!(event: match9, team: team8)
 # event_team10 = EventTeam.create!(event: match10, team: team9)
@@ -129,7 +154,7 @@ LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoi
 file = URI.open("http://www.lesbarres.com/media/image/slideshow/a1f8f0d08556369fa82d5ce29e775387b7a713e1.jpg")
 LaScierie.photo.attach(io: file, filename: "LaScierie.png", content_type: "image/png")
 
-Brasseurs = Place.create!(characteristic: "Une cuisine authentique dans l'esprit des anciennes brasseries. De moments généreux et conviviaux à déguster", address: "C.C Carré 19 Parvis Neptune", city: "44000 Nantes", name:"3 Brasseurs", status:"Places disponibles")
+Brasseurs = Place.create!(characteristic: "Une cuisine authentique dans l'esprit des anciennes brasseries. De moments généreux et conviviaux à déguster", address: "C.C Carré 19 Parvis Neptune", city: "Nantes", name:"3 Brasseurs", status:"Places disponibles")
 file = URI.open("https://i.ytimg.com/vi/CblVTS5fTFE/maxresdefault.jpg")
 Brasseurs.photo.attach(io: file, filename: "Brasseurs.png", content_type: "image/png")
 

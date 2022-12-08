@@ -228,7 +228,7 @@
   // }
 
   .icon-back {
-    position: absolute;
+
     top: 10px;
     left: 10px;
     font-size: 25px;
@@ -236,11 +236,15 @@
     padding-left: 0px;
   }
 
+  .centrage{
+    height: 75px;
+  }
 
   .logoW-show-event{
-
+    position: absolute;
+    left: 45%;
+    transform: transflate(-50%,-50%);
     width: 94px;
-    position: relative;
     left: 158px;
     height: 82px;
     padding-top: 10px;
