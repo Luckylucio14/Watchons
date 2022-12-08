@@ -52,15 +52,7 @@ class PlacesController < ApplicationController
   #   redirect_to place_path(@place)
   # end
 
-  # def status
-  #   @place = Place.find(params[:id])
-  #   # retrouver le place
-  #   @place.update(params[:place])
-  #   if @place.status = "complet"
-  #   # update la palce avec le bon statut
-  #   redirect_to place_path(@place)
-  #   # rediriger vers une page
-  # end
+
 
   # def encore
   #   @place = Place.find(params[:id])
