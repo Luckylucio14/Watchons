@@ -1,5 +1,6 @@
 .row-show-events {
   height: 100%;
+  width: 100vw;
   .card-photo {
     background-position: center !important;
     background-size: cover !important;
@@ -74,7 +75,7 @@
     background-color: rgb(44, 44, 44);
     margin-bottom: 80px;
     padding-inline: 10px;
-    
+
   }
 
   .bar-card1{
@@ -145,7 +146,6 @@
     text-align: right;
     margin-right: 0px;
     color: green;
-    margin-bottom: -17px;
     margin-top: 6px;
     .m-0{
       padding-left: 78px;
@@ -162,7 +162,6 @@
 
     color: orange;
     margin-left: Opx;
-    margin-bottom: -17px;
     margin-top: 6px;
 
     .m-0{
@@ -185,7 +184,6 @@
     margin-left: 0px;
     color: red;
     margin-top: 6px;
-    margin-bottom: -17px;
 
     .m-0{
       padding-left: 97px;

@@ -57,36 +57,47 @@
                 </div>
                 <%# <%=place.characteristic%>
                 <%if place.status == "Places disponibles"%>
-                  <div class="dispo-show-events d-flex justify-content align-items-center">
-                    <i id="handicap" class="fa-solid fa-wheelchair-move"></i>
-                    <i id="tv" class="fa-solid fa-tv"></i>
-                    <i id="dog" class="fa-solid fa-dog"></i>
-                    <i id="wifi" class="fa-solid fa-wifi"></i>
-                    <i id="smoke" class="fa-solid fa-smoking"></i>
-
-                    <p class="m-0">20%</p>
-                    <i class="fa-solid fa-user"></i>
+                  <div class="dispo-show-events d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                      <i id="handicap" class="fa-solid fa-wheelchair-move"></i>
+                      <i id="tv" class="fa-solid fa-tv"></i>
+                      <i id="dog" class="fa-solid fa-dog"></i>
+                      <i id="wifi" class="fa-solid fa-wifi"></i>
+                      <i id="smoke" class="fa-solid fa-smoking"></i>
+                    </div>
+                    <div class="d-flex margin-show-zero">
+                      <p>20%</p>
+                      <i class="fa-solid fa-user"></i>
+                    </div>
 
                   </div>
                 <%elsif place.status == "Quelques places" %>
-                  <div class= "encore-show-events d-flex justify-content align-items-center">
+                  <div class= "encore-show-events d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
                     <i id="cocktail" class="fa-solid fa-martini-glass-citrus"></i>
                     <i id="dog" class="fa-solid fa-dog"></i>
                     <i id="wifi" class="fa-solid fa-wifi"></i>
                     <i id="tv" class="fa-solid fa-tv"></i>
                     <i id="smoke" class="fa-solid fa-smoking"></i>
-
-                    <p class="m-0">70%</p>
-                    <i class="fa-solid fa-user-group"></i>
+                  </div>
+                      <div class="d-flex margin-show-zero">
+                        <p>70%</p>
+                        <i class="fa-solid fa-user-group"></i>
+                      </div>
                   </div>
                 <%else%>
-                  <div class="plein-show-events d-flex justify-content align-items-center">
+                  <div class="plein-show-events d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
                     <i id="tv" class="fa-solid fa-tv"></i>
                     <i id="dog" class="fa-solid fa-dog"></i>
                     <i id="wifi" class="fa-solid fa-wifi"></i>
                     <i id="smoke" class="fa-solid fa-smoking"></i>
-                    <p class="m-0">100%</p>
+                    </div>
+
+                  <div class="d-flex margin-show-zero">
+                    <p >100%</p>
                     <i class="fa-solid fa-users"></i>
+                    </div>
                   </div>
                 <%end%>
               </div>

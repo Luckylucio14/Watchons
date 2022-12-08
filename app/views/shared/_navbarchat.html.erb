@@ -9,7 +9,7 @@
             <%= link_to root_path, class: "navbar-brand" do %>
             <i class="fa-solid fa-house"></i>
             <% end %>
-            <%= link_to chatroom_path(Chatroom.where.missing(:place).last),class: "navbar-brand" do %>
+            <%= link_to chatroom_path(@place.chatrooms.last),class: "navbar-brand" do %>
             <i class="fa-solid fa-comments"></i>
             <% end %>
             <%= link_to  destroy_user_session_path, data: {turbo_method: :delete}, class: "navbar-brand" do %>
