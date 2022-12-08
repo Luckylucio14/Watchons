@@ -15,7 +15,7 @@ class PlacesController < ApplicationController
         lat: @place.latitude,
         lng: @place.longitude,
         info_window: render_to_string(partial: "info_window", locals: {places: @place}),
-        image_url: helpers.asset_url("Component 8 (2).png")
+        image_url: helpers.asset_url("Logo.svg")
       }]
   end
 
