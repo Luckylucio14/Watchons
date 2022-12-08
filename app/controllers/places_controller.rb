@@ -9,6 +9,7 @@ class PlacesController < ApplicationController
     @event = Event.find(params[:event_id])
     @place = Place.find(params[:id])
 
+
     @markers =
       [{
         lat: @place.latitude,
@@ -18,18 +19,35 @@ class PlacesController < ApplicationController
       }]
   end
 
-  def edit
-        @place = Place.find(params[:id])
-        @place.update(params[:place, :status])
-        if @place.status = "Complet"
 
-          redirect_to place_path(@place)
-        elsif @place.status = "Places disponibles"
+  def update
+    @place = Place.find(params[:id])
+    @event = Event.find(params[:event_id])
 
-          redirect_to place_path(@place)
-        else @place.status = "Places disponibles"
-      end
+    if @place.status == "Vide"
+      @place.status = "Places disponibles"
+    elsif @place.status == "Places disponibles"
+      @place.status = "Quelques places"
+    elsif @place.status == "Quelques places"
+      @place.status = "Complet"
+    end
+    @place.save
+    
+    redirect_to event_place_path(@event, @place)
   end
+
+  # def edit
+  #       @place = Place.find(params[:id])
+  #       @place.update(params[:place])
+  #       if @place.status = "Complet"
+
+  #         redirect_to place_path(@place)
+  #       elsif @place.status = "Places disponibles"
+
+  #         redirect_to place_path(@place)
+  #       else @place.status = "Places disponibles"
+  #     end
+  # end
 
   # def update
   #   @place = Place.find(params[:id])
@@ -37,37 +55,32 @@ class PlacesController < ApplicationController
   #   redirect_to place_path(@place)
   # end
 
-  def plein
-    @place = Place.find(params[:id])
-    # retrouver le place
-    @place.update(params[:place, :status])
-    if@place.status = "complet"
-    # update la palce avec le bon statut
-    redirect_to place_path(@place)
-    # rediriger vers une page
-    end
-  end
 
-  def encore
-    @place = Place.find(params[:id])
-    # retrouver le place
-    @place.update(params[:place, :status])
 
-    # update la palce avec le bon statut
-    redirect_to place_path(@place)
-    # rediriger vers une page
+  # def encore
+  #   @place = Place.find(params[:id])
+  #   # retrouver le place
+  #   @place.update(params[:place, :status])
 
-  end
+  #   # update la palce avec le bon statut
+  #   redirect_to place_path(@place)
+  #   # rediriger vers une page
 
-  def dispo
-    @place = Place.find(params[:id])
-    # retrouver le place
-    @place.update(params[:place, :status])
-    # update la palce avec le bon statut
-    redirect_to place_path(@place)
-    # rediriger vers une page
+  # end
 
-  end
+  # def dispo
+  #   @place = Place.find(params[:id])
+  #   # retrouver le place
+  #   @place.update(params[:place, :status])
+  #   # update la palce avec le bon statut
+  #   redirect_to place_path(@place)
+  # rediriger vers une page #si je clique sur le bouton de j'y vais placé au #show_places
+      #lien sur le bouton j'y vais a la methode status
+      #button_to 'Scrape', scrape_path
+      #la methode status indique qu'a chaque clique augment l'status par defaut de 25%
+      #sauf si c'est deja à 100%
+
+  # end
 
 
 
@@ -93,7 +106,4 @@ class PlacesController < ApplicationController
 #   def booking_params
 #     params.require(:booking).permit(:arrival_date, :departure_date)
 #   end
-# end
-
-
 end
