@@ -123,7 +123,7 @@ event_team8 = EventTeam.create!(event: match8, team: team6)
 puts 'Creating Places...'
 # PLACES
 
-LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoignant un lieu de partage", address: "3 allée de l'Ile Gloriette", city: "Nantes", name:"La Scierie", status:"Places disponibles")
+LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoignant un lieu de partage", address: "3 allée de l'Ile Gloriette", city: "Nantes", name:"La Scierie", status:"Vide")
 file = URI.open("http://www.lesbarres.com/media/image/slideshow/a1f8f0d08556369fa82d5ce29e775387b7a713e1.jpg")
 LaScierie.photo.attach(io: file, filename: "LaScierie.png", content_type: "image/png")
 
@@ -135,7 +135,7 @@ LeCascabel = Place.create!(characteristic: "Une belle cascade de joie vous y att
 file = URI.open("https://www.google.com/maps/uv?pb=!1s0x4805eea588d9a5c3%3A0x714dea4f8151dd19!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNS5uSIB_Vg6LAdM6BH96qTVFbS6QJeGaYGXI7Q%3Dw260-h175-n-k-no!5sle%20cascabel%20nantes%20-%20Buscar%20con%20Google!15sCgIgAQ&imagekey=!1e10!2sAF1QipPCmEIhZC0IewhtIpnrwRlV5ITmv1IwuErfrwwJ&hl=es&sa=X&ved=2ahUKEwi57vXewNP7AhVsTKQEHT9fCdAQ7ZgBKAB6BAgWEAI#.jpg")
 LeCascabel.photo.attach(io: file, filename: "LeCascabel.png", content_type: "image/png")
 
-LaBelleEquipe = Place.create!(characteristic: "L'esprit d'équipe que l'on perde ou que l'on gagne",  address: "10 Quai de la Jonelière", city:"Nantes", name:"La belle equipe", status:"Complet")
+LaBelleEquipe = Place.create!(characteristic: "L'esprit d'équipe que l'on perde ou que l'on gagne",  address: "10 Quai de la Jonelière", city:"Nantes", name:"La belle equipe", status:"Vide")
 file = URI.open("https://www.lbe-nantes.fr/i/la-belle-equipe-1877-bar-restaurant-salle-eiffel-rez-de-chausse/3/4/8/1/9/0/1/5/0/2/2/8/8/1548158245_437/5880eee8b302623787de9e0207b33df8.jpg")
 LaBelleEquipe.photo.attach(io: file, filename: "LaBelleEquipe.png", content_type: "image/png")
 
@@ -143,7 +143,7 @@ Giggs = Place.create!(characteristic: "Un match ne se joue pas que sur la pelous
 file = URI.open("https://cdn.schlouk-map.com/cache/gallery/uploads/images/places/giggs-irish-pub-625824ac437ab0.58323803.png")
 Giggs.photo.attach(io: file, filename: "LaBelleEquipe.png", content_type: "image/png")
 
-brady = Place.create!(characteristic: "Près du lieu unique, l'ambiance irlandaise à porter de chope", address: "22 Allée Commandant Charcot", city: "Nantes", name:"Brady's", status:"Quelques places")
+brady = Place.create!(characteristic: "Près du lieu unique, l'ambiance irlandaise à porter de chope", address: "22 Allée Commandant Charcot", city: "Nantes", name:"Brady's", status:"Vide")
 file = URI.open("https://cdn.schlouk-map.com/cache/gallery/uploads/images/places/bradys-62582df31d8dd1.32689537.png")
 brady.photo.attach(io: file, filename: "brady.png", content_type: "image/png")
 

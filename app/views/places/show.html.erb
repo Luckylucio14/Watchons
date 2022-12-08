@@ -64,20 +64,26 @@
                     <i id="wifi" class="fa-solid fa-wifi"></i>
                     <i id="smoke" class="fa-solid fa-smoking"></i>
                   </div>
-                  <%if @place.status == "Places disponibles"%>
+
+                  <%if @place.status == "Vide" %>
+                    <div class="gauge-wrapper-vide d-flex">
+                      <p class="m-0">25%</p>
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                  <%elsif @place.status == "Places disponibles"%>
                     <div class="gauge-wrapper-dispo d-flex">
-                      <p class="m-0">20%</p>
+                      <p class="m-0">50%</p>
                       <i class="fa-solid fa-user"></i>
                     </div>
                   <%elsif @place.status == "Quelques places" %>
                     <div class="gauge-wrapper-encore d-flex">
-                      <p class="m-0">70%</p>
-                      <i class="fa-solid fa-user"></i>
+                      <p class="m-0">75%</p>
+                      <i class="fa-solid fa-user-group"></i>
                     </div>
                   <%else%>
                     <div class="gauge-wrapper-plein d-flex">
                       <p class="m-0">100%</p>
-                      <i class="fa-solid fa-user"></i>
+                      <i class="fa-solid fa-users"></i>
                     </div>
                   <%end%>
                 </div>

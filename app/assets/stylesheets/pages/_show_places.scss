@@ -96,13 +96,22 @@
 
 }
 
-.gauge-wrapper-dispo{
+.gauge-wrapper-vide{
   padding-right: 20px;
   color:green;
   padding-bottom: 9px;
   padding-left: 20px;
     .fa-solid{
     color:green;
+  }
+}
+.gauge-wrapper-dispo{
+  padding-right: 20px;
+  color:rgb(243, 192, 14);
+  padding-bottom: 9px;
+  padding-left: 20px;
+    .fa-solid{
+    color:rgb(243, 192, 14);
   }
 }
 
@@ -145,6 +154,9 @@
   }
   &:disabled {
     background: gray;
+    color: rgb(217, 54, 25);
+    font-weight: 600;
+    font-size: 22px;
   }
 
 }
