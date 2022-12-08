@@ -1,17 +1,17 @@
 <div class="main-container-login">
   <div class="logo-watchons">
-    <%= image_tag "Component 8 (2).png" %>
+    <%= image_tag "Logo.svg" %>
   </div>
 
   <h2>Log in</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
     <div class="form-inputs">
-      <%= f.input_field :email,
+      <%= f.input :email,
                   required: false,
                   autofocus: true,
                   input_html: { autocomplete: "email" } %>
-      <%= f.input_field :password,
+      <%= f.input :password,
                   required: false,
                   input_html: { autocomplete: "current-password" } %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
@@ -26,4 +26,4 @@
 </div>
 
 
-<%# <%= render "devise/shared/links" %>
+<%= render "devise/shared/links" %>
