@@ -13,8 +13,9 @@ EventTeam.destroy_all
 EventPlace.destroy_all
 Event.destroy_all
 Team.destroy_all
-Place.destroy_all
 Message.destroy_all
+Chatroom.destroy_all
+Place.destroy_all
 User.destroy_all
 
 puts 'Creating Users...'

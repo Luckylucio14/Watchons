@@ -45,6 +45,7 @@ class PlacesController < ApplicationController
     # update la palce avec le bon statut
     redirect_to place_path(@place)
     # rediriger vers une page
+    end
   end
 
   def encore
