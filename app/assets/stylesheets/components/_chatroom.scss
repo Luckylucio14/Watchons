@@ -1,7 +1,6 @@
 .chatroom {
   background: white;
-  margin-top: 9px;
-  height: calc(100vh - 75px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,4 +26,18 @@
       margin-bottom: 0;
     }
   }
+}
+
+.btn_envoi{
+  height: 38px;
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+
+.chatroom_name{
+  text-align: center;
+}
+
+#backlogo_chatroom{
+  margin-top: 11px;
 }
