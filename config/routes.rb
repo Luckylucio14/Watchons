@@ -3,15 +3,11 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :events, only: %i[index show] do
-    resources :places, only: %i[show]
+    resources :places, only: %i[show update]
   end
-
-
-  resources :places, only: %i[update edit]
 
   resources :chatrooms, only: :show do
     resources :messages, only: :create
-
   end
 
 end

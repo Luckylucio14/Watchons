@@ -94,9 +94,9 @@
             <div class="map" style=" width: 100%; height: 500px; "
                 data-controller="map"
                 data-map-markers-value="<%= @markers.to_json %>"
-                data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-            <div class= " btn_show"><%= link_to "J'y vais", "https://goo.gl/maps/6D6chY1DSAd2b69j9", target: "_blank" %></div>
-
+                data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+            <%= button_to @place.status == "Complet" ? "Complet" : "J'y vais", event_place_path(@event, @place), method: :patch, class: "btn_show", disabled: @place.status == "Complet" %>
         </div>
     </div>
 </div>
