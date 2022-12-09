@@ -82,6 +82,8 @@ team9.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
 team10 = Team.create!(name: "Vainqueur Quart de finale 2")
 file = URI.open("https://www.fanzo.com/en/_next/image?url=https%3A%2F%2Fmatchpint-cdn.matchpint.cloud%2Fshared%2F%2Fimagenes%2Fteams%2F%2Fno-logo.png&w=1080&q=75")
 team10.photo.attach(io: file, filename:"team1.png", content_type:"image/png")
+
+
 puts 'Creating Events...'
 
 team11 = Team.create!(name: "Vainqueur Quart de finale 3")
@@ -152,7 +154,7 @@ LaScierie = Place.create!(characteristic: "Venez coupez votre quotidien en rejoi
 file = URI.open("http://www.lesbarres.com/media/image/slideshow/a1f8f0d08556369fa82d5ce29e775387b7a713e1.jpg")
 LaScierie.photo.attach(io: file, filename: "LaScierie.png", content_type: "image/png")
 
-Brasseurs = Place.create!(characteristic: "Une cuisine authentique dans l'esprit des anciennes brasseries. De moments généreux et conviviaux à déguster", address: "C.C Carré 19 Parvis Neptune", city: "Nantes", name:"3 Brasseurs", status:"Places disponibles")
+Brasseurs = Place.create!(characteristic: "Une cuisine authentique dans l'esprit des anciennes brasseries. De moments généreux et conviviaux à déguster", address: "Place du Bouffay", city: "Nantes", name:"3 Brasseurs", status:"Places disponibles")
 file = URI.open("https://i.ytimg.com/vi/CblVTS5fTFE/maxresdefault.jpg")
 Brasseurs.photo.attach(io: file, filename: "Brasseurs.png", content_type: "image/png")
 
