@@ -2,14 +2,12 @@
   <div class="row-show-events">
 
             <%# LOGO %>
-    <div class="d-flex w-100 justify-content-center pt-3">
-      <%= link_to event_path(@event),class: "lien" do %>
-        <i id="backlogo" class="fa-solid fa-backward icon-back"></i>
-      <% end %>
-      <%= image_tag "Logo.svg", class:"png-show-place" %>
-    </div>
-
-
+        <div class= "centrage">
+          <%= link_to event_path(@event),class: "lien" do %>
+            <i id="backlogo" class="fa-solid fa-backward icon-back"></i>
+            <% end %>
+            <%= image_tag "Logo.svg", class:"logoW-show-event" %>
+        </div>
 
         <div class="game-flex-container-show-events">
         <div class="align">
