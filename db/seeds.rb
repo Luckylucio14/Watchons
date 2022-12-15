@@ -140,12 +140,13 @@ event_team6 = EventTeam.create!(event: match6, team: team4)
 event_team6 = EventTeam.create!(event: match6, team: team6)
 event_team7 = EventTeam.create!(event: match7, team: team2)
 event_team7 = EventTeam.create!(event: match7, team: team4)
-event_team8 = EventTeam.create!(event: match8, team: team6)
+
 event_team8 = EventTeam.create!(event: match8, team: team8)
-event_team9 = EventTeam.create!(event: match9, team: team7)
-event_team9 = EventTeam.create!(event: match9, team: team8)
-event_team10 = EventTeam.create!(event: match10, team: team9)
-event_team10 = EventTeam.create!(event: match10, team: team10)
+event_team8 = EventTeam.create!(event: match8, team: team6)
+# event_team9 = EventTeam.create!(event: match9, team: team7)
+# event_team9 = EventTeam.create!(event: match9, team: team8)
+# event_team10 = EventTeam.create!(event: match10, team: team9)
+# event_team10 = EventTeam.create!(event: match10, team: team10)
 
 puts 'Creating Places...'
 # PLACES
