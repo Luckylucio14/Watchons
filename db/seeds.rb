@@ -120,8 +120,8 @@ match5 = Event.create!(competition: "Coupe du Monde - Demi-finale", location: "S
 match6 = Event.create!(competition: "Coupe du Monde - Demi-finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,14, 20, 0, 0), channel: "TF1")
 match7 = Event.create!(competition: "Coupe du Monde - 3ème place", location: "Stade Education City - Qatar", full_datetime: DateTime.new(2022,12,17, 16, 0, 0), channel: "Bein")
 match8 = Event.create!(competition: "Coupe du Monde - Finale", location: "Stade Al-Bayt - Qatar", full_datetime: DateTime.new(2022,12,18, 16, 0, 0), channel: "TF1")
-# match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", full_datetime: DateTime.new(2022,12,28, 18, 0, 0), channel: "Primevideo")
-# match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", full_datetime: DateTime.new(2022,12,28, 21, 0, 0), channel: "Primevideo")
+match9 = Event.create!(competition: "Ligue 1", location: "Stade de l'Aube - Troyes", full_datetime: DateTime.new(2022,12,28, 18, 0, 0), channel: "Primevideo")
+match10 = Event.create!(competition: "Ligue 1", location: "Parc des princes - Paris", full_datetime: DateTime.new(2022,12,28, 21, 0, 0), channel: "Primevideo")
 
 #EVENT TEAM
 
@@ -140,6 +140,7 @@ event_team6 = EventTeam.create!(event: match6, team: team4)
 event_team6 = EventTeam.create!(event: match6, team: team6)
 event_team7 = EventTeam.create!(event: match7, team: team2)
 event_team7 = EventTeam.create!(event: match7, team: team4)
+
 event_team8 = EventTeam.create!(event: match8, team: team8)
 event_team8 = EventTeam.create!(event: match8, team: team6)
 # event_team9 = EventTeam.create!(event: match9, team: team7)
